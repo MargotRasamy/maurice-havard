@@ -109,8 +109,8 @@
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-lg-8">
-                                    <h1 class="display-1 text-white mb-5 animated slideInDown">Make Your Home Like Garden</h1>
-                                    <a href="" class="btn btn-primary py-sm-3 px-sm-4">Explore More</a>
+                                    <h1 class="display-1 text-white mb-5 animated slideInDown">Piscines et Jardins depuis 1971</h1>
+                                    <a href="" class="btn btn-primary py-sm-3 px-sm-4">Explorer</a>
                                 </div>
                             </div>
                         </div>
@@ -202,8 +202,8 @@
                     <img class="img-fluid rounded" data-wow-delay="0.1s" src="img/about.jpg">
                 </div>
                 <div class="col-lg-6 col-md-7 wow fadeIn" data-wow-delay="0.3s">
-                    <h1 class="display-1 text-primary mb-0">25</h1>
-                    <p class="text-primary mb-4">Year of Experience</p>
+                    <h1 class="display-1 text-primary mb-0"><span id="yearsExperience"></span></h1>
+                    <p class="text-primary mb-4">Années d'expérience</p>
                     <h1 class="display-5 mb-4">We Make Your Home Like A Garden</h1>
                     <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
                     <a class="btn btn-primary py-3 px-4" href="">Explore More</a>
@@ -697,7 +697,7 @@
                     &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.
                 </div>
                 <div class="col-md-6 text-center text-md-end">
-                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                    <!--/*** This template is free as long as you keep the footer author's credit link/attribution link/backlink. If you'd like to use the template without the footer author's credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                     Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a> Distributed By <a href="https://themewagon.com">ThemeWagon</a>
                 </div>
             </div>
@@ -724,6 +724,18 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+
+    <script>
+      // Calculate years since 1971
+      function updateYears() {
+        const currentYear = new Date().getFullYear();
+        const yearsSince1971 = currentYear - 1971;
+        document.getElementById('yearsExperience').textContent = yearsSince1971;
+      }
+      
+      // Run on page load
+      updateYears();
+    </script>
 </body>
 
 </html>

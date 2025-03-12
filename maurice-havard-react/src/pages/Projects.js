@@ -17,37 +17,37 @@ function Projects() {
   const projects = [
     {
       image: 'img/service-1.jpg',
-      title: 'Landscaping',
+      title: 'Aménagement Paysager',
       category: 'first',
       delay: '100'
     },
     {
       image: 'img/service-2.jpg',
-      title: 'Pruning Plants',
+      title: 'Études et Plans',
       category: 'second',
       delay: '300'
     },
     {
       image: 'img/service-3.jpg',
-      title: 'Irrigation & Drainage',
+      title: 'Maçonnerie Paysagère',
       category: 'first',
       delay: '500'
     },
     {
       image: 'img/service-4.jpg',
-      title: 'Garden Maintenance',
+      title: 'Entretien des Espaces Verts',
       category: 'second',
       delay: '100'
     },
     {
       image: 'img/service-5.jpg',
-      title: 'Green Technology',
+      title: 'Élagage et Taille',
       category: 'first',
       delay: '300'
     },
     {
       image: 'img/service-6.jpg',
-      title: 'Urban Gardening',
+      title: 'Création de Piscines',
       category: 'second',
       delay: '500'
     }
@@ -62,11 +62,11 @@ function Projects() {
       {/* Page Header Start */}
       <div className="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div className="container text-center py-5">
-          <h1 className="display-3 text-white mb-4 animated slideInDown">Projects</h1>
+          <h1 className="display-3 text-white mb-4 animated slideInDown">Nos Réalisations</h1>
           <nav aria-label="breadcrumb animated slideInDown">
             <ol className="breadcrumb justify-content-center mb-0">
-              <li className="breadcrumb-item"><Link to="/">Home</Link></li>
-              <li className="breadcrumb-item active" aria-current="page">Projects</li>
+              <li className="breadcrumb-item"><Link to="/">Accueil</Link></li>
+              <li className="breadcrumb-item active" aria-current="page">Réalisations</li>
             </ol>
           </nav>
         </div>
@@ -77,8 +77,8 @@ function Projects() {
       <div className="container-xxl py-5">
         <div className="container">
           <div className="text-center mx-auto wow fadeInUp" data-aos="fade-up" data-aos-delay="100" style={{maxWidth: "500px"}}>
-            <p className="fs-5 fw-bold text-primary">Our Projects</p>
-            <h1 className="display-5 mb-5">Some Of Our Wonderful Projects</h1>
+            <p className="fs-5 fw-bold text-primary">Nos Réalisations</p>
+            <h1 className="display-5 mb-5">Quelques-unes de Nos Réalisations</h1>
           </div>
           <div className="row wow fadeInUp" data-aos="fade-up" data-aos-delay="300">
             <div className="col-12 text-center">
@@ -87,19 +87,19 @@ function Projects() {
                   className={`mx-2 ${filter === '*' ? 'active' : ''}`} 
                   onClick={() => setFilter('*')}
                 >
-                  All
+                  Tout
                 </li>
                 <li 
                   className={`mx-2 ${filter === 'first' ? 'active' : ''}`}
                   onClick={() => setFilter('first')}
                 >
-                  Complete Projects
+                  Projets Terminés
                 </li>
                 <li 
                   className={`mx-2 ${filter === 'second' ? 'active' : ''}`}
                   onClick={() => setFilter('second')}
                 >
-                  Ongoing Projects
+                  Projets en Cours
                 </li>
               </ul>
             </div>

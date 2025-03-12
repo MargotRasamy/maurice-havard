@@ -11,23 +11,23 @@ function Testimonials() {
   const testimonials = [
     {
       image: 'img/testimonial-1.jpg',
-      content: 'Their expertise in landscaping transformed our backyard into a stunning oasis. The attention to detail and professional service exceeded our expectations.',
-      name: 'Sarah Johnson',
-      profession: 'Homeowner',
+      content: 'Maurice et son équipe ont réalisé un travail exceptionnel dans notre jardin. Leur expertise en aménagement paysager et en création de piscine a transformé notre espace extérieur en un véritable havre de paix.',
+      name: 'Marie Dubois',
+      profession: 'Propriétaire',
       delay: '0.1s'
     },
     {
       image: 'img/testimonial-2.jpg',
-      content: 'The team at Maurice Havard consistently delivers exceptional garden maintenance services. Their knowledge and dedication have kept our property looking beautiful year-round.',
-      name: 'Michael Chen',
-      profession: 'Property Manager',
+      content: 'Un grand merci à toute l\'équipe pour la transformation de notre espace extérieur. Leur professionnalisme et leur créativité ont dépassé nos attentes. La piscine et le jardin s\'intègrent parfaitement.',
+      name: 'Pierre Martin',
+      profession: 'Gérant de Propriété',
       delay: '0.3s'
     },
     {
       image: 'img/testimonial-3.jpg',
-      content: 'We are incredibly pleased with the urban gardening solutions they provided for our limited space. Their innovative approach and sustainable practices are truly remarkable.',
-      name: 'Emily Rodriguez',
-      profession: 'Restaurant Owner',
+      content: 'Nous sommes ravis des solutions d\'aménagement proposées pour notre restaurant. L\'équipe a su créer un espace extérieur accueillant qui enchante nos clients. Un travail remarquable !',
+      name: 'Sophie Laurent',
+      profession: 'Restauratrice',
       delay: '0.5s'
     }
   ];
@@ -37,11 +37,11 @@ function Testimonials() {
       {/* Page Header Start */}
       <div className="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div className="container text-center py-5">
-          <h1 className="display-3 text-white mb-4 animated slideInDown">Testimonials</h1>
+          <h1 className="display-3 text-white mb-4 animated slideInDown">Témoignages</h1>
           <nav aria-label="breadcrumb animated slideInDown">
             <ol className="breadcrumb justify-content-center mb-0">
-              <li className="breadcrumb-item"><Link to="/">Home</Link></li>
-              <li className="breadcrumb-item active" aria-current="page">Testimonials</li>
+              <li className="breadcrumb-item"><Link to="/">Accueil</Link></li>
+              <li className="breadcrumb-item active" aria-current="page">Témoignages</li>
             </ol>
           </nav>
         </div>
@@ -53,10 +53,10 @@ function Testimonials() {
         <div className="container">
           <div className="row g-5">
             <div className="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
-              <p className="fs-5 fw-bold text-primary">Testimonials</p>
-              <h1 className="display-5 mb-5">What Our Clients Say About Us!</h1>
-              <p className="mb-4">Discover why our clients trust us with their landscaping and gardening needs. Read their experiences and learn about our commitment to excellence in every project we undertake.</p>
-              <Link to="/contact" className="btn btn-primary py-3 px-4">Contact Us</Link>
+              <p className="fs-5 fw-bold text-primary">Témoignages</p>
+              <h1 className="display-5 mb-5">Ce que nos clients disent !</h1>
+              <p className="mb-4">Découvrez pourquoi nos clients nous font confiance pour leurs projets de piscines et jardins depuis plus de 50 ans. Lisez leurs expériences et découvrez notre engagement pour l'excellence.</p>
+              <Link to="/contact" className="btn btn-primary py-3 px-4">Contactez-nous</Link>
             </div>
             <div className="col-lg-7 wow fadeInUp" data-wow-delay="0.5s">
               <div className="row g-4">

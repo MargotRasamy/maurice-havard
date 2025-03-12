@@ -47,11 +47,11 @@ function Quote() {
       {/* Page Header Start */}
       <div className="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <div className="container text-center py-5">
-          <h1 className="display-3 text-white mb-4 animated slideInDown">Free Quote</h1>
+          <h1 className="display-3 text-white mb-4 animated slideInDown">Devis Gratuit</h1>
           <nav aria-label="breadcrumb animated slideInDown">
             <ol className="breadcrumb justify-content-center mb-0">
-              <li className="breadcrumb-item"><Link to="/">Home</Link></li>
-              <li className="breadcrumb-item active" aria-current="page">Free Quote</li>
+              <li className="breadcrumb-item"><Link to="/">Accueil</Link></li>
+              <li className="breadcrumb-item active" aria-current="page">Devis Gratuit</li>
             </ol>
           </nav>
         </div>
@@ -62,8 +62,8 @@ function Quote() {
       <div className="container-fluid py-5">
         <div className="container">
           <div className="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style={{maxWidth: "500px"}}>
-            <p className="fs-5 fw-bold text-primary">Free Quote</p>
-            <h1 className="display-5 mb-5">Get A Free Quote</h1>
+            <p className="fs-5 fw-bold text-primary">Devis Gratuit</p>
+            <h1 className="display-5 mb-5">Demandez un Devis Gratuit</h1>
           </div>
           <div className="row justify-content-center">
             <div className="col-lg-7">
@@ -76,11 +76,11 @@ function Quote() {
                           type="text" 
                           className="form-control border-0" 
                           id="name" 
-                          placeholder="Your Name"
+                          placeholder="Votre Nom"
                           value={formData.name}
                           onChange={handleInputChange}
                         />
-                        <label htmlFor="name">Your Name</label>
+                        <label htmlFor="name">Votre Nom</label>
                       </div>
                     </div>
                     <div className="col-sm-6">
@@ -89,11 +89,11 @@ function Quote() {
                           type="email" 
                           className="form-control border-0" 
                           id="email" 
-                          placeholder="Your Email"
+                          placeholder="Votre Email"
                           value={formData.email}
                           onChange={handleInputChange}
                         />
-                        <label htmlFor="email">Your Email</label>
+                        <label htmlFor="email">Votre Email</label>
                       </div>
                     </div>
                     <div className="col-sm-6">
@@ -102,31 +102,37 @@ function Quote() {
                           type="text" 
                           className="form-control border-0" 
                           id="mobile" 
-                          placeholder="Your Mobile"
+                          placeholder="Votre Téléphone"
                           value={formData.mobile}
                           onChange={handleInputChange}
                         />
-                        <label htmlFor="mobile">Your Mobile</label>
+                        <label htmlFor="mobile">Votre Téléphone</label>
                       </div>
                     </div>
                     <div className="col-sm-6">
                       <div className="form-floating">
-                        <input 
-                          type="text" 
-                          className="form-control border-0" 
-                          id="serviceType" 
-                          placeholder="Service Type"
+                        <select 
+                          className="form-select border-0" 
+                          id="serviceType"
                           value={formData.serviceType}
                           onChange={handleInputChange}
-                        />
-                        <label htmlFor="serviceType">Service Type</label>
+                        >
+                          <option value="">Sélectionnez un service</option>
+                          <option value="Aménagement Paysager">Aménagement Paysager</option>
+                          <option value="Études et Plans">Études et Plans</option>
+                          <option value="Maçonnerie Paysagère">Maçonnerie Paysagère</option>
+                          <option value="Entretien des Espaces Verts">Entretien des Espaces Verts</option>
+                          <option value="Élagage et Taille">Élagage et Taille</option>
+                          <option value="Création de Piscines">Création de Piscines</option>
+                        </select>
+                        <label htmlFor="serviceType">Type de Service</label>
                       </div>
                     </div>
                     <div className="col-12">
                       <div className="form-floating">
                         <textarea 
                           className="form-control border-0" 
-                          placeholder="Leave a message here" 
+                          placeholder="Laissez votre message ici" 
                           id="message" 
                           style={{height: "100px"}}
                           value={formData.message}
@@ -136,7 +142,7 @@ function Quote() {
                       </div>
                     </div>
                     <div className="col-12 text-center">
-                      <button className="btn btn-primary py-3 px-4" type="submit">Submit Now</button>
+                      <button className="btn btn-primary py-3 px-4" type="submit">Envoyer</button>
                     </div>
                   </div>
                 </form>

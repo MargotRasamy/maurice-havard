@@ -4,8 +4,8 @@ import { WOW } from 'wowjs';
 import 'wowjs/css/libs/animate.css';
 
 // Import images
-import carousel1 from '../assets/img/carousel-1.jpg';
-import carousel2 from '../assets/img/carousel-2.jpg';
+import carousel1 from '../assets/img/home.jpg';
+import carousel2 from '../assets/img/home2.jpg';
 
 // Import components
 import Projects from '../components/Projects';
@@ -22,43 +22,43 @@ function Home() {
     {
       image: "/img/service-1.jpg",
       icon: "/img/icon/icon-3.png",
-      title: "Décoration Paysagiste",
-      description: "Conception et réalisation de jardins sur mesure adaptés à vos envies. Expertise dans l'aménagement paysager, la création d'espaces verts harmonieux et la mise en valeur de votre extérieur. Conseils personnalisés pour le choix des végétaux et des matériaux.",
+      title: "Aménagement Paysager",
+      description: "Création et aménagement de jardins sur mesure. Conception d'espaces verts harmonieux et durables. Mise en valeur de votre extérieur avec des solutions adaptées à vos envies et à votre terrain.",
       delay: "0.1s",
     },
     {
       image: "/img/service-2.jpg",
       icon: "/img/icon/icon-6.png",
-      title: "Etudes et plans de jardins",
-      description: "Élaboration détaillée de plans d'aménagement paysager sur-mesure. Étude approfondie du terrain, de l'exposition et des contraintes techniques pour créer un projet parfaitement adapté à votre espace et à vos souhaits. Visualisation précise de votre futur jardin.",
+      title: "Études et Plans",
+      description: "Réalisation d'études détaillées et de plans d'aménagement personnalisés. Analyse approfondie de votre terrain et de vos besoins pour créer un projet cohérent et réalisable. Conseils experts pour optimiser votre espace extérieur.",
       delay: "0.3s",
     },
     {
       image: "/img/service-3.jpg",
       icon: "/img/icon/icon-5.png",
-      title: "Maçonnerie décorative",
-      description: "Création d'éléments décoratifs en pierre et maçonnerie pour embellir votre jardin. Réalisation de murets, escaliers, terrasses, allées pavées et rocailles. Travail soigné avec des matériaux de qualité pour un résultat durable et esthétique.",
+      title: "Maçonnerie Paysagère",
+      description: "Construction d'éléments en pierre et maçonnerie pour structurer et embellir votre jardin. Réalisation de murets, escaliers, terrasses et allées. Travail soigné avec des matériaux de qualité pour un résultat durable.",
       delay: "0.5s",
     },
     {
       image: "/img/service-4.jpg",
       icon: "/img/icon/icon-4.png",
-      title: "Elagage",
-      description: "Taille raisonnée et professionnelle de vos arbres et arbustes. Intervention respectueuse du végétal pour favoriser sa croissance et sa santé. Expertise dans la gestion des hauteurs et l'entretien des formes ornementales.",
+      title: "Entretien des Espaces Verts",
+      description: "Entretien régulier et professionnel de vos espaces verts. Tonte, taille des haies, désherbage et soins des végétaux. Suivi personnalisé pour maintenir la beauté de votre jardin toute l'année.",
       delay: "0.1s",
     },
     {
       image: "/img/service-5.jpg",
       icon: "/img/icon/icon-8.png",
-      title: "Terrassement",
-      description: "Préparation et modelage expert de votre terrain pour créer des espaces de vie agréables. Nivellement, création de plateformes, gestion des pentes et drainage. Solutions techniques adaptées pour optimiser votre espace extérieur.",
+      title: "Élagage et Taille",
+      description: "Élagage professionnel et taille raisonnée de vos arbres et arbustes. Intervention respectueuse pour favoriser la santé et la croissance des végétaux. Expertise dans la gestion des hauteurs et l'entretien des formes.",
       delay: "0.3s",
     },
     {
       image: "/img/service-6.jpg",
       icon: "/img/icon/icon-2.png",
-      title: "Tout travaux de jardinage",
-      description: "Entretien complet et régulier de votre jardin tout au long de l'année. Tonte, taille des haies, désherbage, plantation, fertilisation et soins des végétaux. Suivi personnalisé pour maintenir la beauté de votre espace vert.",
+      title: "Création de Piscines",
+      description: "Conception et réalisation de piscines sur mesure. Installation professionnelle avec des matériaux de qualité. Intégration harmonieuse dans votre espace extérieur pour créer un lieu de détente unique.",
       delay: "0.5s",
     },
   ];
@@ -102,7 +102,7 @@ function Home() {
           </button>
           <button className="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
             <span className="carousel-control-next-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Prochain</span>
+            <span className="visually-hidden">Suivant</span>
           </button>
         </div>
       </div>
@@ -120,7 +120,7 @@ function Home() {
                   </div>
                   <div className="ps-3">
                     <h4>Devis gratuit</h4>
-                    <span>Estimation détaillée et transparente de votre projet</span>
+                    <span>Estimation détaillée et personnalisée</span>
                   </div>
                 </div>
               </div>
@@ -132,8 +132,8 @@ function Home() {
                     <i className="fa fa-users text-primary"></i>
                   </div>
                   <div className="ps-3">
-                    <h4>Équipe dédiée</h4>
-                    <span>Professionnels qualifiés et passionnés</span>
+                    <h4>Équipe qualifiée</h4>
+                    <span>Professionnels expérimentés</span>
                   </div>
                 </div>
               </div>
@@ -146,7 +146,7 @@ function Home() {
                   </div>
                   <div className="ps-3">
                     <h4>Service client</h4>
-                    <span>Disponible pour répondre à vos questions</span>
+                    <span>À votre écoute</span>
                   </div>
                 </div>
               </div>
@@ -168,22 +168,22 @@ function Home() {
               <p className="text-primary mb-4">Années d'expérience</p>
               <h1 className="display-5 mb-4">Paysagiste (entreprise de parcs et jardins)</h1>
               <p className="mb-4">Créateur et concepteur de jardins depuis 1971</p>
-              <Link to="/about" className="btn btn-primary py-3 px-4">En savoir plus</Link>
+              <Link to="/about" className="btn btn-primary py-3 px-4">Explorer</Link>
             </div>
             <div className="col-lg-3 col-md-12 wow fadeIn" data-wow-delay="0.5s">
               <div className="row g-5">
                 <div className="col-12 col-sm-6 col-lg-12">
                   <div className="border-start ps-4">
                     <i className="fa fa-award fa-3x text-primary mb-3"></i>
-                    <h4 className="mb-3">Diplômé de l'Ecole d'horticulture de Saint Ilan</h4>
-                    <span>Bretagne 35</span>
+                    <h4 className="mb-3">Expertise reconnue</h4>
+                    <span>Plus de 50 ans d'expérience</span>
                   </div>
                 </div>
                 <div className="col-12 col-sm-6 col-lg-12">
                   <div className="border-start ps-4">
                     <i className="fa fa-users fa-3x text-primary mb-3"></i>
-                    <h4 className="mb-3">Équipe expérimentée</h4>
-                    <span>Professionnels qualifiés pour réaliser vos projets</span>
+                    <h4 className="mb-3">Équipe qualifiée</h4>
+                    <span>Professionnels passionnés</span>
                   </div>
                 </div>
               </div>
@@ -198,20 +198,20 @@ function Home() {
         <div className="container py-5">
           <div className="row g-5">
             <div className="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
-              <h1 className="display-4 text-white" data-toggle="counter-up">50+</h1>
-              <span className="fs-5 fw-semi-bold text-white">Clients satisfaits</span>
+              <h1 className="display-4 text-white" data-toggle="counter-up">52</h1>
+              <span className="fs-5 fw-semi-bold text-white">Années d'expérience</span>
             </div>
             <div className="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
-              <h1 className="display-4 text-white" data-toggle="counter-up">100+</h1>
+              <h1 className="display-4 text-white" data-toggle="counter-up">1000+</h1>
               <span className="fs-5 fw-semi-bold text-white">Projets réalisés</span>
             </div>
             <div className="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
-              <h1 className="display-4 text-white" data-toggle="counter-up">10+</h1>
-              <span className="fs-5 fw-semi-bold text-white">Membres d'équipe</span>
+              <h1 className="display-4 text-white" data-toggle="counter-up">15</h1>
+              <span className="fs-5 fw-semi-bold text-white">Professionnels qualifiés</span>
             </div>
             <div className="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
-              <h1 className="display-4 text-white" data-toggle="counter-up">15+</h1>
-              <span className="fs-5 fw-semi-bold text-white">Récompenses reçues</span>
+              <h1 className="display-4 text-white" data-toggle="counter-up">98%</h1>
+              <span className="fs-5 fw-semi-bold text-white">Clients satisfaits</span>
             </div>
           </div>
         </div>
@@ -224,8 +224,8 @@ function Home() {
           <div className="row g-5 align-items-center">
             <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
               <p className="fs-5 fw-bold text-primary">Pourquoi nous choisir</p>
-              <h1 className="display-5 mb-4">Les raisons de nous faire confiance</h1>
-              <p className="mb-4">Plus de 50 ans d'expérience dans la création et l'entretien de jardins. Une équipe passionnée et qualifiée pour réaliser vos projets d'aménagement paysager.</p>
+              <h1 className="display-5 mb-4">Notre engagement pour votre satisfaction</h1>
+              <p className="mb-4">Depuis plus de 50 ans, nous mettons notre expertise et notre passion au service de vos projets d'aménagement paysager. Notre équipe qualifiée s'engage à vous offrir des solutions personnalisées et un service de qualité.</p>
               <Link to="/about" className="btn btn-primary py-3 px-4">En savoir plus</Link>
             </div>
             <div className="col-lg-6">
@@ -237,7 +237,7 @@ function Home() {
                         <div className="btn-square bg-light rounded-circle mx-auto mb-4" style={{width: "90px", height: "90px"}}>
                           <i className="fa fa-check fa-3x text-primary"></i>
                         </div>
-                        <h4 className="mb-0">100% Satisfaction</h4>
+                        <h4 className="mb-0">Satisfaction garantie</h4>
                       </div>
                     </div>
                     <div className="col-12 wow fadeIn" data-wow-delay="0.5s">
@@ -245,7 +245,7 @@ function Home() {
                         <div className="btn-square bg-light rounded-circle mx-auto mb-4" style={{width: "90px", height: "90px"}}>
                           <i className="fa fa-users fa-3x text-primary"></i>
                         </div>
-                        <h4 className="mb-0">Équipe dédiée</h4>
+                        <h4 className="mb-0">Équipe experte</h4>
                       </div>
                     </div>
                   </div>
@@ -255,7 +255,7 @@ function Home() {
                     <div className="btn-square bg-light rounded-circle mx-auto mb-4" style={{width: "90px", height: "90px"}}>
                       <i className="fa fa-tools fa-3x text-primary"></i>
                     </div>
-                    <h4 className="mb-0">Équipement moderne</h4>
+                    <h4 className="mb-0">Services complets</h4>
                   </div>
                 </div>
               </div>
@@ -269,8 +269,8 @@ function Home() {
       <div className="container-xxl py-5">
         <div className="container">
           <div className="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style={{maxWidth: "500px"}}>
-            <p className="fs-5 fw-bold text-primary">Mes services</p>
-            <h1 className="display-5 mb-5">Jardins et Piscines</h1>
+            <p className="fs-5 fw-bold text-primary">Nos Services</p>
+            <h1 className="display-5 mb-5">Piscines et Jardins</h1>
           </div>
           <div className="row g-4">
             {services.map((service, index) => (
@@ -298,7 +298,7 @@ function Home() {
       {/* Service End */}
 
       {/* Quote Start */}
-      <div className="container-fluid quote my-5 py-5">
+      <div className="container-fluid quote my-5 py-5" data-image-src="../assets/img/carousel-1.jpg">
         <div className="container py-5">
           <div className="row justify-content-center">
             <div className="col-lg-7">
@@ -328,12 +328,12 @@ function Home() {
                       <div className="form-floating">
                         <select className="form-select bg-light border-0" id="service">
                           <option value="">Choisir un service</option>
-                          <option value="Décoration Paysagiste">Décoration Paysagiste</option>
-                          <option value="Etudes et plans">Etudes et plans</option>
-                          <option value="Maçonnerie décorative">Maçonnerie décorative</option>
-                          <option value="Elagage">Elagage</option>
-                          <option value="Terrassement">Terrassement</option>
-                          <option value="Jardinage">Jardinage</option>
+                          <option value="Aménagement Paysager">Aménagement Paysager</option>
+                          <option value="Études et Plans">Études et Plans</option>
+                          <option value="Maçonnerie Paysagère">Maçonnerie Paysagère</option>
+                          <option value="Entretien des Espaces Verts">Entretien des Espaces Verts</option>
+                          <option value="Élagage et Taille">Élagage et Taille</option>
+                          <option value="Création de Piscines">Création de Piscines</option>
                         </select>
                         <label htmlFor="service">Type de service</label>
                       </div>

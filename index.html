@@ -895,6 +895,68 @@
             return false;
         }
     </script>
+
+    <!-- Newsletter Popup Modal -->
+    <div class="modal fade" id="newsletterModal" tabindex="-1" aria-labelledby="newsletterModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="newsletterModalLabel">Restez informé</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="img/newsletter.jpg" alt="Newsletter" class="img-fluid rounded mb-4" style="max-height: 200px;">
+                    <h4 class="mb-3">Inscrivez-vous à notre newsletter</h4>
+                    <p class="mb-4">Recevez nos conseils d'aménagement paysager, nos actualités et nos offres exclusives directement dans votre boîte mail.</p>
+                    <form id="newsletterForm" onsubmit="return subscribeNewsletter(event)">
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="newsletterEmail" placeholder="Votre email" required>
+                            <label for="newsletterEmail">Votre email</label>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input class="form-check-input" type="checkbox" id="newsletterConsent" required>
+                            <label class="form-check-label" for="newsletterConsent">
+                                J'accepte de recevoir la newsletter et je confirme avoir pris connaissance de la politique de confidentialité
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary py-3 px-4">S'abonner</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Afficher la popup après 3 secondes
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                var newsletterModal = new bootstrap.Modal(document.getElementById('newsletterModal'));
+                newsletterModal.show();
+            }, 3000);
+        });
+
+        // Gérer l'inscription à la newsletter
+        function subscribeNewsletter(event) {
+            event.preventDefault();
+            
+            const email = document.getElementById('newsletterEmail').value;
+            const consent = document.getElementById('newsletterConsent').checked;
+
+            if (!email || !consent) {
+                alert('Veuillez remplir tous les champs requis');
+                return false;
+            }
+
+            // Ici, vous pouvez ajouter le code pour envoyer l'email à votre service de newsletter
+            // Par exemple, utiliser EmailJS comme pour le formulaire de contact
+            
+            alert('Merci de votre inscription à notre newsletter !');
+            bootstrap.Modal.getInstance(document.getElementById('newsletterModal')).hide();
+            document.getElementById('newsletterForm').reset();
+            
+            return false;
+        }
+    </script>
 </body>
 
 </html>

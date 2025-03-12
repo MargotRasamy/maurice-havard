@@ -358,6 +358,73 @@ function Home() {
 
       {/* Projects Section */}
       <Projects />
+
+      {/* FAQ Start */}
+      <div className="container-xxl py-5">
+                <div className="container">
+                    <div className="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style={{ maxWidth: "500px" }}>
+                        <p className="fs-5 fw-bold text-primary">FAQ</p>
+                        <h1 className="display-5 mb-5">Questions Fréquentes</h1>
+                    </div>
+                    <div className="row justify-content-center">
+                        <div className="col-lg-10">
+                            <div className="accordion" id="accordionFAQ">
+                                <div className="accordion-item wow fadeInUp" data-wow-delay="0.1s">
+                                    <h2 className="accordion-header" id="headingOne">
+                                        <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                            Combien coûte la construction d'une piscine ?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ">
+                                        <div className="accordion-body">
+                                            Le coût d'une piscine varie en fonction de plusieurs facteurs : dimensions, type de construction, équipements choisis, aménagements périphériques... Nous établissons un devis détaillé et gratuit pour chaque projet, tenant compte de vos souhaits et de votre budget.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="accordion-item wow fadeInUp" data-wow-delay="0.2s">
+                                    <h2 className="accordion-header" id="headingTwo">
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                            Quels sont les délais de réalisation pour un projet paysager ?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
+                                        <div className="accordion-body">
+                                            Les délais varient selon l'ampleur du projet et la saison. En moyenne, un projet d'aménagement paysager peut prendre de quelques jours à plusieurs semaines. Nous établissons un planning précis lors de l'étude de votre projet.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="accordion-item wow fadeInUp" data-wow-delay="0.3s">
+                                    <h2 className="accordion-header" id="headingThree">
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                            Proposez-vous un service d'entretien régulier ?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionFAQ">
+                                        <div className="accordion-body">
+                                            Oui, nous proposons des contrats d'entretien adaptés à vos besoins, que ce soit pour l'entretien de votre jardin ou de votre piscine. Nos équipes interviennent selon un calendrier établi ensemble.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="accordion-item wow fadeInUp" data-wow-delay="0.4s">
+                                    <h2 className="accordion-header" id="headingFour">
+                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                            Quelles sont les garanties proposées ?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseFour" className="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionFAQ">
+                                        <div className="accordion-body">
+                                            Nous offrons les garanties légales sur nos réalisations et sommes assurés pour tous nos travaux. Pour les piscines, nous proposons des garanties spécifiques sur l'étanchéité et les équipements selon les fabricants.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* FAQ End */}
+
+      
     </>
   );
 }

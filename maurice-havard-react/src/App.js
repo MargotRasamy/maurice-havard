@@ -1,8 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+// Import third-party CSS
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'aos/dist/aos.css';
+
+// Import our custom CSS last to override third-party styles
 import './styles/global.css';
 
 // Import components (we'll create these next)

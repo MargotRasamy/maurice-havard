@@ -1,0 +1,31 @@
+/* IMAGE OBJECT FIT */
+
+@mixin image-object-fit($adaptToWidth: true, $fixed-height: auto, $fixed-width: auto) {
+    height: $fixed-height;
+    width: $fixed-width;
+    @media (max-width: 768px) {
+        width: 100% !important;
+    }
+
+    & > img {
+        @if $adaptToWidth {
+            height: 100%;
+            max-width: 100%;
+            object-fit: contain;
+        }
+        @else {
+            width: 100%;
+            min-height: 100%;
+            object-fit: cover;
+        }
+       
+        object-position: center;
+        overflow: hidden;
+        @media (max-width: 768px) {
+            width: 100% !important;
+            object-fit: cover !important;
+        }
+    }
+
+    
+}

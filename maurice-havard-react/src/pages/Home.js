@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { WOW } from 'wowjs';
+import { Container, Row, Col, Carousel, Button } from 'react-bootstrap';
 import 'wowjs/css/libs/animate.css';
 
 // Import images
@@ -11,8 +12,6 @@ import carousel2 from '../assets/img/home2.jpg';
 import Projects from '../components/Projects';
 
 function Home() {
-  const [currentYear] = useState(new Date().getFullYear());
-  const yearsExperience = currentYear - 1971;
 
   useEffect(() => {
     new WOW().init();
@@ -66,53 +65,47 @@ function Home() {
   return (
     <>
       {/* Carousel Start */}
-      <div className="container-fluid p-0 wow fadeIn" data-wow-delay="0.1s">
-        <div id="header-carousel" className="carousel slide" data-bs-ride="carousel">
-          <div className="carousel-inner">
-            <div className="carousel-item active">
-              <img className="w-100" src={carousel1} alt="Image" />
-              <div className="carousel-caption">
-                <div className="container">
-                  <div className="row justify-content-center">
-                    <div className="col-lg-8">
-                      <h1 className="display-1 text-white mb-5 animated slideInDown">Piscines et Jardins depuis 1971</h1>
-                      <Link to="/about" className="btn btn-primary py-sm-3 px-sm-4">Explorer</Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="carousel-item">
-              <img className="w-100" src={carousel2} alt="Image" />
-              <div className="carousel-caption">
-                <div className="container">
-                  <div className="row justify-content-center">
-                    <div className="col-lg-7">
-                      <h1 className="display-1 text-white mb-5 animated slideInDown">Piscines et Jardins depuis 1971</h1>
-                      <Link to="/about" className="btn btn-primary py-sm-3 px-sm-4">Explorer</Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <button className="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
-            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Précédent</span>
-          </button>
-          <button className="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
-            <span className="carousel-control-next-icon" aria-hidden="true"></span>
-            <span className="visually-hidden">Suivant</span>
-          </button>
-        </div>
-      </div>
+      <Container fluid className="p-0 wow fadeIn" data-wow-delay="0.05s">
+        <Carousel id="header-carousel" className="slide" interval={5000}>
+          <Carousel.Item>
+            <img className="w-100" src={carousel1} alt="Image" />
+            <Carousel.Caption>
+              <Container>
+                <Row className="justify-content-center">
+                  <Col lg={8}>
+                    <h1 className="display-1 text-white mb-5 animated slideInDown">Piscines et Jardins depuis 1971</h1>
+                    <Link to="/about">
+                      <Button variant="primary" className="py-sm-3 px-sm-4">Explorer</Button>
+                    </Link>
+                  </Col>
+                </Row>
+              </Container>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img className="w-100" src={carousel2} alt="Image" />
+            <Carousel.Caption>
+              <Container>
+                <Row className="justify-content-center">
+                  <Col lg={7}>
+                    <h1 className="display-1 text-white mb-5 animated slideInDown">Piscines et Jardins depuis 1971</h1>
+                    <Link to="/about">
+                      <Button variant="primary" className="py-sm-3 px-sm-4">Explorer</Button>
+                    </Link>
+                  </Col>
+                </Row>
+              </Container>
+            </Carousel.Caption>
+          </Carousel.Item>
+        </Carousel>
+      </Container>
       {/* Carousel End */}
 
       {/* Top Feature Start */}
-      <div className="container-fluid top-feature py-5 pt-lg-0">
-        <div className="container py-5 pt-lg-0">
-          <div className="row gx-0">
-            <div className="col-lg-4 wow fadeIn" data-wow-delay="0.1s">
+      <Container fluid className="top-feature py-5 pt-lg-0">
+        <Container className="py-5 pt-lg-0">
+          <Row className="gx-0 wow" data-wow-delay="0.05s">
+            <Col lg={4}>
               <div className="bg-white shadow d-flex align-items-center h-100 px-5" style={{minHeight: "160px"}}>
                 <div className="d-flex">
                   <div className="flex-shrink-0 btn-lg-square rounded-circle bg-light">
@@ -124,8 +117,8 @@ function Home() {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="col-lg-4 wow fadeIn" data-wow-delay="0.3s">
+            </Col>
+            <Col lg={4}>
               <div className="bg-white shadow d-flex align-items-center h-100 px-5" style={{minHeight: "160px"}}>
                 <div className="d-flex">
                   <div className="flex-shrink-0 btn-lg-square rounded-circle bg-light">
@@ -137,8 +130,8 @@ function Home() {
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="col-lg-4 wow fadeIn" data-wow-delay="0.5s">
+            </Col>
+            <Col lg={4}>
               <div className="bg-white shadow d-flex align-items-center h-100 px-5" style={{minHeight: "160px"}}>
                 <div className="d-flex">
                   <div className="flex-shrink-0 btn-lg-square rounded-circle bg-light">
@@ -150,281 +143,151 @@ function Home() {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
+            </Col>
+          </Row>
+        </Container>
+      </Container>
       {/* Top Feature End */}
 
-      {/* About Start */}
-      <div className="container-xxl py-5">
-        <div className="container">
-          <div className="row g-5 align-items-end">
-            <div className="col-lg-3 col-md-5 wow fadeIn" data-wow-delay="0.1s">
-              <img className="img-fluid rounded" data-wow-delay="0.1s" src="/img/about.jpg" alt="About" />
-            </div>
-            <div className="col-lg-6 col-md-7 wow fadeIn" data-wow-delay="0.3s">
-              <h1 className="display-1 text-primary mb-0">{yearsExperience}</h1>
-              <p className="text-primary mb-4">Années d'expérience</p>
-              <h1 className="display-5 mb-4">Paysagiste (entreprise de parcs et jardins)</h1>
-              <p className="mb-4">Créateur et concepteur de jardins depuis 1971</p>
-              <Link to="/about" className="btn btn-primary py-3 px-4">Explorer</Link>
-            </div>
-            <div className="col-lg-3 col-md-12 wow fadeIn" data-wow-delay="0.5s">
-              <div className="row g-5">
-                <div className="col-12 col-sm-6 col-lg-12">
-                  <div className="border-start ps-4">
-                    <i className="fa fa-award fa-3x text-primary mb-3"></i>
-                    <h4 className="mb-3">Expertise reconnue</h4>
-                    <span>Plus de 50 ans d'expérience</span>
-                  </div>
-                </div>
-                <div className="col-12 col-sm-6 col-lg-12">
-                  <div className="border-start ps-4">
-                    <i className="fa fa-users fa-3x text-primary mb-3"></i>
-                    <h4 className="mb-3">Équipe qualifiée</h4>
-                    <span>Professionnels passionnés</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* About End */}
-
       {/* Facts Start */}
-      <div className="container-fluid facts my-5 py-5">
-        <div className="container py-5">
-          <div className="row g-5">
-            <div className="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
+      <Container fluid className="facts my-5 py-5">
+        <Container className="py-5">
+          <Row className="g-5">
+            <Col sm={6} lg={3} className="text-center wow fadeIn" data-wow-delay="0.1s">
               <h1 className="display-4 text-white" data-toggle="counter-up">52</h1>
               <span className="fs-5 fw-semi-bold text-white">Années d'expérience</span>
-            </div>
-            <div className="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
+            </Col>
+            <Col sm={6} lg={3} className="text-center wow fadeIn" data-wow-delay="0.3s">
               <h1 className="display-4 text-white" data-toggle="counter-up">1000+</h1>
               <span className="fs-5 fw-semi-bold text-white">Projets réalisés</span>
-            </div>
-            <div className="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
+            </Col>
+            <Col sm={6} lg={3} className="text-center wow fadeIn" data-wow-delay="0.5s">
               <h1 className="display-4 text-white" data-toggle="counter-up">15</h1>
               <span className="fs-5 fw-semi-bold text-white">Professionnels qualifiés</span>
-            </div>
-            <div className="col-sm-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
+            </Col>
+            <Col sm={6} lg={3} className="text-center wow fadeIn" data-wow-delay="0.7s">
               <h1 className="display-4 text-white" data-toggle="counter-up">98%</h1>
               <span className="fs-5 fw-semi-bold text-white">Clients satisfaits</span>
-            </div>
-          </div>
-        </div>
-      </div>
+            </Col>
+          </Row>
+        </Container>
+      </Container>
       {/* Facts End */}
 
       {/* Features Start */}
-      <div className="container-xxl py-5">
-        <div className="container">
-          <div className="row g-5 align-items-center">
-            <div className="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+      <Container fluid className="py-5">
+        <Container>
+          <Row className="g-5 align-items-center">
+            <Col lg={6} className="wow fadeInUp" data-wow-delay="0.1s">
               <p className="fs-5 fw-bold text-primary">Pourquoi nous choisir</p>
               <h1 className="display-5 mb-4">Notre engagement pour votre satisfaction</h1>
               <p className="mb-4">Depuis plus de 50 ans, nous mettons notre expertise et notre passion au service de vos projets d'aménagement paysager. Notre équipe qualifiée s'engage à vous offrir des solutions personnalisées et un service de qualité.</p>
-              <Link to="/about" className="btn btn-primary py-3 px-4">En savoir plus</Link>
-            </div>
-            <div className="col-lg-6">
-              <div className="row g-4 align-items-center">
-                <div className="col-md-6">
-                  <div className="row g-4">
-                    <div className="col-12 wow fadeIn" data-wow-delay="0.3s">
+              <Link to="/about">
+                <Button variant="primary" className="py-3 px-4">En savoir plus</Button>
+              </Link>
+            </Col>
+            <Col lg={6}>
+              <Row className="g-4 align-items-center">
+                <Col md={6}>
+                  <Row className="g-4">
+                    <Col xs={12} className="wow fadeIn" data-wow-delay="0.3s">
                       <div className="text-center rounded py-5 px-4" style={{boxShadow: "0 0 45px rgba(0,0,0,.08)"}}>
                         <div className="btn-square bg-light rounded-circle mx-auto mb-4" style={{width: "90px", height: "90px"}}>
                           <i className="fa fa-check fa-3x text-primary"></i>
                         </div>
                         <h4 className="mb-0">Satisfaction garantie</h4>
                       </div>
-                    </div>
-                    <div className="col-12 wow fadeIn" data-wow-delay="0.5s">
+                    </Col>
+                    <Col xs={12} className="wow fadeIn" data-wow-delay="0.5s">
                       <div className="text-center rounded py-5 px-4" style={{boxShadow: "0 0 45px rgba(0,0,0,.08)"}}>
                         <div className="btn-square bg-light rounded-circle mx-auto mb-4" style={{width: "90px", height: "90px"}}>
                           <i className="fa fa-users fa-3x text-primary"></i>
                         </div>
                         <h4 className="mb-0">Équipe experte</h4>
                       </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-6 wow fadeIn" data-wow-delay="0.7s">
-                  <div className="text-center rounded py-5 px-4" style={{boxShadow: "0 0 45px rgba(0,0,0,.08)"}}>
-                    <div className="btn-square bg-light rounded-circle mx-auto mb-4" style={{width: "90px", height: "90px"}}>
-                      <i className="fa fa-tools fa-3x text-primary"></i>
-                    </div>
-                    <h4 className="mb-0">Services complets</h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+                    </Col>
+                  </Row>
+                </Col>
+                <Col md={6}>
+                  <Row className="g-4">
+                    <Col xs={12} className="wow fadeIn" data-wow-delay="0.7s">
+                      <div className="text-center rounded py-5 px-4" style={{boxShadow: "0 0 45px rgba(0,0,0,.08)"}}>
+                        <div className="btn-square bg-light rounded-circle mx-auto mb-4" style={{width: "90px", height: "90px"}}>
+                          <i className="fa fa-check fa-3x text-primary"></i>
+                        </div>
+                        <h4 className="mb-0">Qualité de service</h4>
+                      </div>
+                    </Col>
+                    <Col xs={12} className="wow fadeIn" data-wow-delay="0.9s">
+                      <div className="text-center rounded py-5 px-4" style={{boxShadow: "0 0 45px rgba(0,0,0,.08)"}}>
+                        <div className="btn-square bg-light rounded-circle mx-auto mb-4" style={{width: "90px", height: "90px"}}>
+                          <i className="fa fa-drafting-compass fa-3x text-primary"></i>
+                        </div>
+                        <h4 className="mb-0">Solutions innovantes</h4>
+                      </div>
+                    </Col>
+                  </Row>
+                </Col>
+              </Row>
+            </Col>
+          </Row>
+        </Container>
+      </Container>
       {/* Features End */}
 
       {/* Service Start */}
-      <div className="container-xxl py-5">
-        <div className="container">
+      <Container fluid className="py-5">
+        <Container>
           <div className="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style={{maxWidth: "500px"}}>
             <p className="fs-5 fw-bold text-primary">Nos Services</p>
-            <h1 className="display-5 mb-5">Piscines et Jardins</h1>
+            <h1 className="display-5 mb-5">Services de qualité pour votre jardin</h1>
           </div>
-          <div className="row g-4">
+          <Row className="g-4">
             {services.map((service, index) => (
-              <div key={index} className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay={service.delay}>
+              <Col lg={4} md={6} className="wow fadeInUp" data-wow-delay={service.delay} key={index}>
                 <div className="service-item rounded d-flex h-100">
                   <div className="service-img rounded">
                     <img className="img-fluid" src={service.image} alt={service.title} />
                   </div>
                   <div className="service-text rounded p-5">
-                    <div className="btn-square rounded-circle mx-auto mb-3">
-                      <img className="img-fluid" src={service.icon} alt="Icon" />
+                    <div className="btn-square rounded-circle mx-auto mb-4">
+                      <img className="img-fluid" src={service.icon} alt={service.title} />
                     </div>
                     <h4 className="mb-3">{service.title}</h4>
                     <p className="mb-4">{service.description}</p>
-                    <Link to="/services" className="btn btn-sm">
-                      <i className="fa fa-plus text-primary me-2"></i>En savoir plus
+                    <Link to="/quote">
+                      <Button variant="primary" className="px-4">Demander un devis</Button>
                     </Link>
                   </div>
                 </div>
-              </div>
+              </Col>
             ))}
-          </div>
-        </div>
-      </div>
+          </Row>
+        </Container>
+      </Container>
       {/* Service End */}
 
-      {/* Quote Start */}
-      <div className="container-fluid quote my-5 py-5" data-image-src="../assets/img/carousel-1.jpg">
-        <div className="container py-5">
-          <div className="row justify-content-center">
-            <div className="col-lg-7">
-              <div className="bg-white rounded p-4 p-sm-5 wow fadeIn" data-wow-delay="0.5s">
-                <h1 className="display-5 text-center mb-5">Demander un devis gratuit</h1>
-                <form>
-                  <div className="row g-3">
-                    <div className="col-sm-6">
-                      <div className="form-floating">
-                        <input type="text" className="form-control bg-light border-0" id="name" placeholder="Votre Nom Prénom" />
-                        <label htmlFor="name">Votre Nom Prénom</label>
-                      </div>
-                    </div>
-                    <div className="col-sm-6">
-                      <div className="form-floating">
-                        <input type="email" className="form-control bg-light border-0" id="email" placeholder="Votre email" />
-                        <label htmlFor="email">Votre email</label>
-                      </div>
-                    </div>
-                    <div className="col-sm-6">
-                      <div className="form-floating">
-                        <input type="tel" className="form-control bg-light border-0" id="phone" placeholder="Votre téléphone" />
-                        <label htmlFor="phone">Votre téléphone</label>
-                      </div>
-                    </div>
-                    <div className="col-sm-6">
-                      <div className="form-floating">
-                        <select className="form-select bg-light border-0" id="service">
-                          <option value="">Choisir un service</option>
-                          <option value="Aménagement Paysager">Aménagement Paysager</option>
-                          <option value="Études et Plans">Études et Plans</option>
-                          <option value="Maçonnerie Paysagère">Maçonnerie Paysagère</option>
-                          <option value="Entretien des Espaces Verts">Entretien des Espaces Verts</option>
-                          <option value="Élagage et Taille">Élagage et Taille</option>
-                          <option value="Création de Piscines">Création de Piscines</option>
-                        </select>
-                        <label htmlFor="service">Type de service</label>
-                      </div>
-                    </div>
-                    <div className="col-12">
-                      <div className="form-floating">
-                        <textarea className="form-control bg-light border-0" placeholder="Votre message" id="message" style={{height: "100px"}}></textarea>
-                        <label htmlFor="message">Message</label>
-                      </div>
-                    </div>
-                    <div className="col-12 text-center">
-                      <button className="btn btn-primary py-3 px-4" type="submit">Envoyer</button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* Quote End */}
-
-      {/* Projects Section */}
+      {/* Projects Start */}
       <Projects />
+      {/* Projects End */}
 
-      {/* FAQ Start */}
-      <div className="container-xxl py-5">
-                <div className="container">
-                    <div className="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style={{ maxWidth: "500px" }}>
-                        <p className="fs-5 fw-bold text-primary">FAQ</p>
-                        <h1 className="display-5 mb-5">Questions Fréquentes</h1>
-                    </div>
-                    <div className="row justify-content-center">
-                        <div className="col-lg-10">
-                            <div className="accordion" id="accordionFAQ">
-                                <div className="accordion-item wow fadeInUp" data-wow-delay="0.1s">
-                                    <h2 className="accordion-header" id="headingOne">
-                                        <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                            Combien coûte la construction d'une piscine ?
-                                        </button>
-                                    </h2>
-                                    <div id="collapseOne" className="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionFAQ">
-                                        <div className="accordion-body">
-                                            Le coût d'une piscine varie en fonction de plusieurs facteurs : dimensions, type de construction, équipements choisis, aménagements périphériques... Nous établissons un devis détaillé et gratuit pour chaque projet, tenant compte de vos souhaits et de votre budget.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="accordion-item wow fadeInUp" data-wow-delay="0.2s">
-                                    <h2 className="accordion-header" id="headingTwo">
-                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                            Quels sont les délais de réalisation pour un projet paysager ?
-                                        </button>
-                                    </h2>
-                                    <div id="collapseTwo" className="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionFAQ">
-                                        <div className="accordion-body">
-                                            Les délais varient selon l'ampleur du projet et la saison. En moyenne, un projet d'aménagement paysager peut prendre de quelques jours à plusieurs semaines. Nous établissons un planning précis lors de l'étude de votre projet.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="accordion-item wow fadeInUp" data-wow-delay="0.3s">
-                                    <h2 className="accordion-header" id="headingThree">
-                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                            Proposez-vous un service d'entretien régulier ?
-                                        </button>
-                                    </h2>
-                                    <div id="collapseThree" className="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionFAQ">
-                                        <div className="accordion-body">
-                                            Oui, nous proposons des contrats d'entretien adaptés à vos besoins, que ce soit pour l'entretien de votre jardin ou de votre piscine. Nos équipes interviennent selon un calendrier établi ensemble.
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="accordion-item wow fadeInUp" data-wow-delay="0.4s">
-                                    <h2 className="accordion-header" id="headingFour">
-                                        <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                            Quelles sont les garanties proposées ?
-                                        </button>
-                                    </h2>
-                                    <div id="collapseFour" className="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionFAQ">
-                                        <div className="accordion-body">
-                                            Nous offrons les garanties légales sur nos réalisations et sommes assurés pour tous nos travaux. Pour les piscines, nous proposons des garanties spécifiques sur l'étanchéité et les équipements selon les fabricants.
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            {/* FAQ End */}
-
-      
+      {/* Quote Start */}
+      <Container fluid className="quote my-5 py-5">
+        <Container className="py-5">
+          <Row className="g-5 justify-content-center">
+            <Col lg={7}>
+              <div className="bg-white rounded p-5 h-100">
+                <h1 className="display-5 mb-4">Demandez un Devis Gratuit</h1>
+                <p className="mb-4">Contactez-nous pour obtenir un devis personnalisé pour votre projet d'aménagement paysager ou de création de piscine.</p>
+                <Link to="/quote" className="btn btn-primary py-3 px-4">
+                  <Button variant="primary" className="py-3 px-4">Demander un Devis</Button>
+                </Link>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </Container>
+      {/* Quote End */}
     </>
   );
 }

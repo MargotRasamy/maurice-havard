@@ -3,6 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { WOW } from 'wowjs';
 import emailjs from '@emailjs/browser';
 import { EMAILJS_CONFIG } from '../config/emailjs';
+import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import 'wowjs/css/libs/animate.css';
 
 function Quote() {
@@ -38,7 +39,7 @@ function Quote() {
         <>
             {/* Page Header Start */}
             <div className="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-                <div className="container text-center py-5">
+                <Container className="text-center py-5">
                     <h1 className="display-3 text-white mb-4 animated slideInDown">Devis Gratuit</h1>
                     <nav aria-label="breadcrumb animated slideInDown">
                         <ol className="breadcrumb justify-content-center mb-0">
@@ -46,62 +47,58 @@ function Quote() {
                             <li className="breadcrumb-item active" aria-current="page">Devis Gratuit</li>
                         </ol>
                     </nav>
-                </div>
+                </Container>
             </div>
             {/* Page Header End */}
 
             {/* Quote Start */}
-            <div className="container-fluid py-5">
-                <div className="container">
+            <Container fluid className="py-5">
+                <Container>
                     <div className="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style={{maxWidth: "500px"}}>
                         <p className="fs-5 fw-bold text-primary">Devis Gratuit</p>
                         <h1 className="display-5 mb-5">Demandez un Devis Gratuit</h1>
                     </div>
-                    <div className="row justify-content-center">
-                        <div className="col-lg-7">
+                    <Row className="justify-content-center">
+                        <Col lg={7}>
                             <div className="bg-light rounded p-4 p-sm-5 wow fadeInUp" data-wow-delay="0.2s">
-                                <form ref={form} onSubmit={sendEmail}>
-                                    <div className="row g-3">
-                                        <div className="col-sm-6">
-                                            <div className="form-floating">
-                                                <input 
-                                                    type="text" 
-                                                    className="form-control border-0" 
+                                <Form ref={form} onSubmit={sendEmail}>
+                                    <Row className="g-3">
+                                        <Col sm={6}>
+                                            <Form.Floating>
+                                                <Form.Control
+                                                    type="text"
                                                     name="user_name"
                                                     placeholder="Votre Nom"
                                                     required
                                                 />
-                                                <label htmlFor="name">Votre Nom</label>
-                                            </div>
-                                        </div>
-                                        <div className="col-sm-6">
-                                            <div className="form-floating">
-                                                <input 
-                                                    type="email" 
-                                                    className="form-control border-0" 
+                                                <Form.Label>Votre Nom</Form.Label>
+                                            </Form.Floating>
+                                        </Col>
+                                        <Col sm={6}>
+                                            <Form.Floating>
+                                                <Form.Control
+                                                    type="email"
                                                     name="user_email"
                                                     placeholder="Votre Email"
                                                     required
                                                 />
-                                                <label htmlFor="email">Votre Email</label>
-                                            </div>
-                                        </div>
-                                        <div className="col-sm-6">
-                                            <div className="form-floating">
-                                                <input 
-                                                    type="text" 
-                                                    className="form-control border-0" 
+                                                <Form.Label>Votre Email</Form.Label>
+                                            </Form.Floating>
+                                        </Col>
+                                        <Col sm={6}>
+                                            <Form.Floating>
+                                                <Form.Control
+                                                    type="text"
                                                     name="phone"
                                                     placeholder="Votre Téléphone"
                                                     required
                                                 />
-                                                <label htmlFor="mobile">Votre Téléphone</label>
-                                            </div>
-                                        </div>
-                                        <div className="col-sm-6">
-                                            <div className="form-floating">
-                                                <select 
-                                                    className="form-select border-0" 
+                                                <Form.Label>Votre Téléphone</Form.Label>
+                                            </Form.Floating>
+                                        </Col>
+                                        <Col sm={6}>
+                                            <Form.Floating>
+                                                <Form.Select
                                                     name="service"
                                                     defaultValue={projectFromUrl || ""}
                                                     required
@@ -113,34 +110,34 @@ function Quote() {
                                                     <option value="Entretien des Espaces Verts">Entretien des Espaces Verts</option>
                                                     <option value="Élagage et Taille">Élagage et Taille</option>
                                                     <option value="Création de Piscines">Création de Piscines</option>
-                                                </select>
-                                                <label htmlFor="service">Type de Service</label>
-                                            </div>
-                                        </div>
-                                        <div className="col-12">
-                                            <div className="form-floating">
-                                                <textarea 
-                                                    className="form-control border-0" 
-                                                    placeholder="Laissez votre message ici" 
+                                                </Form.Select>
+                                                <Form.Label>Type de Service</Form.Label>
+                                            </Form.Floating>
+                                        </Col>
+                                        <Col xs={12}>
+                                            <Form.Floating>
+                                                <Form.Control
+                                                    as="textarea"
                                                     name="message"
+                                                    placeholder="Laissez votre message ici"
                                                     style={{height: "100px"}}
                                                     required
-                                                ></textarea>
-                                                <label htmlFor="message">Message</label>
-                                            </div>
-                                        </div>
-                                        <div className="col-12 text-center">
-                                            <button className="btn btn-primary py-3 px-4" type="submit">
+                                                />
+                                                <Form.Label>Message</Form.Label>
+                                            </Form.Floating>
+                                        </Col>
+                                        <Col xs={12} className="text-center">
+                                            <Button variant="primary" type="submit" className="py-3 px-4">
                                                 Envoyer
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
+                                            </Button>
+                                        </Col>
+                                    </Row>
+                                </Form>
                             </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </Container>
             {/* Quote End */}
         </>
     );

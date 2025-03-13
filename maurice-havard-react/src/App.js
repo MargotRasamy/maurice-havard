@@ -14,7 +14,7 @@ import './styles/global.css';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import Home from './pages/Home';
-import About from './pages/About';
+import About from './pages/About/About';
 import Services from './pages/Services';
 import Projects from './pages/Projects';
 import Team from './pages/Team';

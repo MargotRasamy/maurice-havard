@@ -212,7 +212,7 @@ h6,
 }
 
 .page-header {
-    background: linear-gradient(rgba(15, 66, 41, .6), rgba(15, 66, 41, .6)), url(../assets/img/carousel-1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(15, 66, 41, .6), rgba(15, 66, 41, .6)), url(../assets/img/home.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -241,7 +241,7 @@ h6,
 .facts,
 .quote {
     position: relative;
-    background: linear-gradient(rgba(15, 66, 41, .6), rgba(15, 66, 41, .6)), url(../assets/img/carousel-1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(15, 66, 41, .6), rgba(15, 66, 41, .6)), url(../assets/img/pool2.jpg) center center no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -313,19 +313,12 @@ h6,
 }
 
 .service-item .service-text .btn {
-    width: 31px;
-    height: 31px;
+    padding: 10px 20px;
     display: inline-flex;
     align-items: center;
     color: var(--dark);
     background: var(--light);
     white-space: nowrap;
-    overflow: hidden;
-    transition: .3s;
-}
-
-.service-item:hover .service-text .btn {
-    width: 112px;
 }
 
 

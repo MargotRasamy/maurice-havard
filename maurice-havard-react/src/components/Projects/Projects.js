@@ -5,12 +5,12 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // Import project images
-import project1 from '../assets/img/pool1.jpg';
-import project2 from '../assets/img/pool2.jpg';
-import project3 from '../assets/img/pool3.jpg';
-import project4 from '../assets/img/pool4.jpg';
-import project5 from '../assets/img/landscape3.jpg';
-import project6 from '../assets/img/landscape1.jpg';
+import project1 from '../../assets/img/pool1.jpg';
+import project2 from '../../assets/img/pool2.jpg';
+import project3 from '../../assets/img/pool3.jpg';
+import project4 from '../../assets/img/pool4.jpg';
+import project5 from '../../assets/img/landscape3.jpg';
+import project6 from '../../assets/img/landscape1.jpg';
 
 const PROJECT_CATEGORIES = {
   ALL: '*',

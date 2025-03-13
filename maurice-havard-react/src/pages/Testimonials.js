@@ -24,7 +24,7 @@ function Testimonials() {
       delay: '0.3s'
     },
     {
-      image: 'img/testimonial-3.jpg',
+      image: 'img/testimonial-1.jpg',
       content: 'Nous sommes ravis des solutions d\'aménagement proposées pour notre restaurant. L\'équipe a su créer un espace extérieur accueillant qui enchante nos clients. Un travail remarquable !',
       name: 'Sophie Laurent',
       profession: 'Restauratrice',

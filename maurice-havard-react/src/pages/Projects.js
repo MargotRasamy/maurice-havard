@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
-
+import ProjectShowcase from '../components/ProjectShowcase/ProjectShowcase';
 function Projects() {
   const [filter, setFilter] = useState('*');
 
@@ -73,65 +73,7 @@ function Projects() {
       </div>
       {/* Page Header End */}
 
-      {/* Projects Start */}
-      <div className="container-xxl py-5">
-        <div className="container">
-          <div className="text-center mx-auto wow fadeInUp" data-aos="fade-up" data-aos-delay="100" style={{maxWidth: "500px"}}>
-            <p className="fs-5 fw-bold text-primary">Nos Réalisations</p>
-            <h1 className="display-5 mb-5">Quelques-unes de Nos Réalisations</h1>
-          </div>
-          <div className="row wow fadeInUp" data-aos="fade-up" data-aos-delay="300">
-            <div className="col-12 text-center">
-              <ul className="list-inline rounded mb-5" id="portfolio-flters">
-                <li 
-                  className={`mx-2 ${filter === '*' ? 'active' : ''}`} 
-                  onClick={() => setFilter('*')}
-                >
-                  Tout
-                </li>
-                <li 
-                  className={`mx-2 ${filter === 'first' ? 'active' : ''}`}
-                  onClick={() => setFilter('first')}
-                >
-                  Projets Terminés
-                </li>
-                <li 
-                  className={`mx-2 ${filter === 'second' ? 'active' : ''}`}
-                  onClick={() => setFilter('second')}
-                >
-                  Projets en Cours
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="row g-4 portfolio-container">
-            {filteredProjects.map((project, index) => (
-              <div 
-                key={index} 
-                className={`col-lg-4 col-md-6 portfolio-item ${project.category} wow fadeInUp`}
-                data-aos="fade-up"
-                data-aos-delay={project.delay}
-              >
-                <div className="portfolio-inner rounded">
-                  <img className="img-fluid" src={project.image} alt={project.title} />
-                  <div className="portfolio-text">
-                    <h4 className="text-white mb-4">{project.title}</h4>
-                    <div className="d-flex">
-                      <a className="btn btn-lg-square rounded-circle mx-2" href={project.image} data-lightbox="portfolio">
-                        <i className="fa fa-eye"></i>
-                      </a>
-                      <Link to={`/quote?project=${project.title}`} className="btn btn-lg-square rounded-circle mx-2">
-                        <i className="fa fa-link"></i>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-      {/* Projects End */}
+     <ProjectShowcase />
     </>
   );
 }

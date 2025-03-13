@@ -9,7 +9,7 @@ import carousel1 from '../assets/img/home.jpg';
 import carousel2 from '../assets/img/home2.jpg';
 
 // Import components
-import Projects from '../components/Projects';
+import Projects from '../components/Projects/Projects';
 
 function Home() {
 
@@ -234,38 +234,6 @@ function Home() {
         </Container>
       </Container>
       {/* Features End */}
-
-      {/* Service Start */}
-      <Container fluid className="py-5">
-        <Container>
-          <div className="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style={{maxWidth: "500px"}}>
-            <p className="fs-5 fw-bold text-primary">Nos Services</p>
-            <h1 className="display-5 mb-5">Services de qualité pour votre jardin</h1>
-          </div>
-          <Row className="g-4">
-            {services.map((service, index) => (
-              <Col lg={4} md={6} className="wow fadeInUp" data-wow-delay={service.delay} key={index}>
-                <div className="service-item rounded d-flex h-100">
-                  <div className="service-img rounded">
-                    <img className="img-fluid" src={service.image} alt={service.title} />
-                  </div>
-                  <div className="service-text rounded p-5">
-                    <div className="btn-square rounded-circle mx-auto mb-4">
-                      <img className="img-fluid" src={service.icon} alt={service.title} />
-                    </div>
-                    <h4 className="mb-3">{service.title}</h4>
-                    <p className="mb-4">{service.description}</p>
-                    <Link to="/quote">
-                      <Button variant="primary" className="px-4">Demander un devis</Button>
-                    </Link>
-                  </div>
-                </div>
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      </Container>
-      {/* Service End */}
 
       {/* Projects Start */}
       <Projects />

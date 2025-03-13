@@ -84,15 +84,6 @@ const ProjectCard = ({ project }) => (
           >
             <i className="fa fa-eye"></i>
           </Button>
-          <Button
-            variant="outline-light"
-            className="btn-lg-square rounded-circle mx-2"
-            as={Link}
-            to={`/quote?project=${encodeURIComponent(project.title)}`}
-            aria-label={`Demander un devis pour ${project.title}`}
-          >
-            <i className="fa fa-link"></i>
-          </Button>
         </div>
       </div>
     </div>
@@ -141,8 +132,8 @@ function Projects() {
     <Container fluid className="py-5">
       <Container>
         <div className="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style={{maxWidth: "500px"}}>
-          <p className="fs-5 fw-bold text-primary">Nos Projets</p>
-          <h1 className="display-5 mb-5">Découvrez nos réalisations</h1>
+          <p className="fs-5 fw-bold text-primary">Notre galerie</p>
+          <h1 className="display-5 mb-5">Piscines et Jardins réalisés</h1>
         </div>
         
         <Row className="justify-content-center mb-5">

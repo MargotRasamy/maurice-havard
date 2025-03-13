@@ -1,0 +1,114 @@
+@import '../../styles/utils/utils.scss';
+
+.engagement-section {
+    padding: 5rem 0;
+    background: #fff;
+
+    .section-title {
+        margin-bottom: 2rem;
+
+        .subtitle {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+        }
+
+        p {
+            color: #666;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .features-grid {
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 0 45px rgba(0,0,0,.08);
+            transition: all 0.3s ease;
+            height: 100%;
+
+            &:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 30px rgba(0,0,0,.12);
+            }
+
+            .icon-wrapper {
+                width: 90px;
+                height: 90px;
+                background: #f8f9fa;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto 1.5rem;
+                transition: all 0.3s ease;
+
+                i {
+                    font-size: 2.5rem;
+                    color: var(--primary);
+                }
+            }
+
+            h4 {
+                font-size: 1.2rem;
+                color: #333;
+                margin-bottom: 0;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .btn-primary {
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
+        border-radius: 50px;
+        transition: all 0.3s ease;
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+    }
+}
+
+// Responsive adjustments
+@media (max-width: 991.98px) {
+    .engagement-section {
+        padding: 3rem 0;
+
+        .section-title {
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 767.98px) {
+    .engagement-section {
+        padding: 2rem 0;
+
+        .section-title {
+            h2 {
+                font-size: 1.8rem;
+            }
+        }
+
+        .features-grid {
+            .feature-card {
+                padding: 1.5rem;
+            }
+        }
+    }
+} 

@@ -63,7 +63,6 @@ function Footer() {
               <Link className="btn btn-link" to="/contact">Contact</Link>
               <Link className="btn btn-link" to="/services">Nos Services</Link>
               <Link className="btn btn-link" to="/projects">Nos Réalisations</Link>
-              <Link className="btn btn-link" to="/quote">Devis Gratuit</Link>
             </div>
           </div>
         </div>

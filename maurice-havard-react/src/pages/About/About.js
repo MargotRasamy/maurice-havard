@@ -95,9 +95,6 @@ function About() {
         </div>
       </div>
       {/* Facts End */}
-
-      {/* Projects Showcase */}
-      <ProjectShowcase />
     </>
   );
 }

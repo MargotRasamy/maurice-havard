@@ -48,10 +48,8 @@ function Navbar() {
             
             {/* Pages Dropdown */}
             <div className="nav-item dropdown">
-              <a href="#" className={`nav-link dropdown-toggle ${['/team', '/testimonials', '/quote', '/404'].includes(location.pathname) ? 'active' : ''}`} data-bs-toggle="dropdown">Pages</a>
+              <a href="#" className={`nav-link dropdown-toggle ${['/404'].includes(location.pathname) ? 'active' : ''}`} data-bs-toggle="dropdown">Pages</a>
               <div className="dropdown-menu bg-light m-0">
-                <Link to="/testimonials" className={`dropdown-item ${location.pathname === '/testimonials' ? 'active' : ''}`}>Témoignages</Link>
-                <Link to="/quote" className={`dropdown-item ${location.pathname === '/quote' ? 'active' : ''}`}>Devis Gratuit</Link>
                 <Link to="/404" className={`dropdown-item ${location.pathname === '/404' ? 'active' : ''}`}>Page 404</Link>
               </div>
             </div>

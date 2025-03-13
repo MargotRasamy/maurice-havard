@@ -33,6 +33,7 @@
     "react-scripts": "5.0.1",
     "react-slick": "^0.30.3",
     "sass-loader": "^16.0.5",
+    "swiper": "^11.2.5",
     "waypoints": "^4.0.1",
     "web-vitals": "^2.1.4",
     "wowjs": "^1.1.3",

@@ -63,7 +63,7 @@ const PROJECTS_DATA = [
   }
 ];
 
-const ProjectCard = ({ project }) => (
+const ProjectCard = ({ project, onViewClick }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
@@ -79,7 +79,7 @@ const ProjectCard = ({ project }) => (
           <Button
             variant="outline-light"
             className="btn-lg-square rounded-circle mx-2"
-            onClick={() => window.open(project.image, '_blank')}
+            onClick={() => onViewClick(project)}
             aria-label={`Voir ${project.title} en grand format`}
           >
             <i className="fa fa-eye"></i>
@@ -97,7 +97,8 @@ ProjectCard.propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired
-  }).isRequired
+  }).isRequired,
+  onViewClick: PropTypes.func.isRequired
 };
 
 const FilterButton = ({ category, label, isActive, onClick }) => (
@@ -120,6 +121,8 @@ FilterButton.propTypes = {
 
 function Projects() {
   const [filter, setFilter] = useState(PROJECT_CATEGORIES.ALL);
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [showModal, setShowModal] = useState(false);
 
   const filteredProjects = useMemo(() => 
     PROJECTS_DATA.filter(project => 
@@ -127,6 +130,11 @@ function Projects() {
     ),
     [filter]
   );
+
+  const handleViewClick = (project) => {
+    setSelectedProject(project);
+    setShowModal(true);
+  };
 
   return (
     <Container fluid className="py-5">
@@ -163,11 +171,34 @@ function Projects() {
           <AnimatePresence>
             {filteredProjects.map(project => (
               <Col key={project.id} lg={4} md={6}>
-                <ProjectCard project={project} />
+                <ProjectCard project={project} onViewClick={handleViewClick} />
               </Col>
             ))}
           </AnimatePresence>
         </Row>
+
+        {/* Project Modal */}
+        {showModal && selectedProject && (
+          <div className="modal project-modal show" style={{ display: 'block' }}>
+            <div className="modal-dialog modal-lg modal-dialog-centered">
+              <div className="modal-content">
+                <div className="modal-body">
+                  <button className="modal-close" onClick={() => setShowModal(false)}>
+                    <i className="fas fa-times"></i>
+                  </button>
+                  <div className="modal-image">
+                    <img src={selectedProject.image} alt={selectedProject.title} />
+                  </div>
+                  <div className="modal-details">
+                    <h3>{selectedProject.title}</h3>
+                    <p>{selectedProject.description}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+        {showModal && <div className="modal-backdrop show"></div>}
       </Container>
     </Container>
   );

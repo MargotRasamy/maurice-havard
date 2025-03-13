@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 // Import project images
-import project1 from '../assets/img/project/project-1.jpg';
-import project2 from '../assets/img/project/project-2.jpg';
-import project3 from '../assets/img/project/project-3.jpg';
-import project4 from '../assets/img/project/project-4.jpg';
-import project5 from '../assets/img/project/project-5.jpg';
-import project6 from '../assets/img/project/project-6.jpg';
+import project1 from '../assets/img/pool1.jpg';
+import project2 from '../assets/img/pool2.jpg';
+import project3 from '../assets/img/pool3.jpg';
+import project4 from '../assets/img/pool4.jpg';
+import project5 from '../assets/img/landscape3.jpg';
+import project6 from '../assets/img/landscape1.jpg';
 
 function Projects() {
   const [filter, setFilter] = useState('*');
@@ -21,7 +21,7 @@ function Projects() {
     {
       image: project2,
       title: "Création de jardin",
-      category: "second",
+      category: "first",
       delay: "0.3s"
     },
     {
@@ -33,13 +33,13 @@ function Projects() {
     {
       image: project4,
       title: "Piscine paysagée",
-      category: "second",
+      category: "first",
       delay: "0.1s"
     },
     {
       image: project5,
       title: "Jardin méditerranéen",
-      category: "first",
+      category: "second",
       delay: "0.3s"
     },
     {
@@ -78,13 +78,13 @@ function Projects() {
                 className={`mx-2 ${filter === 'first' ? 'active' : ''}`}
                 onClick={() => handleFilterClick('first')}
               >
-                Projets terminés
+                Piscines
               </li>
               <li 
                 className={`mx-2 ${filter === 'second' ? 'active' : ''}`}
                 onClick={() => handleFilterClick('second')}
               >
-                Projets en cours
+                Jardins et paysages
               </li>
             </ul>
           </div>

@@ -12,6 +12,7 @@ import carousel2 from '../assets/img/home2.jpg';
 import Projects from '../components/Projects/Projects';
 import TestimonialsSection from '../components/Testimonials/TestimonialsSection';
 import Engagement from '../components/Engagement/Engagement';
+import AboutSection from '../components/AboutSection/AboutSection';
 
 function Home() {
 
@@ -150,6 +151,10 @@ function Home() {
         </Container>
       </Container>
       {/* Top Feature End */}
+
+      {/* About Section Start */}
+      <AboutSection />
+      {/* About Section End */}
 
       {/* Facts Start */}
       <Container fluid className="facts my-5 py-5">

@@ -13,6 +13,7 @@ import Projects from '../components/Projects/Projects';
 import TestimonialsSection from '../components/Testimonials/TestimonialsSection';
 import Engagement from '../components/Engagement/Engagement';
 import AboutSection from '../components/AboutSection/AboutSection';
+import HowItWorks from '../components/HowItWorks/HowItWorks';
 
 function Home() {
 

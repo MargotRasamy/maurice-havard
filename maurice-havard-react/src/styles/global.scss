@@ -4,6 +4,141 @@
     --secondary: #525368;
     --light: #E8F5E9;
     --dark: #0F4229;
+    --very-dark: #062014;
+    --very-light: #d9d9d950;
+    // Override des variables Bootstrap
+    --bs-primary: var(--primary);
+    --bs-secondary: var(--secondary);
+    --bs-light: var(--light);
+    --bs-dark: var(--dark);
+
+    // RGB values pour les couleurs (nécessaire pour certains effets Bootstrap)
+    --bs-primary-rgb: 52, 142, 56;
+    --bs-secondary-rgb: 82, 83, 104;
+    --bs-light-rgb: 232, 245, 233;
+    --bs-dark-rgb: 15, 66, 41;
+
+    // Override des couleurs de thème Bootstrap
+    --bs-primary-bg-subtle: #{rgba(52, 142, 56, 0.1)};
+    --bs-secondary-bg-subtle: #{rgba(82, 83, 104, 0.1)};
+    --bs-light-bg-subtle: #{rgba(232, 245, 233, 0.1)};
+    --bs-dark-bg-subtle: #{rgba(15, 66, 41, 0.1)};
+
+    // Override des couleurs de bordure
+    --bs-primary-border-subtle: #{rgba(52, 142, 56, 0.3)};
+    --bs-secondary-border-subtle: #{rgba(82, 83, 104, 0.3)};
+    --bs-light-border-subtle: #{rgba(232, 245, 233, 0.3)};
+    --bs-dark-border-subtle: #{rgba(15, 66, 41, 0.3)};
+
+    // Override des couleurs de texte
+    --bs-primary-text: var(--primary);
+    --bs-secondary-text: var(--secondary);
+    --bs-light-text: var(--light);
+    --bs-dark-text: var(--dark);
+}
+
+// Override des classes de couleur de fond Bootstrap
+.bg-primary { background-color: var(--primary) !important; }
+.bg-secondary { background-color: var(--secondary) !important; }
+.bg-light { background-color: var(--light) !important; }
+.bg-dark { background-color: var(--dark) !important; }
+
+// Override des classes de couleur de texte Bootstrap
+.text-primary { color: var(--primary) !important; }
+.text-secondary { color: var(--secondary) !important; }
+.text-light { color: var(--light) !important; }
+.text-dark { color: var(--dark) !important; }
+
+// Override des classes de bordure Bootstrap
+.border-primary { border-color: var(--primary) !important; }
+.border-secondary { border-color: var(--secondary) !important; }
+.border-light { border-color: var(--light) !important; }
+.border-dark { border-color: var(--dark) !important; }
+
+// Override des boutons Bootstrap
+.btn-primary {
+    color: var(--light);
+    background-color: var(--primary);
+    border-color: var(--primary);
+    &:hover, &:focus, &:active {
+        color: var(--light);
+        background-color: darken(#348E38, 10%);
+        border-color: darken(#348E38, 10%);
+    }
+}
+
+.btn-secondary {
+    color: var(--light);
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    &:hover, &:focus, &:active {
+        color: var(--light);
+        background-color: darken(#525368, 10%);
+        border-color: darken(#525368, 10%);
+    }
+}
+
+.btn-light {
+    color: var(--dark);
+    background-color: var(--light);
+    border-color: var(--light);
+    &:hover, &:focus, &:active {
+        color: var(--dark);
+        background-color: darken(#E8F5E9, 10%);
+        border-color: darken(#E8F5E9, 10%);
+    }
+}
+
+.btn-dark {
+    color: var(--light);
+    background-color: var(--dark);
+    border-color: var(--dark);
+    &:hover, &:focus, &:active {
+        color: var(--light);
+        background-color: darken(#0F4229, 10%);
+        border-color: darken(#0F4229, 10%);
+    }
+}
+
+// Override des boutons outline Bootstrap
+.btn-outline-primary {
+    color: var(--primary);
+    border-color: var(--primary);
+    &:hover, &:focus, &:active {
+        color: var(--light);
+        background-color: var(--primary);
+        border-color: var(--primary);
+    }
+}
+
+.btn-outline-secondary {
+    color: var(--secondary);
+    border-color: var(--secondary);
+    &:hover, &:focus, &:active {
+        color: var(--light);
+        background-color: var(--secondary);
+        border-color: var(--secondary);
+    }
+}
+
+.btn-outline-light {
+    color: var(--light);
+    border-color: var(--light);
+    &:hover, &:focus, &:active {
+        color: var(--dark);
+        background-color: var(--light);
+        border-color: var(--light);
+    }
+}
+
+.btn-outline-dark {
+    color: var(--dark);
+    border-color: var(--dark);
+    &:hover, &:focus, &:active {
+        color: var(--light);
+        background-color: var(--dark);
+        border-color: var(--dark);
+    }
 }
 
 body {
@@ -69,11 +204,6 @@ h6,
 .btn {
     transition: .5s;
     font-weight: 500;
-}
-
-.btn-primary,
-.btn-outline-primary:hover {
-    color: var(--light);
 }
 
 .btn-square {
@@ -463,7 +593,7 @@ h6,
 
 .copyright {
     color: var(--light);
-    background: #072A19;
+    background: var(--very-dark)
 }
 
 .copyright a {

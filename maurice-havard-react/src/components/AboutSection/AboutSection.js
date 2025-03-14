@@ -9,7 +9,7 @@ import landscape2 from '../../assets/img/landscape2.jpg';
 
 function AboutSection() {
     return (
-        <Container fluid className="about-section py-5">
+        <Container fluid className="about-section py-5 bg-very-light">
             <Container>
                 <Row className="align-items-center">
                     <Col lg={6} className="wow fadeInLeft" data-wow-delay="0.1s">

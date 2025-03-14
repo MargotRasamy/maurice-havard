@@ -8,7 +8,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'aos/dist/aos.css';
 
 // Import our custom CSS last to override third-party styles
-import './styles/global.css';
+import './styles/global.scss';
 
 // Import components (we'll create these next)
 import Navbar from './components/Navbar';

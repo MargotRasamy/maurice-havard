@@ -1,155 +1,157 @@
 /********** Template CSS **********/
+// Variables SCSS
+$primary: #30a59a;
+$secondary: #525b68;
+$light: #e8f5f4;
+$dark: #0f3a42;
+$very-dark: #061c20;
+$very-light: #d9d9d950;
+$carousel-dark: #064852;
+$bg-overlay: rgba($carousel-dark, .5);
+
 :root {
-    --primary: #348E38;
-    --secondary: #525368;
-    --light: #E8F5E9;
-    --dark: #0F4229;
-    --very-dark: #062014;
-    --very-light: #d9d9d950;
-    // Override des variables Bootstrap
-    --bs-primary: var(--primary);
-    --bs-secondary: var(--secondary);
-    --bs-light: var(--light);
-    --bs-dark: var(--dark);
+    // Variables nécessaires pour Bootstrap
+    --bs-primary: #{$primary};
+    --bs-secondary: #{$secondary};
+    --bs-light: #{$light};
+    --bs-dark: #{$dark};
+    --bs-very-dark: #{$very-dark};
+    --bs-very-light: #{$very-light};
+    --bs-carousel-dark: #{$carousel-dark};
+    --bs-bg-overlay: #{$bg-overlay};
 
-    // RGB values pour les couleurs (nécessaire pour certains effets Bootstrap)
-    --bs-primary-rgb: 52, 142, 56;
-    --bs-secondary-rgb: 82, 83, 104;
-    --bs-light-rgb: 232, 245, 233;
-    --bs-dark-rgb: 15, 66, 41;
+    // Variables de thème Bootstrap
+    --bs-primary-bg-subtle: #{rgba($primary, 0.1)};
+    --bs-secondary-bg-subtle: #{rgba($secondary, 0.1)};
+    --bs-light-bg-subtle: #{rgba($light, 0.1)};
+    --bs-dark-bg-subtle: #{rgba($dark, 0.1)};
 
-    // Override des couleurs de thème Bootstrap
-    --bs-primary-bg-subtle: #{rgba(52, 142, 56, 0.1)};
-    --bs-secondary-bg-subtle: #{rgba(82, 83, 104, 0.1)};
-    --bs-light-bg-subtle: #{rgba(232, 245, 233, 0.1)};
-    --bs-dark-bg-subtle: #{rgba(15, 66, 41, 0.1)};
+    // Variables de bordure Bootstrap
+    --bs-primary-border-subtle: #{rgba($primary, 0.3)};
+    --bs-secondary-border-subtle: #{rgba($secondary, 0.3)};
+    --bs-light-border-subtle: #{rgba($light, 0.3)};
+    --bs-dark-border-subtle: #{rgba($dark, 0.3)};
 
-    // Override des couleurs de bordure
-    --bs-primary-border-subtle: #{rgba(52, 142, 56, 0.3)};
-    --bs-secondary-border-subtle: #{rgba(82, 83, 104, 0.3)};
-    --bs-light-border-subtle: #{rgba(232, 245, 233, 0.3)};
-    --bs-dark-border-subtle: #{rgba(15, 66, 41, 0.3)};
-
-    // Override des couleurs de texte
-    --bs-primary-text: var(--primary);
-    --bs-secondary-text: var(--secondary);
-    --bs-light-text: var(--light);
-    --bs-dark-text: var(--dark);
+    // Variables de texte Bootstrap
+    --bs-primary-text: #{$primary};
+    --bs-secondary-text: #{$secondary};
+    --bs-light-text: #{$light};
+    --bs-dark-text: #{$dark};
 }
 
 // Override des classes de couleur de fond Bootstrap
-.bg-primary { background-color: var(--primary) !important; }
-.bg-secondary { background-color: var(--secondary) !important; }
-.bg-light { background-color: var(--light) !important; }
-.bg-dark { background-color: var(--dark) !important; }
+.bg-primary { background-color: $primary !important; }
+.bg-secondary { background-color: $secondary !important; }
+.bg-light { background-color: $light !important; }
+.bg-dark { background-color: $dark !important; }
 
 // Override des classes de couleur de texte Bootstrap
-.text-primary { color: var(--primary) !important; }
-.text-secondary { color: var(--secondary) !important; }
-.text-light { color: var(--light) !important; }
-.text-dark { color: var(--dark) !important; }
+.text-primary { color: $primary !important; }
+.text-secondary { color: $secondary !important; }
+.text-light { color: $light !important; }
+.text-dark { color: $dark !important; }
 
 // Override des classes de bordure Bootstrap
-.border-primary { border-color: var(--primary) !important; }
-.border-secondary { border-color: var(--secondary) !important; }
-.border-light { border-color: var(--light) !important; }
-.border-dark { border-color: var(--dark) !important; }
+.border-primary { border-color: $primary !important; }
+.border-secondary { border-color: $secondary !important; }
+.border-light { border-color: $light !important; }
+.border-dark { border-color: $dark !important; }
 
 // Override des boutons Bootstrap
 .btn-primary {
-    color: var(--light);
-    background-color: var(--primary);
-    border-color: var(--primary);
+    color: $light;
+    background-color: $primary;
+    border-color: $primary;
     &:hover, &:focus, &:active {
-        color: var(--light);
-        background-color: darken(#348E38, 10%);
-        border-color: darken(#348E38, 10%);
+        color: $light;
+        background-color: darken($primary, 10%);
+        border-color: darken($primary, 10%);
     }
 }
 
 .btn-secondary {
-    color: var(--light);
-    background-color: var(--secondary);
-    border-color: var(--secondary);
+    color: $light;
+    background-color: $secondary;
+    border-color: $secondary;
     &:hover, &:focus, &:active {
-        color: var(--light);
-        background-color: darken(#525368, 10%);
-        border-color: darken(#525368, 10%);
+        color: $light;
+        background-color: darken($secondary, 10%);
+        border-color: darken($secondary, 10%);
     }
 }
 
 .btn-light {
-    color: var(--dark);
-    background-color: var(--light);
-    border-color: var(--light);
+    color: $dark;
+    background-color: $light;
+    border-color: $light;
     &:hover, &:focus, &:active {
-        color: var(--dark);
-        background-color: darken(#E8F5E9, 10%);
-        border-color: darken(#E8F5E9, 10%);
+        color: $dark;
+        background-color: darken($light, 10%);
+        border-color: darken($light, 10%);
     }
 }
 
 .btn-dark {
-    color: var(--light);
-    background-color: var(--dark);
-    border-color: var(--dark);
+    color: $light;
+    background-color: $dark;
+    border-color: $dark;
     &:hover, &:focus, &:active {
-        color: var(--light);
-        background-color: darken(#0F4229, 10%);
-        border-color: darken(#0F4229, 10%);
+        color: $light;
+        background-color: darken($dark, 10%);
+        border-color: darken($dark, 10%);
     }
 }
 
 // Override des boutons outline Bootstrap
 .btn-outline-primary {
-    color: var(--primary);
-    border-color: var(--primary);
+    color: var(--bs-primary);
+    border-color: var(--bs-primary);
     &:hover, &:focus, &:active {
-        color: var(--light);
-        background-color: var(--primary);
-        border-color: var(--primary);
+        color: var(--bs-light);
+        background-color: var(--bs-primary);
+        border-color: var(--bs-primary);
     }
 }
 
 .btn-outline-secondary {
-    color: var(--secondary);
-    border-color: var(--secondary);
+    color: var(--bs-secondary);
+    border-color: var(--bs-secondary);
     &:hover, &:focus, &:active {
-        color: var(--light);
-        background-color: var(--secondary);
-        border-color: var(--secondary);
+        color: var(--bs-light);
+        background-color: var(--bs-secondary);
+        border-color: var(--bs-secondary);
     }
 }
 
 .btn-outline-light {
-    color: var(--light);
-    border-color: var(--light);
+    color: var(--bs-light);
+    border-color: var(--bs-light);
     &:hover, &:focus, &:active {
-        color: var(--dark);
-        background-color: var(--light);
-        border-color: var(--light);
+        color: var(--bs-dark);
+        background-color: var(--bs-light);
+        border-color: var(--bs-light);
     }
 }
 
 .btn-outline-dark {
-    color: var(--dark);
-    border-color: var(--dark);
+    color: var(--bs-dark);
+    border-color: var(--bs-dark);
     &:hover, &:focus, &:active {
-        color: var(--light);
-        background-color: var(--dark);
-        border-color: var(--dark);
+        color: var(--bs-light);
+        background-color: var(--bs-dark);
+        border-color: var(--bs-dark);
     }
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
-    color: var(--secondary);
+    color: $secondary;
 }
 
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: 'Jost', sans-serif;
-    color: var(--dark);
+    color: $dark;
 }
 
 .back-to-top {
@@ -246,7 +248,7 @@ h6,
 .navbar .navbar-nav .nav-link {
     margin-right: 35px;
     padding: 25px 0;
-    color: var(--dark);
+    color: $dark;
     font-size: 18px;
     font-weight: 500;
     outline: none;
@@ -254,7 +256,7 @@ h6,
 
 .navbar .navbar-nav .nav-link:hover,
 .navbar .navbar-nav .nav-link.active {
-    color: var(--primary);
+    color: $primary;
 }
 
 .navbar .dropdown-toggle::after {
@@ -307,7 +309,7 @@ h6,
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: rgba(15, 66, 41, .6);
+    background: $bg-overlay;
     z-index: 1;
 }
 
@@ -321,8 +323,8 @@ h6,
     width: 3rem;
     height: 3rem;
     border-radius: 3rem;
-    background-color: var(--primary);
-    border: 10px solid var(--primary);
+    background-color: $primary;
+    border: 10px solid $primary;
 }
 
 /* TODO: fix height of carousel */
@@ -342,18 +344,18 @@ h6,
 }
 
 .page-header {
-    background: linear-gradient(rgba(15, 66, 41, .6), rgba(15, 66, 41, .6)), url(../assets/img/home.jpg) center center no-repeat;
+    background: linear-gradient($bg-overlay, $bg-overlay), url(../assets/img/home.jpg) center center no-repeat;
     background-size: cover;
 }
 
 .page-header .breadcrumb-item+.breadcrumb-item::before {
-    color: var(--light);
+    color: $light;
 }
 
 .page-header .breadcrumb-item,
 .page-header .breadcrumb-item a {
     font-size: 18px;
-    color: var(--light);
+    color: $light;
 }
 
 
@@ -371,7 +373,7 @@ h6,
 .facts,
 .quote {
     position: relative;
-    background: linear-gradient(rgba(15, 66, 41, .6), rgba(15, 66, 41, .6)), url(../assets/img/pool2.jpg) center center no-repeat;
+    background: linear-gradient($bg-overlay, $bg-overlay), url(../assets/img/pool2.jpg) center center no-repeat;
     background-size: cover;
     background-attachment: fixed;
 }
@@ -415,7 +417,7 @@ h6,
 }
 
 .service-item:hover .service-text {
-    background: rgba(15, 66, 41, .6);
+    background: $bg-overlay;
 }
 
 .service-item .service-text h4,
@@ -428,7 +430,7 @@ h6,
 }
 
 .service-item:hover .service-text p {
-    color: var(--light);
+    color: $light;
 }
 
 .service-item .service-text .btn-square {
@@ -439,30 +441,34 @@ h6,
 }
 
 .service-item:hover .service-text .btn-square {
-    background: var(--light);
+    background: $light;
 }
 
 .service-item .service-text .btn {
     padding: 10px 20px;
     display: inline-flex;
     align-items: center;
-    color: var(--dark);
-    background: var(--light);
+    color: $dark;
+    background: $light;
     white-space: nowrap;
+}
+
+.service-item .service-text .btn:hover {
+    background: rgb(214, 254, 255);
 }
 
 
 /*** Project Portfolio ***/
 #portfolio-flters {
     display: inline-block;
-    background: var(--light);
+    background: $light;
     padding: 10px 15px;
 }
 
 #portfolio-flters li {
     display: inline-block;
     font-weight: 500;
-    color: var(--primary);
+    color: $primary;
     cursor: pointer;
     transition: .5s;
     border-bottom: 2px solid transparent;
@@ -470,13 +476,14 @@ h6,
 
 #portfolio-flters li:hover,
 #portfolio-flters li.active {
-    color: var(--dark);
-    border-color: var(--dark);
+    color: $dark;
+    border-color: $dark;
 }
 
 .portfolio-inner {
     position: relative;
     overflow: hidden;
+    cursor: pointer;
 }
 
 .portfolio-inner::before,
@@ -487,7 +494,7 @@ h6,
     height: 100%;
     top: 0;
     left: 0;
-    background: rgba(15, 66, 41, .6);
+    background: $bg-overlay;
     transition: .5s;
 }
 
@@ -522,13 +529,13 @@ h6,
 }
 
 .portfolio-inner .portfolio-text .btn {
-    background: var(--light);
-    color: var(--primary);
+    background: $light;
+    color: $primary;
 }
 
 .portfolio-inner .portfolio-text .btn:hover {
-    background: var(--primary);
-    color: var(--light);
+    background: $primary;
+    color: $light;
 }
 
 /*** Testimonial ***/
@@ -551,8 +558,8 @@ h6,
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--primary);
-    background: var(--light);
+    color: $primary;
+    background: $light;
     border-radius: 4px;
     font-size: 22px;
     transition: .5s;
@@ -560,8 +567,8 @@ h6,
 
 .testimonial-carousel .owl-nav .owl-prev:hover,
 .testimonial-carousel .owl-nav .owl-next:hover {
-    background: var(--primary);
-    color: var(--light);
+    background: $primary;
+    color: $light;
 }
 
 
@@ -571,7 +578,7 @@ h6,
     margin-bottom: 5px;
     padding: 0;
     text-align: left;
-    color: var(--light);
+    color: $light;
     font-weight: normal;
     text-transform: capitalize;
     transition: .3s;
@@ -586,14 +593,14 @@ h6,
 }
 
 .footer .btn.btn-link:hover {
-    color: var(--primary);
+    color: $primary;
     letter-spacing: 1px;
     box-shadow: none;
 }
 
 .copyright {
-    color: var(--light);
-    background: var(--very-dark)
+    color: $light;
+    background: $very-dark;
 }
 
 .copyright a {
@@ -601,5 +608,5 @@ h6,
 }
 
 .copyright a:hover {
-    color: var(--primary);
+    color: $primary;
 }

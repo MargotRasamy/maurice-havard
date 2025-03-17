@@ -33,8 +33,8 @@ function Footer() {
         <div className="container py-5">
           <div className="row g-5">
             <div className="col-lg-3 col-md-6">
-              <h4 className="text-white mb-4">Notre Bureau</h4>
-              <p className="mb-2"><i className="fa fa-map-marker-alt me-3"></i>1 Lauzit du Haut, RN21, 32500 Pauilhac</p>
+              <h4 className="text-white mb-4">Nous contacter</h4>
+              <p className="mb-2"><i className="fa fa-map-marker-alt me-3"></i>1 Lauzit du Haut, RN21, 32500 PAUILHAC</p>
               <p className="mb-2"><i className="fa fa-phone-alt me-3"></i>06 76 97 89 86</p>
               <p className="mb-2"><i className="fa fa-envelope me-3"></i>mauricehavard99@gmail.com</p>
               <div className="d-flex pt-2">
@@ -77,7 +77,7 @@ function Footer() {
               &copy; <Link to="/">Maurice Havard</Link>, Tous droits réservés.
             </div>
             <div className="col-md-6 text-center text-md-end">
-              Design par <Link to="#">Margot et Lionel</Link>
+              Développé par <Link target="_blank" rel="noopener noreferrer" to="https://www.linkedin.com/in/margotrasamy">Margot RASAMY</Link> & <Link target="_blank" rel="noopener noreferrer" to="https://www.linkedin.com/in/lionel-tran/">Lionel TRAN</Link>
             </div>
           </div>
         </div>

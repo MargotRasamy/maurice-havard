@@ -14,6 +14,7 @@ import TestimonialsSection from '../components/Testimonials/TestimonialsSection'
 import Engagement from '../components/Engagement/Engagement';
 import AboutSection from '../components/AboutSection/AboutSection';
 import HowItWorks from '../components/HowItWorks/HowItWorks';
+import GrafSystem from '../components/GrafSystem/GrafSystem';
 
 function Home() {
 
@@ -156,6 +157,10 @@ function Home() {
       {/* About Section Start */}
       <AboutSection />
       {/* About Section End */}
+
+      {/* Graf System Section Start */}
+      <GrafSystem />
+      {/* Graf System Section End */}
 
       {/* Facts Start */}
       <Container fluid className="facts my-5 py-5">

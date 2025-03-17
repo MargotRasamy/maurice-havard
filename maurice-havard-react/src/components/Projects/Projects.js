@@ -70,7 +70,7 @@ const ProjectCard = ({ project, onViewClick }) => (
     exit={{ opacity: 0, y: -20 }}
     transition={{ duration: 0.5 }}
   >
-    <div className="portfolio-inner rounded">
+    <div className="portfolio-inner rounded" onClick={() => onViewClick(project)}>
       <img className="img-fluid" src={project.image} alt={project.title} />
       <div className="portfolio-text">
         <h4 className="text-white mb-4">{project.title}</h4>
@@ -188,10 +188,6 @@ function Projects() {
                   </button>
                   <div className="modal-image">
                     <img src={selectedProject.image} alt={selectedProject.title} />
-                  </div>
-                  <div className="modal-details">
-                    <h3>{selectedProject.title}</h3>
-                    <p>{selectedProject.description}</p>
                   </div>
                 </div>
               </div>

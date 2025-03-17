@@ -16,28 +16,6 @@
         @include image-object-fit($adaptToWidth: false, $fixed-height: 80vh, $fixed-width: 100%);
     }
 
-    .modal-details {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        padding: 2rem;
-        background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
-        color: white;
-
-        h3 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        p {
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 0;
-        }
-    }
-
     .modal-close {
         position: absolute;
         top: 1rem;

@@ -1,13 +1,20 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { WOW } from 'wowjs';
 import emailjs from '@emailjs/browser';
 import { EMAILJS_CONFIG } from '../config/emailjs';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import 'wowjs/css/libs/animate.css';
+import MessageModal from '../components/MessageModal/MessageModal';
 
 function Contact() {
   const form = useRef();
+  const [showModal, setShowModal] = useState(false);
+  const [modalConfig, setModalConfig] = useState({
+    title: '',
+    message: '',
+    type: 'success'
+  });
 
   useEffect(() => {
     new WOW().init();
@@ -23,12 +30,20 @@ function Contact() {
       EMAILJS_CONFIG.PUBLIC_KEY
     )
       .then((result) => {
-        console.log(result.text);
-        alert('Message envoyé avec succès !');
+        setModalConfig({
+          title: 'Succès !',
+          message: 'Votre message a été envoyé avec succès.',
+          type: 'success'
+        });
+        setShowModal(true);
         form.current.reset();
       }, (error) => {
-        console.log(error.text);
-        alert('Une erreur est survenue, veuillez réessayer.');
+        setModalConfig({
+          title: 'Erreur',
+          message: 'Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.',
+          type: 'error'
+        });
+        setShowModal(true);
       });
   };
 
@@ -84,7 +99,7 @@ function Contact() {
                     <Form.Floating>
                       <Form.Control
                         type="tel"
-                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                        pattern="[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}"
                         name="phone"
                         placeholder="Votre numéro de téléphone"
                         required
@@ -141,6 +156,14 @@ function Contact() {
         </Container>
       </Container>
       {/* Contact End */}
+
+      <MessageModal
+        show={showModal}
+        onHide={() => setShowModal(false)}
+        title={modalConfig.title}
+        message={modalConfig.message}
+        type={modalConfig.type}
+      />
     </>
   );
 }

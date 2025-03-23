@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
-import AboutImage from '../../assets/img/home2.jpg';
+import MainAboutSection from '../../components/MainAboutSection/MainAboutSection';
 import "./about.scss";
 
 function About() {
@@ -34,40 +34,7 @@ function About() {
       {/* Page Header End */}
 
       {/* About Start */}
-      <div className="section-about container-xxl py-5">
-        <div className="container">
-          <div className="row g-5 align-items-start">
-            <div className="image-container-about wow fadeInUp" data-aos="fade-in" data-aos-delay="30">
-              <img className="rounded" src={AboutImage} alt="À propos" />
-            </div>
-            <div className="col-lg-6 col-md-7 wow fadeInUp" data-aos="fade-in" data-aos-delay="30">
-              <h1 className="display-1 text-primary mb-0">{yearsExperience}</h1>
-              <p className="text-primary mb-4">Années d'Expérience</p>
-              <h1 className="display-5 mb-4">Piscines et Jardins depuis 1971</h1>
-              <p className="mb-4">Avec plus de cinquante ans d'expertise dans la création et l'aménagement d'espaces extérieurs, nous donnons vie à vos rêves de jardins. Notre équipe passionnée allie créativité et savoir-faire horticole pour créer des paysages magnifiques et durables qui valorisent votre propriété.</p>
-              <Link to="/services" className="btn btn-primary py-3 px-4">Découvrir Nos Services</Link>
-            </div>
-            <div className="col-lg-3 col-md-12 wow fadeInUp" data-aos="fade-in" data-aos-delay="30">
-              <div className="row g-5">
-                <div className="col-12 col-sm-6 col-lg-12">
-                  <div className="border-start ps-4">
-                    <i className="fa fa-award fa-3x text-primary mb-3"></i>
-                    <h4 className="mb-3">Expertise Reconnue</h4>
-                    <span>Reconnus pour notre excellence en conception paysagère et en entretien de jardins, avec une approche innovante et durable.</span>
-                  </div>
-                </div>
-                <div className="col-12 col-sm-6 col-lg-12">
-                  <div className="border-start ps-4">
-                    <i className="fa fa-users fa-3x text-primary mb-3"></i>
-                    <h4 className="mb-3">Équipe Dédiée</h4>
-                    <span>Notre équipe de professionnels qualifiés est passionnée par la création et l'entretien d'espaces extérieurs qui dépassent vos attentes.</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <MainAboutSection yearsExperience={yearsExperience} />
       {/* About End */}
 
       {/* Facts Start */}

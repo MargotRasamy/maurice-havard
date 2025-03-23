@@ -88,6 +88,7 @@
         }
 
         .testimonial-image {
+            display: none;
             position: relative;
             height: 300px;
             overflow: hidden;
@@ -118,8 +119,8 @@
 
             .quote-icon {
                 position: absolute;
-                top: -15px;
-                left: 2rem;
+                bottom: 1rem;
+                right: 1rem;
                 width: 30px;
                 height: 30px;
                 background: var(--bs-primary);

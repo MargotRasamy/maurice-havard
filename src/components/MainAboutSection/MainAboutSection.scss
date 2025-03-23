@@ -1,0 +1,35 @@
+.section-about {
+  .image-container-about {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    
+    img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+      
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .border-start {
+    border-left: 3px solid var(--bs-primary) !important;
+  }
+
+  .text-primary {
+    color: var(--bs-primary) !important;
+  }
+
+  .btn-primary {
+    background-color: var(--bs-primary);
+    border-color: var(--bs-primary);
+    
+    &:hover {
+      background-color: rgba(var(--bs-primary),0.10);
+      border-color: rgba(var(--bs-primary),0.10);
+    }
+  }
+} 

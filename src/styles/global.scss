@@ -20,6 +20,10 @@ $bg-overlay: rgba($carousel-dark, .5);
     --bs-carousel-dark: #{$carousel-dark};
     --bs-bg-overlay: #{$bg-overlay};
 
+    --bs-btn-active-color: $light !important;
+    --bs-btn-active-bg: darken($primary, 10%) !important;
+    --bs-btn-active-border-color: #{$dark} !important;
+
     // Variables de thème Bootstrap
     --bs-primary-bg-subtle: #{rgba($primary, 0.1)};
     --bs-secondary-bg-subtle: #{rgba($secondary, 0.1)};
@@ -37,6 +41,10 @@ $bg-overlay: rgba($carousel-dark, .5);
     --bs-secondary-text: #{$secondary};
     --bs-light-text: #{$light};
     --bs-dark-text: #{$dark};
+}
+
+.form-control:focus {
+    border-color: var(--bs-primary) !important;
 }
 
 // Override des classes de couleur de fond Bootstrap
@@ -58,14 +66,15 @@ $bg-overlay: rgba($carousel-dark, .5);
 .border-dark { border-color: $dark !important; }
 
 // Override des boutons Bootstrap
+
 .btn-primary {
     color: $light;
     background-color: $primary;
     border-color: $primary;
-    &:hover, &:focus, &:active {
-        color: $light;
-        background-color: darken($primary, 10%);
-        border-color: darken($primary, 10%);
+    &:hover, &:focus, &:active, &:checked {
+        color: $light !important;
+        background-color: darken($primary, 10%) !important;
+        border-color: darken($primary, 10%) !important;
     }
 }
 
@@ -73,10 +82,10 @@ $bg-overlay: rgba($carousel-dark, .5);
     color: $light;
     background-color: $secondary;
     border-color: $secondary;
-    &:hover, &:focus, &:active {
-        color: $light;
-        background-color: darken($secondary, 10%);
-        border-color: darken($secondary, 10%);
+    &:hover, &:focus, &:active, &:checked {
+        color: $light !important;
+        background-color: darken($secondary, 10%) !important;
+        border-color: darken($secondary, 10%) !important;
     }
 }
 
@@ -84,10 +93,10 @@ $bg-overlay: rgba($carousel-dark, .5);
     color: $dark;
     background-color: $light;
     border-color: $light;
-    &:hover, &:focus, &:active {
-        color: $dark;
-        background-color: darken($light, 10%);
-        border-color: darken($light, 10%);
+    &:hover, &:focus, &:active, &:checked {
+        color: $dark !important;
+        background-color: darken($light, 10%) !important;
+        border-color: darken($light, 10%) !important;
     }
 }
 
@@ -95,10 +104,10 @@ $bg-overlay: rgba($carousel-dark, .5);
     color: $light;
     background-color: $dark;
     border-color: $dark;
-    &:hover, &:focus, &:active {
-        color: $light;
-        background-color: darken($dark, 10%);
-        border-color: darken($dark, 10%);
+    &:hover, &:focus, &:active, &:checked {
+        color: $light !important;
+        background-color: darken($dark, 10%) !important;
+        border-color: darken($dark, 10%) !important;
     }
 }
 
@@ -106,40 +115,40 @@ $bg-overlay: rgba($carousel-dark, .5);
 .btn-outline-primary {
     color: var(--bs-primary);
     border-color: var(--bs-primary);
-    &:hover, &:focus, &:active {
-        color: var(--bs-light);
-        background-color: var(--bs-primary);
-        border-color: var(--bs-primary);
+    &:hover, &:focus, &:active, &:checked {
+        color: var(--bs-light) !important;
+        background-color: var(--bs-primary) !important;
+        border-color: var(--bs-primary) !important;
     }
 }
 
 .btn-outline-secondary {
     color: var(--bs-secondary);
     border-color: var(--bs-secondary);
-    &:hover, &:focus, &:active {
-        color: var(--bs-light);
-        background-color: var(--bs-secondary);
-        border-color: var(--bs-secondary);
+    &:hover, &:focus, &:active, &:checked {
+        color: var(--bs-light) !important;
+        background-color: var(--bs-secondary) !important;
+        border-color: var(--bs-secondary) !important;
     }
 }
 
 .btn-outline-light {
     color: var(--bs-light);
     border-color: var(--bs-light);
-    &:hover, &:focus, &:active {
-        color: var(--bs-dark);
-        background-color: var(--bs-light);
-        border-color: var(--bs-light);
+    &:hover, &:focus, &:active, &:checked {
+        color: var(--bs-dark) !important;
+        background-color: var(--bs-light) !important;
+        border-color: var(--bs-light) !important;
     }
 }
 
 .btn-outline-dark {
     color: var(--bs-dark);
     border-color: var(--bs-dark);
-    &:hover, &:focus, &:active {
-        color: var(--bs-light);
-        background-color: var(--bs-dark);
-        border-color: var(--bs-dark);
+    &:hover, &:focus, &:active, &:checked {
+        color: var(--bs-light) !important;
+        background-color: var(--bs-dark) !important;
+        border-color: var(--bs-dark) !important;
     }
 }
 
@@ -242,7 +251,7 @@ h6,
 
 .navbar .navbar-brand,
 .navbar a.btn {
-    height: 80px
+    min-height: 100%
 }
 
 .navbar .navbar-nav .nav-link {
@@ -266,6 +275,12 @@ h6,
     font-weight: 900;
     vertical-align: middle;
     margin-left: 8px;
+}
+
+.navbar .ctaBtn {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (max-width: 991.98px) {

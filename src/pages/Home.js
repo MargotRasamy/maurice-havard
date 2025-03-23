@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { WOW } from 'wowjs';
 import { Container, Row, Col, Carousel, Button } from 'react-bootstrap';
@@ -15,8 +15,11 @@ import Engagement from '../components/Engagement/Engagement';
 import AboutSection from '../components/AboutSection/AboutSection';
 import HowItWorks from '../components/HowItWorks/HowItWorks';
 import GrafSystem from '../components/GrafSystem/GrafSystem';
+import MainAboutSection from '../components/MainAboutSection/MainAboutSection';
 
 function Home() {
+  const [currentYear] = useState(new Date().getFullYear());
+  const yearsExperience = currentYear - 1971;
 
   useEffect(() => {
     new WOW().init();
@@ -153,6 +156,10 @@ function Home() {
         </Container>
       </Container>
       {/* Top Feature End */}
+
+      {/* About Start */}
+      <MainAboutSection yearsExperience={yearsExperience} />
+      {/* About End */}
 
       {/* About Section Start */}
       <AboutSection />

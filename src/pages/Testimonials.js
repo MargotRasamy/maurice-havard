@@ -9,30 +9,6 @@ function Testimonials() {
     new WOW().init();
   }, []);
 
-  const testimonials = [
-    {
-      image: 'img/testimonial-1.jpg',
-      content: 'Maurice et son équipe ont réalisé un travail exceptionnel dans notre jardin. Leur expertise en aménagement paysager et en création de piscine a transformé notre espace extérieur en un véritable havre de paix.',
-      name: 'Marie Dubois',
-      profession: 'Propriétaire',
-      delay: '0.1s'
-    },
-    {
-      image: 'img/testimonial-2.jpg',
-      content: 'Un grand merci à toute l\'équipe pour la transformation de notre espace extérieur. Leur professionnalisme et leur créativité ont dépassé nos attentes. La piscine et le jardin s\'intègrent parfaitement.',
-      name: 'Pierre Martin',
-      profession: 'Gérant de Propriété',
-      delay: '0.3s'
-    },
-    {
-      image: 'img/testimonial-1.jpg',
-      content: 'Nous sommes ravis des solutions d\'aménagement proposées pour notre restaurant. L\'équipe a su créer un espace extérieur accueillant qui enchante nos clients. Un travail remarquable !',
-      name: 'Sophie Laurent',
-      profession: 'Restauratrice',
-      delay: '0.5s'
-    }
-  ];
-
   return (
     <>
       {/* Page Header Start */}

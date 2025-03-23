@@ -59,7 +59,6 @@ function Footer() {
             </div>
             <div className="col-lg-3 col-md-6">
               <h4 className="text-white mb-4">Liens Rapides</h4>
-              <Link className="btn btn-link" to="/about">À propos</Link>
               <Link className="btn btn-link" to="/contact">Contact</Link>
               <Link className="btn btn-link" to="/services">Nos Services</Link>
               <Link className="btn btn-link" to="/projects">Nos Réalisations</Link>

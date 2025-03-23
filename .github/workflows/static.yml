@@ -44,7 +44,6 @@ jobs:
       - name: Build React app
         run: npm run build
         env:
-          PUBLIC_URL: /maurice-havard
           CI: false
           SKIP_PREFLIGHT_CHECK: true
 
@@ -54,3 +53,4 @@ jobs:
         env:
           CI: false
           SKIP_PREFLIGHT_CHECK: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

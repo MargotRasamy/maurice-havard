@@ -36,9 +36,10 @@ jobs:
 
       # Step 5: Configure Git
       - name: Configure Git
-        run:
+        run: |
           git config --global user.name "MargotRasamy"
           git config --global user.email "rasamymargot@gmail.com"
+          git remote set-url origin git@github.com:MargotRasamy/maurice-havard.git
 
       # Step 6: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages

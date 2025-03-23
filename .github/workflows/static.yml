@@ -49,8 +49,8 @@ jobs:
 
       # Step 5: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
         run: npm run deploy
         env:
           CI: false
           SKIP_PREFLIGHT_CHECK: true
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

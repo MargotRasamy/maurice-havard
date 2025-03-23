@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import AboutImage from '../../assets/img/home2.jpg';
-import ProjectShowcase from '../../components/ProjectShowcase/ProjectShowcase';
 import "./about.scss";
 
 function About() {
@@ -72,7 +71,7 @@ function About() {
       {/* About End */}
 
       {/* Facts Start */}
-      <div className="container-fluid facts my-5 py-5" data-parallax="scroll" data-image-src="img/carousel-1.jpg">
+      <div className="container-fluid facts my-5 py-5" data-parallax="scroll">
         <div className="container py-5">
           <div className="row g-5">
             <div className="col-sm-6 col-lg-3 text-center wow fadeIn" data-aos="fade-in" data-aos-delay="30">

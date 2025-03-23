@@ -45,10 +45,12 @@ jobs:
         run: npm run build
         env:
           PUBLIC_URL: /maurice-havard
-          NODE_ENV: production
           CI: false
           SKIP_PREFLIGHT_CHECK: true
 
       # Step 5: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         run: npm run deploy
+        env:
+          CI: false
+          SKIP_PREFLIGHT_CHECK: true

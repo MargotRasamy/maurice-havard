@@ -21,7 +21,7 @@ jobs:
           node-version: '16'  # Specify the Node.js version
 
       # Step 3: Install dependencies
-      - name: Install Dependencies
+      - name: Install Dependenciess
         run: npm install
 
       # Step 4: Build the React app

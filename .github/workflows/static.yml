@@ -40,8 +40,6 @@ jobs:
       
       - name: Build React app
         run: npm run build
-        env:
-          PUBLIC_URL: /maurice-havard
 
   deploy:
     environment:

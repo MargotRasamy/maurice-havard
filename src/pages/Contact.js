@@ -1,20 +1,15 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { WOW } from 'wowjs';
 import emailjs from '@emailjs/browser';
 import { EMAILJS_CONFIG } from '../config/emailjs';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { useModal } from '../context/ModalContext';
 import 'wowjs/css/libs/animate.css';
-import MessageModal from '../components/MessageModal/MessageModal';
 
 function Contact() {
   const form = useRef();
-  const [showModal, setShowModal] = useState(false);
-  const [modalConfig, setModalConfig] = useState({
-    title: '',
-    message: '',
-    type: 'success'
-  });
+  const { setModal } = useModal();
 
   useEffect(() => {
     new WOW().init();
@@ -30,20 +25,18 @@ function Contact() {
       EMAILJS_CONFIG.PUBLIC_KEY
     )
       .then((result) => {
-        setModalConfig({
-          title: 'Succès !',
-          message: 'Votre message a été envoyé avec succès.',
-          type: 'success'
-        });
-        setShowModal(true);
+        setModal(
+          'Succès !',
+          'Votre message a été envoyé avec succès.',
+          'success'
+        );
         form.current.reset();
       }, (error) => {
-        setModalConfig({
-          title: 'Erreur',
-          message: 'Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.',
-          type: 'error'
-        });
-        setShowModal(true);
+        setModal(
+          'Erreur',
+          'Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.',
+          'error'
+        );
       });
   };
 
@@ -156,14 +149,6 @@ function Contact() {
         </Container>
       </Container>
       {/* Contact End */}
-
-      <MessageModal
-        show={showModal}
-        onHide={() => setShowModal(false)}
-        title={modalConfig.title}
-        message={modalConfig.message}
-        type={modalConfig.type}
-      />
     </>
   );
 }

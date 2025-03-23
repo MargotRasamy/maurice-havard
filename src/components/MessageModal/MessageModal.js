@@ -1,18 +1,21 @@
 import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
+import { useModal } from '../../context/ModalContext';
 import './MessageModal.scss';
 
-const MessageModal = ({ show, onHide, title, message, type = 'success' }) => {
+const MessageModal = () => {
+  const { showModal, modalConfig, hideModal } = useModal();
+
   return (
-    <Modal show={show} onHide={onHide} centered className="message-modal">
+    <Modal show={showModal} onHide={hideModal} centered className="message-modal">
       <Modal.Header closeButton>
-        <Modal.Title>{title}</Modal.Title>
+        <Modal.Title>{modalConfig.title}</Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        {message}
+        {modalConfig.message}
       </Modal.Body>
       <Modal.Footer>
-        <Button variant={type === 'success' ? 'success' : 'danger'} onClick={onHide}>
+        <Button variant={modalConfig.type === 'success' ? 'success' : 'danger'} onClick={hideModal}>
           Fermer
         </Button>
       </Modal.Footer>

@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ModalProvider } from './context/ModalContext';
+import MessageModal from './components/MessageModal/MessageModal';
 //TODO use dotenv package here
 
 // Import third-party CSS
@@ -24,20 +26,23 @@ import NotFound from './components/NotFound';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/quote" element={<Quote />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-        <Footer />
-      </div>
-    </Router>
+    <ModalProvider>
+      <Router>
+        <div className="App">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/quote" element={<Quote />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+          <Footer />
+          <MessageModal />
+        </div>
+      </Router>
+    </ModalProvider>
   );
 }
 

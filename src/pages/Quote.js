@@ -4,6 +4,7 @@ import { WOW } from 'wowjs';
 import emailjs from '@emailjs/browser';
 import { EMAILJS_CONFIG } from '../config/emailjs';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { useModal } from '../context/ModalContext';
 import 'wowjs/css/libs/animate.css';
 
 function Quote() {
@@ -11,6 +12,7 @@ function Quote() {
     const searchParams = new URLSearchParams(location.search);
     const projectFromUrl = searchParams.get('project');
     const form = useRef();
+    const { setModal } = useModal();
 
     useEffect(() => {
         new WOW().init();
@@ -26,12 +28,18 @@ function Quote() {
             EMAILJS_CONFIG.PUBLIC_KEY
         )
             .then((result) => {
-                console.log(result.text);
-                alert('Demande de devis envoyée avec succès !');
+                setModal(
+                    'Succès !',
+                    'Votre demande de devis a été envoyée avec succès.',
+                    'success'
+                );
                 form.current.reset();
             }, (error) => {
-                console.log(error.text);
-                alert('Une erreur est survenue, veuillez réessayer.');
+                setModal(
+                    'Erreur',
+                    'Une erreur est survenue lors de l\'envoi de votre demande. Veuillez réessayer.',
+                    'error'
+                );
             });
     };
 

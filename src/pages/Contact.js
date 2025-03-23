@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { WOW } from 'wowjs';
 import emailjs from '@emailjs/browser';
 import { EMAILJS_CONFIG } from '../config/emailjs';
+import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import 'wowjs/css/libs/animate.css';
 
 function Contact() {
@@ -35,7 +36,7 @@ function Contact() {
     <>
       {/* Page Header Start */}
       <div className="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
-        <div className="container text-center py-5">
+        <Container className="text-center py-5">
           <h1 className="display-3 text-white mb-4 animated slideInDown">Contactez-nous</h1>
           <nav aria-label="breadcrumb animated slideInDown">
             <ol className="breadcrumb justify-content-center mb-0">
@@ -43,81 +44,86 @@ function Contact() {
               <li className="breadcrumb-item active" aria-current="page">Contact</li>
             </ol>
           </nav>
-        </div>
+        </Container>
       </div>
       {/* Page Header End */}
 
       {/* Contact Start */}
-      <div className="container-xxl py-5">
-        <div className="container">
-          <div className="row g-5">
-            <div className="col-lg-6 wow fadeIn" data-wow-delay="0.1s">
+      <Container fluid className="py-5">
+        <Container>
+          <Row className="g-5">
+            <Col lg={6} className="wow fadeIn" data-wow-delay="0.1s">
               <p className="fs-5 fw-bold text-primary">Contact</p>
-              <h1 className="display-5 mb-5">Si vous avez des questions, n'hésitez pas à nous contacter</h1>
-              <p className="mb-4">Nous sommes à votre disposition pour répondre à toutes vos questions concernant nos services d'aménagement paysager et de création de piscines.</p>
-              <form ref={form} onSubmit={sendEmail}>
-                <div className="row g-3">
-                  <div className="col-md-6">
-                    <div className="form-floating">
-                      <input 
-                        type="text" 
-                        className="form-control" 
-                        id="name" 
-                        name="user_name"
-                        placeholder="Votre Nom" 
-                        required 
-                      />
-                      <label htmlFor="name">Votre Nom</label>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="form-floating">
-                      <input 
-                        type="email" 
-                        className="form-control" 
-                        id="email" 
-                        name="user_email"
-                        placeholder="Votre Email" 
-                        required 
-                      />
-                      <label htmlFor="email">Votre Email</label>
-                    </div>
-                  </div>
-                  <div className="col-12">
-                    <div className="form-floating">
-                      <input 
-                        type="text" 
-                        className="form-control" 
-                        id="subject" 
-                        name="subject"
-                        placeholder="Sujet" 
-                        required 
-                      />
-                      <label htmlFor="subject">Sujet</label>
-                    </div>
-                  </div>
-                  <div className="col-12">
-                    <div className="form-floating">
-                      <textarea 
-                        className="form-control" 
-                        placeholder="Laissez votre message ici" 
-                        id="message"
-                        name="message"
-                        style={{ height: "100px" }}
+              <h1 className="display-5 mb-5">Si vous avez des questions, n'hésitez pas à contacter Maurice HAVARD</h1>
+              <p className="mb-4">Maurice HAVARD est à votre disposition pour répondre à toutes vos questions concernant ses services d'aménagement paysager et de création de piscines.</p>
+              <Form ref={form} onSubmit={sendEmail}>
+                <Row className="g-3">
+                  <Col xs={12}>
+                    <Form.Floating>
+                      <Form.Control
+                        type="text"
+                        name="name"
+                        placeholder="Votre Nom"
                         required
-                      ></textarea>
-                      <label htmlFor="message">Message</label>
-                    </div>
-                  </div>
-                  <div className="col-12">
-                    <button className="btn btn-primary py-3 px-4" type="submit">
+                      />
+                      <Form.Label>Votre nom et prénom</Form.Label>
+                    </Form.Floating>
+                  </Col>
+                  <Col md={6}>
+                    <Form.Floating>
+                      <Form.Control
+                        type="email"
+                        name="email"
+                        placeholder="Votre Email"
+                        required
+                      />
+                      <Form.Label>Votre adresse email</Form.Label>
+                    </Form.Floating>
+                  </Col>
+                  <Col md={6}>
+                    <Form.Floating>
+                      <Form.Control
+                        type="tel"
+                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                        name="phone"
+                        placeholder="Votre numéro de téléphone"
+                        required
+                      />
+                      <Form.Label>Votre numéro de téléphone</Form.Label>
+                    </Form.Floating>
+                  </Col>
+                  <Col xs={12}>
+                    <Form.Floating>
+                      <Form.Control
+                        type="text"
+                        name="subject"
+                        placeholder="Sujet de votre demande de contact"
+                        required
+                      />
+                      <Form.Label>Sujet de votre demande de contact</Form.Label>
+                    </Form.Floating>
+                  </Col>
+                  <Col xs={12}>
+                    <Form.Floating>
+                      <Form.Control
+                        as="textarea"
+                        name="message"
+                        placeholder="Laissez votre message ici"
+                        style={{height: "100px"}}
+                        required
+                      />
+                      <Form.Label>Votre message</Form.Label>
+                    </Form.Floating>
+                  </Col>
+                  <Col xs={12}>
+                    <Button variant="primary" type="submit" className="py-3 px-4">
                       Envoyer
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div className="col-lg-6 wow fadeIn" data-wow-delay="0.5s" style={{ minHeight: "450px" }}>
+                    </Button>
+                  </Col>
+                </Row>
+              </Form>
+            </Col>
+            <Col lg={6} className="wow fadeIn" data-wow-delay="0.5s" style={{ minHeight: "450px" }}>
               <div className="position-relative rounded overflow-hidden h-100">
                 <iframe 
                   className="position-relative w-100 h-100"
@@ -130,10 +136,10 @@ function Contact() {
                   title="Google Maps"
                 ></iframe>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
+            </Col>
+          </Row>
+        </Container>
+      </Container>
       {/* Contact End */}
     </>
   );

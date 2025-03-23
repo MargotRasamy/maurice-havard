@@ -71,7 +71,7 @@ function Quote() {
                                                     placeholder="Votre Nom"
                                                     required
                                                 />
-                                                <Form.Label>Votre Nom</Form.Label>
+                                                <Form.Label>Votre nom et prénom</Form.Label>
                                             </Form.Floating>
                                         </Col>
                                         <Col sm={6}>
@@ -88,30 +88,24 @@ function Quote() {
                                         <Col sm={6}>
                                             <Form.Floating>
                                                 <Form.Control
-                                                    type="text"
+                                                    type="tel"
+                                                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                                                     name="phone"
                                                     placeholder="Votre Téléphone"
                                                     required
                                                 />
-                                                <Form.Label>Votre Téléphone</Form.Label>
+                                                <Form.Label>Votre numéro de téléphone</Form.Label>
                                             </Form.Floating>
                                         </Col>
                                         <Col sm={6}>
                                             <Form.Floating>
-                                                <Form.Select
+                                                <Form.Control
+                                                    type="text"
                                                     name="service"
-                                                    defaultValue={projectFromUrl || ""}
+                                                    placeholder="Type de service"
                                                     required
-                                                >
-                                                    <option value="">Sélectionnez un service</option>
-                                                    <option value="Aménagement Paysager">Aménagement Paysager</option>
-                                                    <option value="Études et Plans">Études et Plans</option>
-                                                    <option value="Maçonnerie Paysagère">Maçonnerie Paysagère</option>
-                                                    <option value="Entretien des Espaces Verts">Entretien des Espaces Verts</option>
-                                                    <option value="Élagage et Taille">Élagage et Taille</option>
-                                                    <option value="Création de Piscines">Création de Piscines</option>
-                                                </Form.Select>
-                                                <Form.Label>Type de Service</Form.Label>
+                                                />
+                                                <Form.Label>Quel service souhaitez-vous ?</Form.Label>
                                             </Form.Floating>
                                         </Col>
                                         <Col xs={12}>
@@ -123,7 +117,7 @@ function Quote() {
                                                     style={{height: "100px"}}
                                                     required
                                                 />
-                                                <Form.Label>Message</Form.Label>
+                                                <Form.Label>Votre message</Form.Label>
                                             </Form.Floating>
                                         </Col>
                                         <Col xs={12} className="text-center">

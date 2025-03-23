@@ -46,7 +46,7 @@ jobs:
         env:
           PUBLIC_URL: /maurice-havard
           NODE_ENV: production
-          CI: true
+          CI: false
           SKIP_PREFLIGHT_CHECK: true
 
   deploy:

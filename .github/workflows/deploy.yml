@@ -1,9 +1,13 @@
-name: Deploy React App to GitHub Pagess
+name: Deploy React App to GitHub Pages
 
 on:
   push:
     branches:
       - main  # Deploy only when pushing to the main branch
+
+# Add permissions for the job
+permissions:
+  contents: write
 
 jobs:
   build-and-deploy:
@@ -21,7 +25,7 @@ jobs:
           node-version: '16'  # Specify the Node.js version
 
       # Step 3: Install dependencies
-      - name: Install Dependenciesss
+      - name: Install Dependencies
         run: npm install
 
       # Step 4: Build the React app
@@ -30,7 +34,13 @@ jobs:
         env:
           CI: false
 
-      # Step 5: Deploy to GitHub Pages
+      # Step 5: Configure Git
+      - name: Configure Git
+        run: |
+          git config --global user.name "MargotRasamy"
+          git config --global user.email "rasamymargot@gmail.com"
+
+      # Step 6: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         run: npm run deploy
         env:

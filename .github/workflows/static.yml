@@ -35,7 +35,7 @@ jobs:
           cache: 'npm'
           cache-dependency-path: package-lock.json
       
-      - name: Clean install dependenciesss
+      - name: Clean install dependencies
         run: |
           rm -rf node_modules
           rm -rf build

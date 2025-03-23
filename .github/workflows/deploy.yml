@@ -36,7 +36,7 @@ jobs:
 
       # Step 5: Configure Git
       - name: Configure Git
-        run: |
+        run:
           git config --global user.name "MargotRasamy"
           git config --global user.email "rasamymargot@gmail.com"
 

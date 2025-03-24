@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef } from 'react';
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { WOW } from 'wowjs';
 import emailjs from '@emailjs/browser';
@@ -13,6 +13,7 @@ function Quote() {
     const projectFromUrl = searchParams.get('project');
     const form = useRef();
     const { setModal } = useModal();
+    const [validated, setValidated] = useState(false);
 
     useEffect(() => {
         new WOW().init();
@@ -24,6 +25,13 @@ function Quote() {
 
     const sendEmail = (e) => {
         e.preventDefault();
+        const formElement = e.currentTarget;
+        setValidated(true);
+
+        if (!formElement.checkValidity()) {
+            e.stopPropagation();
+            return;
+        }
 
         emailjs.sendForm(
             EMAILJS_CONFIG.SERVICE_ID,
@@ -38,7 +46,9 @@ function Quote() {
                     'success'
                 );
                 form.current.reset();
+                setValidated(false);
             }, (error) => {
+                console.error("Error sending email from quote:", error);
                 setModal(
                     "Erreur d'envoi",
                     "Une erreur est survenue lors de l'envoi du message. Veuillez réessayer ou nous contacter directement par téléphone au 06 76 97 89 86 ou par email à l'adresse mauricehavard99@gmail.com",
@@ -73,28 +83,34 @@ function Quote() {
                     <Row className="justify-content-center">
                         <Col lg={7}>
                             <div className="bg-light rounded p-4 p-sm-5 wow fadeInUp" data-wow-delay="0.2s">
-                                <Form ref={form} onSubmit={sendEmail}>
+                                <Form ref={form} onSubmit={sendEmail} noValidate validated={validated}>
                                     <Row className="g-3">
                                         <Col sm={6}>
                                             <Form.Floating>
                                                 <Form.Control
                                                     type="text"
-                                                    name="user_name"
+                                                    name="name"
                                                     placeholder="Votre Nom"
                                                     required
                                                 />
-                                                <Form.Label>Votre nom et prénom</Form.Label>
+                                                <Form.Label>Votre prénom et nom</Form.Label>
+                                                <Form.Control.Feedback type="invalid">
+                                                    Veuillez entrer votre prénom et nom
+                                                </Form.Control.Feedback>
                                             </Form.Floating>
                                         </Col>
                                         <Col sm={6}>
                                             <Form.Floating>
                                                 <Form.Control
                                                     type="email"
-                                                    name="user_email"
+                                                    name="email"
                                                     placeholder="Votre Email"
                                                     required
                                                 />
-                                                <Form.Label>Votre Email</Form.Label>
+                                                <Form.Label>Votre adresse email</Form.Label>
+                                                <Form.Control.Feedback type="invalid">
+                                                    Veuillez entrer une adresse email valide
+                                                </Form.Control.Feedback>
                                             </Form.Floating>
                                         </Col>
                                         <Col sm={6}>
@@ -107,6 +123,9 @@ function Quote() {
                                                     required
                                                 />
                                                 <Form.Label>Votre numéro de téléphone</Form.Label>
+                                                <Form.Control.Feedback type="invalid">
+                                                    Uniquement les chiffres et ces caractères sont autorisés : + - .)
+                                                </Form.Control.Feedback>
                                             </Form.Floating>
                                         </Col>
                                         <Col sm={6}>
@@ -118,6 +137,9 @@ function Quote() {
                                                     required
                                                 />
                                                 <Form.Label>Quel service souhaitez-vous ?</Form.Label>
+                                                <Form.Control.Feedback type="invalid">
+                                                    Veuillez entrer le type de service souhaité
+                                                </Form.Control.Feedback>
                                             </Form.Floating>
                                         </Col>
                                         <Col xs={12}>
@@ -130,6 +152,9 @@ function Quote() {
                                                     required
                                                 />
                                                 <Form.Label>Votre message</Form.Label>
+                                                <Form.Control.Feedback type="invalid">
+                                                    Veuillez entrer votre message
+                                                </Form.Control.Feedback>
                                             </Form.Floating>
                                         </Col>
                                         <Col xs={12} className="text-center">

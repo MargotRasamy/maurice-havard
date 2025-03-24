@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useRef } from 'react';
+import React, { useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { WOW } from 'wowjs';
 import emailjs from '@emailjs/browser';
@@ -10,6 +10,7 @@ import 'wowjs/css/libs/animate.css';
 function Contact() {
   const form = useRef();
   const { setModal } = useModal();
+  const [validated, setValidated] = useState(false);
 
   useEffect(() => {
     new WOW().init();
@@ -21,6 +22,13 @@ function Contact() {
 
   const sendEmail = (e) => {
     e.preventDefault();
+    const formElement = e.currentTarget;
+    setValidated(true);
+
+    if (!formElement.checkValidity()) {
+      e.stopPropagation();
+      return;
+    }
 
     console.log("EMAILJS_CONFIG", EMAILJS_CONFIG)
     emailjs.sendForm(
@@ -36,7 +44,9 @@ function Contact() {
           'success'
         );
         form.current.reset();
+        setValidated(false);
       }, (error) => {
+        console.error("Error sending email from quote:", error);
         setModal(
           "Erreur d'envoi",
           "Une erreur est survenue lors de l'envoi du message. Veuillez réessayer ou nous contacter directement par téléphone au 06.76.97.89.86 ou par email à l'adresse mauricehavard99@gmail.com",
@@ -69,17 +79,20 @@ function Contact() {
               <p className="fs-5 fw-bold text-primary">Contact</p>
               <h1 className="display-5 mb-5">Si vous avez des questions, n'hésitez pas à contacter Maurice HAVARD</h1>
               <p className="mb-4">Maurice HAVARD est à votre disposition pour répondre à toutes vos questions concernant ses services d'aménagement paysager et de création de piscines.</p>
-              <Form ref={form} onSubmit={sendEmail}>
+              <Form ref={form} onSubmit={sendEmail} noValidate validated={validated}>
                 <Row className="g-3">
                   <Col xs={12}>
                     <Form.Floating>
                       <Form.Control
                         type="text"
                         name="name"
-                        placeholder="Votre Nom"
+                        placeholder="Votre prénom et nom"
                         required
                       />
-                      <Form.Label>Votre nom et prénom</Form.Label>
+                      <Form.Label>Votre prénom et nom</Form.Label>
+                      <Form.Control.Feedback type="invalid">
+                        Veuillez entrer votre prénom et nom
+                      </Form.Control.Feedback>
                     </Form.Floating>
                   </Col>
                   <Col md={6}>
@@ -87,10 +100,13 @@ function Contact() {
                       <Form.Control
                         type="email"
                         name="email"
-                        placeholder="Votre Email"
+                        placeholder="Votre adresse email"
                         required
                       />
                       <Form.Label>Votre adresse email</Form.Label>
+                      <Form.Control.Feedback type="invalid">
+                        Veuillez entrer une adresse email valide
+                      </Form.Control.Feedback>
                     </Form.Floating>
                   </Col>
                   <Col md={6}>
@@ -103,6 +119,9 @@ function Contact() {
                         required
                       />
                       <Form.Label>Votre numéro de téléphone</Form.Label>
+                      <Form.Control.Feedback type="invalid">
+                        Veuillez entrer un numéro de téléphone valide
+                      </Form.Control.Feedback>
                     </Form.Floating>
                   </Col>
                   <Col xs={12}>
@@ -114,6 +133,9 @@ function Contact() {
                         required
                       />
                       <Form.Label>Sujet de votre demande de contact</Form.Label>
+                      <Form.Control.Feedback type="invalid">
+                        Veuillez entrer le sujet de votre demande
+                      </Form.Control.Feedback>
                     </Form.Floating>
                   </Col>
                   <Col xs={12}>
@@ -126,6 +148,9 @@ function Contact() {
                         required
                       />
                       <Form.Label>Votre message</Form.Label>
+                      <Form.Control.Feedback type="invalid">
+                        Veuillez entrer votre message
+                      </Form.Control.Feedback>
                     </Form.Floating>
                   </Col>
                   <Col xs={12}>

@@ -53,7 +53,7 @@ function Navbar() {
             </div>
 
             <Link to="/contact" className={`nav-item nav-link ${location.pathname === '/contact' ? 'active' : ''}`}>Contact</Link>
-            <Link to="/quote" className="btn btn-primary ctaBtn p-2 rounded-0 d-none d-lg-block"><span>Demander un devis<i className="fa fa-arrow-right ms-3"></i></span></Link>
+            <Link to="/quote" className="btn btn-primary ctaBtn py-2 px-3 rounded-0 d-none d-lg-block"><span>Demander un devis<i className="fa fa-arrow-right ms-3"></i></span></Link>
           </div>
         </div>
       </nav>

@@ -38,7 +38,7 @@ function Contact() {
       }, (error) => {
         setModal(
           "Erreur d'envoi",
-          "Une erreur est survenue lors de l'envoi du message. Veuillez réessayer ou nous contacter directement par téléphone au 06 76 97 89 86 ou par email à l'adresse mauricehavard99@gmail.com",
+          "Une erreur est survenue lors de l'envoi du message. Veuillez réessayer ou nous contacter directement par téléphone au 06.76.97.89.86 ou par email à l'adresse mauricehavard99@gmail.com",
           'error'
         );
       });

@@ -1,11 +1,12 @@
 {
   "files": {
-    "main.css": "/maurice-havard/static/css/main.00bd41d1.css",
-    "main.js": "/maurice-havard/static/js/main.185966e0.js",
+    "main.css": "/maurice-havard/static/css/main.f1f976e2.css",
+    "main.js": "/maurice-havard/static/js/main.dd95253e.js",
     "static/js/453.f27e415b.chunk.js": "/maurice-havard/static/js/453.f27e415b.chunk.js",
     "static/media/vitrine1.jpg": "/maurice-havard/static/media/vitrine1.9d0ad82f3994a09c1632.jpg",
     "static/media/landscape3.jpg": "/maurice-havard/static/media/landscape3.3673d639e1b3c3865172.jpg",
     "static/media/divers-landscape5.jpg": "/maurice-havard/static/media/divers-landscape5.a7d506ae0554eccbfe42.jpg",
+    "static/media/pool6.jpg": "/maurice-havard/static/media/pool6.49d581551e2eb9e52446.jpg",
     "static/media/divers-pool3.jpg": "/maurice-havard/static/media/divers-pool3.62f784821c6d2f6910fb.jpg",
     "static/media/divers-landscape4.jpg": "/maurice-havard/static/media/divers-landscape4.291cdef2d3d5435e98d9.jpg",
     "static/media/landscape1.jpg": "/maurice-havard/static/media/landscape1.2b840e0dca8fce8a0798.jpg",
@@ -37,12 +38,12 @@
     "static/media/fa-v4compatibility.ttf": "/maurice-havard/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
     "static/media/fa-v4compatibility.woff2": "/maurice-havard/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "index.html": "/maurice-havard/index.html",
-    "main.00bd41d1.css.map": "/maurice-havard/static/css/main.00bd41d1.css.map",
-    "main.185966e0.js.map": "/maurice-havard/static/js/main.185966e0.js.map",
+    "main.f1f976e2.css.map": "/maurice-havard/static/css/main.f1f976e2.css.map",
+    "main.dd95253e.js.map": "/maurice-havard/static/js/main.dd95253e.js.map",
     "453.f27e415b.chunk.js.map": "/maurice-havard/static/js/453.f27e415b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.00bd41d1.css",
-    "static/js/main.185966e0.js"
+    "static/css/main.f1f976e2.css",
+    "static/js/main.dd95253e.js"
   ]
 }

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useLayoutEffect } from 'react';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
 
@@ -11,6 +11,10 @@ function Services() {
       mirror: false
     });
   }, []);
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0, { behavior: 'smooth' })
+  });
 
   const services = [
     {

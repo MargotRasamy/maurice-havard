@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useLayoutEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 function NotFound() {
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0, { behavior: 'smooth' })
+  });
   return (
     <>
       {/* Page Header Start */}

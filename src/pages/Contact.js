@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useLayoutEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { WOW } from 'wowjs';
 import emailjs from '@emailjs/browser';
@@ -14,6 +14,10 @@ function Contact() {
   useEffect(() => {
     new WOW().init();
   }, []);
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0, { behavior: 'smooth' })
+  });
 
   const sendEmail = (e) => {
     e.preventDefault();

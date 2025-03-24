@@ -29,7 +29,7 @@ function AboutSection() {
                             </div>
                             <div className="d-flex align-items-center mb-4">
                                 <div className="flex-shrink-0 btn-lg-square rounded-circle bg-light">
-                                    <i className="fa fa-users text-primary"></i>
+                                    <i className="fa fa-check text-primary"></i>
                                 </div>
                                 <div className="ms-3">
                                     <h5 className="mb-0">Où est la piscine ?</h5>

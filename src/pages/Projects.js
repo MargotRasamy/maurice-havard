@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import ProjectShowcase from '../components/ProjectShowcase/ProjectShowcase';
@@ -52,6 +52,10 @@ function Projects() {
       delay: '500'
     }
   ];
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0, { behavior: 'smooth' })
+  });
 
   const filteredProjects = filter === '*' 
     ? projects 

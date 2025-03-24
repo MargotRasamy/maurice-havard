@@ -195,6 +195,7 @@ function Projects() {
           </div>
         )}
         {showModal && <div className="modal-backdrop show"></div>}
+        <Link to="/projects" className="btn btn-primary p-4 d-block mx-auto">En voir plus</Link>
       </Container>
     </Container>
   );

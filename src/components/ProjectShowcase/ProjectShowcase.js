@@ -13,6 +13,16 @@ import project3 from '../../assets/img/pool3.jpg';
 import project4 from '../../assets/img/pool4.jpg';
 import project5 from '../../assets/img/landscape3.jpg';
 import project6 from '../../assets/img/landscape1.jpg';
+import landscape1 from '../../assets/img/divers/divers-landscape1.jpg';
+import landscape2 from '../../assets/img/divers/divers-landscape2.jpg';
+import landscape3 from '../../assets/img/divers/divers-landscape3.jpg';
+import landscape4 from '../../assets/img/divers/divers-landscape4.jpg';
+import landscape5 from '../../assets/img/divers/divers-landscape5.jpg';
+
+import pool1 from '../../assets/img/divers/divers-pool1.jpg';
+import pool2 from '../../assets/img/divers/divers-pool2.jpg';
+import pool3 from '../../assets/img/divers/divers-pool3.jpg';
+
 
 const PROJECT_CATEGORIES = {
   ALL: '*',
@@ -56,15 +66,63 @@ const PROJECTS_DATA = [
     category: PROJECT_CATEGORIES.LANDSCAPES,
     description: "Création d'un jardin paysager luxuriant avec une harmonie parfaite entre les différents éléments végétaux. Un espace vert structuré qui offre une expérience sensorielle unique à travers ses textures, couleurs et parfums."
   },
-  {
-    id: 6,
-    image: project6,
-    title: "Espace vert d'entreprise",
-    category: PROJECT_CATEGORIES.LANDSCAPES,
-    description: "Un espace vert structuré pour les entreprises"
-  }
+    {
+      id: 6,
+      image: landscape1,
+      title: "Espace vert d'entreprise",
+      category: PROJECT_CATEGORIES.LANDSCAPES,
+      description: "Un espace vert structuré pour les entreprises"
+    },
+    {
+      id: 7,
+      image: landscape2,
+      title: "Espace vert d'entreprise",
+      category: PROJECT_CATEGORIES.LANDSCAPES,
+      description: "Un espace vert structuré pour les entreprises"
+    },
+    {
+      id: 8,
+      image: landscape3,
+      title: "Espace vert d'entreprise",
+      category: PROJECT_CATEGORIES.LANDSCAPES,
+      description: "Un espace vert structuré pour les entreprises"
+    },
+    {
+      id: 9,
+      image: landscape4,
+      title: "Espace vert d'entreprise",
+      category: PROJECT_CATEGORIES.LANDSCAPES,
+      description: "Un espace vert structuré pour les entreprises"
+    },  
+    {
+      id: 10,
+      image: landscape5,
+      title: "Espace vert d'entreprise",
+      category: PROJECT_CATEGORIES.LANDSCAPES,
+      description: "Un espace vert structuré pour les entreprises"
+    },
+    {
+      id: 11,
+      image: pool1,
+      title: "Piscine Moderne",
+      category: PROJECT_CATEGORIES.POOLS,
+      description: "Une piscine contemporaine avec système de nage à contre-courant, intégrant les dernières innovations en matière de filtration et d'éclairage. Le design épuré s'harmonise parfaitement avec l'environnement naturel."
+    },
+    {
+      id: 12,
+      image: pool2,
+      title: "Piscine Moderne",
+      category: PROJECT_CATEGORIES.POOLS,
+      description: "Une piscine contemporaine avec système de nage à contre-courant, intégrant les dernières innovations en matière de filtration et d'éclairage. Le design épuré s'harmonise parfaitement avec l'environnement naturel."
+    },
+    {
+      id: 13,
+      image: pool3,
+      title: "Piscine Moderne",
+      category: PROJECT_CATEGORIES.POOLS,
+      description: "Une piscine contemporaine avec système de nage à contre-courant, intégrant les dernières innovations en matière de filtration et d'éclairage. Le design épuré s'harmonise parfaitement avec l'environnement naturel."
+    }
 ];
-
 const ProjectCard = ({ project, onClick }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}

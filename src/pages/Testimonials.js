@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useLayoutEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { WOW } from 'wowjs';
 import 'wowjs/css/libs/animate.css';
@@ -8,6 +8,10 @@ function Testimonials() {
   useEffect(() => {
     new WOW().init();
   }, []);
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0, { behavior: 'smooth' })
+  });
 
   return (
     <>

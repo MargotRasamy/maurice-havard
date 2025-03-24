@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { WOW } from 'wowjs';
 import { Container, Row, Col, Carousel, Button } from 'react-bootstrap';
@@ -20,6 +20,10 @@ import MainAboutSection from '../components/MainAboutSection/MainAboutSection';
 function Home() {
   const [currentYear] = useState(new Date().getFullYear());
   const yearsExperience = currentYear - 1971;
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0, { behavior: 'smooth' })
+  });
 
   useEffect(() => {
     new WOW().init();

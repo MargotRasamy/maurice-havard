@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import MainAboutSection from '../../components/MainAboutSection/MainAboutSection';
@@ -7,6 +7,10 @@ import "./about.scss";
 function About() {
   const [currentYear] = useState(new Date().getFullYear());
   const yearsExperience = currentYear - 1971;
+
+  useLayoutEffect(() => {
+    window.scrollTo(0, 0, { behavior: 'smooth' })
+  });
 
   useEffect(() => {
     AOS.init({

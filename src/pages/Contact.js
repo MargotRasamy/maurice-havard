@@ -22,6 +22,7 @@ function Contact() {
   const sendEmail = (e) => {
     e.preventDefault();
 
+    console.log("EMAILJS_CONFIG", EMAILJS_CONFIG)
     emailjs.sendForm(
       EMAILJS_CONFIG.SERVICE_ID,
       EMAILJS_CONFIG.TEMPLATE_IDS.CONTACT,

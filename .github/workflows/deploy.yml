@@ -39,11 +39,13 @@ jobs:
         run: |
           git config --global user.name "MargotRasamy"
           git config --global user.email "rasamymargot@gmail.com"
-          git remote set-url origin "git@github.com:MargotRasamy/maurice-havard.git"
+          git remote set-url origin "https://${{ secrets.GITHUB_TOKEN }}@github.com/MargotRasamy/maurice-havard.git"
 
       # Step 6: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
-        run: npm run deploy
+        run: |
+          git remote set-url origin https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          npm run deploy
         env:
           CI: false
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

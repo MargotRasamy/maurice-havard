@@ -85,7 +85,7 @@ function Home() {
               <Container>
                 <Row className="justify-content-center">
                   <Col lg={8}>
-                    <h1 className="display-1 text-white mb-5 animated slideInDown">Piscines et Jardins depuis 1971</h1>
+                    <h1 className="display-1 text-white mb-5 animated slideInDown">Piscines Et Jardins depuis 1971</h1>
                     <Link to="/about">
                       <Button variant="primary" className="py-sm-3 px-sm-4">Explorer</Button>
                     </Link>

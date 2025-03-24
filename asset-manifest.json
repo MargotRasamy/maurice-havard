@@ -1,18 +1,32 @@
 {
   "files": {
-    "main.css": "/maurice-havard/static/css/main.ce3b2a32.css",
-    "main.js": "/maurice-havard/static/js/main.523a7756.js",
+    "main.css": "/maurice-havard/static/css/main.d937e7a4.css",
+    "main.js": "/maurice-havard/static/js/main.e129a84c.js",
     "static/js/453.f27e415b.chunk.js": "/maurice-havard/static/js/453.f27e415b.chunk.js",
-    "static/media/landscape2.jpg": "/maurice-havard/static/media/landscape2.d1a31cf11ca254b13c60.jpg",
+    "static/media/vitrine1.jpg": "/maurice-havard/static/media/vitrine1.9d0ad82f3994a09c1632.jpg",
     "static/media/landscape3.jpg": "/maurice-havard/static/media/landscape3.3673d639e1b3c3865172.jpg",
+    "static/media/divers-landscape5.jpg": "/maurice-havard/static/media/divers-landscape5.a7d506ae0554eccbfe42.jpg",
+    "static/media/divers-pool3.jpg": "/maurice-havard/static/media/divers-pool3.62f784821c6d2f6910fb.jpg",
+    "static/media/divers-landscape4.jpg": "/maurice-havard/static/media/divers-landscape4.291cdef2d3d5435e98d9.jpg",
     "static/media/landscape1.jpg": "/maurice-havard/static/media/landscape1.2b840e0dca8fce8a0798.jpg",
+    "static/media/divers-landscape2.jpg": "/maurice-havard/static/media/divers-landscape2.c5b32f9ec8686dfdac7a.jpg",
     "static/media/pool2.jpg": "/maurice-havard/static/media/pool2.d863327d0099d51fd678.jpg",
+    "static/media/divers-landscape1.jpg": "/maurice-havard/static/media/divers-landscape1.38ddd51f43cdbd1c4e75.jpg",
     "static/media/home.jpg": "/maurice-havard/static/media/home.07576d60a8c14806d8c8.jpg",
+    "static/media/divers-pool1.jpg": "/maurice-havard/static/media/divers-pool1.5bf9d096636112e329a0.jpg",
     "static/media/home2.jpg": "/maurice-havard/static/media/home2.9d3cf9ae645649d06055.jpg",
+    "static/media/divers-pool2.jpg": "/maurice-havard/static/media/divers-pool2.201599c15cb35dc09c85.jpg",
     "static/media/fa-solid-900.ttf": "/maurice-havard/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
     "static/media/pool3.jpg": "/maurice-havard/static/media/pool3.4c25849017f326f64908.jpg",
     "static/media/pool4.jpg": "/maurice-havard/static/media/pool4.f931ca0bac786c0679e3.jpg",
+    "static/media/1.jpg": "/maurice-havard/static/media/1.195da6f2dbf7e0ef4c22.jpg",
     "static/media/pool1.jpg": "/maurice-havard/static/media/pool1.7ff8faff9a7bab5b730b.jpg",
+    "static/media/2.jpg": "/maurice-havard/static/media/2.9ef073e51dc128513969.jpg",
+    "static/media/3.jpg": "/maurice-havard/static/media/3.e3ff5a7ee09df27ce6bf.jpg",
+    "static/media/4.jpg": "/maurice-havard/static/media/4.073808ccf1af1eb65b51.jpg",
+    "static/media/6.jpg": "/maurice-havard/static/media/6.c9c04c976fbb5ee3cbe5.jpg",
+    "static/media/divers-landscape3.jpg": "/maurice-havard/static/media/divers-landscape3.8baaff8c9ce7dce8da59.jpg",
+    "static/media/5.jpg": "/maurice-havard/static/media/5.57f65424684247f853ce.jpg",
     "static/media/fa-brands-400.ttf": "/maurice-havard/static/media/fa-brands-400.1815e00441357e01619e.ttf",
     "static/media/fa-solid-900.woff2": "/maurice-havard/static/media/fa-solid-900.2463b90d9a316e4e5294.woff2",
     "static/media/fa-brands-400.woff2": "/maurice-havard/static/media/fa-brands-400.c210719e60948b211a12.woff2",
@@ -26,12 +40,12 @@
     "static/media/fa-v4compatibility.ttf": "/maurice-havard/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
     "static/media/fa-v4compatibility.woff2": "/maurice-havard/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "index.html": "/maurice-havard/index.html",
-    "main.ce3b2a32.css.map": "/maurice-havard/static/css/main.ce3b2a32.css.map",
-    "main.523a7756.js.map": "/maurice-havard/static/js/main.523a7756.js.map",
+    "main.d937e7a4.css.map": "/maurice-havard/static/css/main.d937e7a4.css.map",
+    "main.e129a84c.js.map": "/maurice-havard/static/js/main.e129a84c.js.map",
     "453.f27e415b.chunk.js.map": "/maurice-havard/static/js/453.f27e415b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ce3b2a32.css",
-    "static/js/main.523a7756.js"
+    "static/css/main.d937e7a4.css",
+    "static/js/main.e129a84c.js"
   ]
 }

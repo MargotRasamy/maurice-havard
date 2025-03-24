@@ -1,6 +1,6 @@
 # https://margotrasamy.github.io/maurice-havard/
 
-
+COUCOU
 Create a .env file at the root of /maurice-havard-react with the following informations retrieved from your Email.js account (https://www.emailjs.com/)
 
 REACT_APP_EMAILJS_PUBLIC_API_KEY = api key

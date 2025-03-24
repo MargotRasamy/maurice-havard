@@ -60,8 +60,8 @@ function Contact() {
       {/* Page Header Start */}
       <div className="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
         <Container className="text-center py-5">
-          <h1 className="display-3 text-white mb-4 animated slideInDown">Contactez-nous</h1>
-          <nav aria-label="breadcrumb animated slideInDown">
+          <h1 className="display-3 text-white mb-4 animated fadeIn">Contactez-nous</h1>
+          <nav aria-label="breadcrumb animated fadeIn">
             <ol className="breadcrumb justify-content-center mb-0">
               <li className="breadcrumb-item"><Link to="/">Accueil</Link></li>
               <li className="breadcrumb-item active" aria-current="page">Contact</li>

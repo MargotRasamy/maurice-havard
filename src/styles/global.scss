@@ -9,6 +9,11 @@ $very-light: #d9d9d950;
 $carousel-dark: #064852;
 $bg-overlay: rgba($carousel-dark, .5);
 
+// Function to convert hex to RGB
+@function hex-to-rgb($hex) {
+  @return red($hex), green($hex), blue($hex);
+}
+
 :root {
     // Variables nécessaires pour Bootstrap
     --bs-primary: #{$primary};
@@ -19,6 +24,11 @@ $bg-overlay: rgba($carousel-dark, .5);
     --bs-very-light: #{$very-light};
     --bs-carousel-dark: #{$carousel-dark};
     --bs-bg-overlay: #{$bg-overlay};
+
+    --bs-primary-rgb: #{hex-to-rgb($primary)};
+    --bs-secondary-rgb: #{hex-to-rgb($secondary)};
+    --bs-light-rgb: #{hex-to-rgb($light)};
+    --bs-dark-rgb: #{hex-to-rgb($dark)};
 
     --bs-btn-active-color: $light !important;
     --bs-btn-active-bg: darken($primary, 10%) !important;

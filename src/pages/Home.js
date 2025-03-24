@@ -6,7 +6,7 @@ import 'wowjs/css/libs/animate.css';
 
 // Import images
 import carousel1 from '../assets/img/home.jpg';
-import carousel2 from '../assets/img/home2.jpg';
+import carousel2 from '../assets/img/pool6.jpg';
 
 // Import components
 import Projects from '../components/Projects/Projects';

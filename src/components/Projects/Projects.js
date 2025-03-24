@@ -8,9 +8,15 @@ import { motion, AnimatePresence } from 'framer-motion';
 import project1 from '../../assets/img/pool1.jpg';
 import project2 from '../../assets/img/pool2.jpg';
 import project3 from '../../assets/img/pool3.jpg';
-import project4 from '../../assets/img/pool4.jpg';
+import project4 from '../../assets/img/divers/divers-pool1.jpg';
 import project5 from '../../assets/img/landscape3.jpg';
-import project6 from '../../assets/img/landscape1.jpg';
+import project6 from '../../assets/img/divers/divers-landscape2.jpg';
+import projectImage1 from '../../assets/img/divers/projet/1.jpg';
+import projectImage2 from '../../assets/img/divers/projet/2.jpg';
+import projectImage3 from '../../assets/img/divers/projet/3.jpg';
+import projectImage4 from '../../assets/img/divers/projet/4.jpg';
+import projectImage5 from '../../assets/img/divers/projet/5.jpg';
+import projectImage6 from '../../assets/img/divers/projet/6.jpg';
 
 const PROJECT_CATEGORIES = {
   ALL: '*',
@@ -60,9 +66,29 @@ const PROJECTS_DATA = [
     title: "Espace vert d'entreprise",
     category: PROJECT_CATEGORIES.LANDSCAPES,
     description: "Un espace vert structuré pour les entreprises"
+  },
+  {
+    id: 7,
+    image: projectImage2,
+    title: "Aménagement espace vert",
+    category: PROJECT_CATEGORIES.LANDSCAPES,
+    description: "Aménagement d'une piscine avec espace vert"
+  },
+  {
+    id: 8,
+    image: projectImage4,
+    title: "Aménagement espace vert",
+    category: PROJECT_CATEGORIES.LANDSCAPES,
+    description: "Aménagement d'une piscine avec espace vert"
+  },
+  {
+    id: 9,
+    image: projectImage6,
+    title: "Aménagement espace vert",
+    category: PROJECT_CATEGORIES.LANDSCAPES,
+    description: "Aménagement d'une piscine avec espace vert"
   }
 ];
-
 const ProjectCard = ({ project, onViewClick }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}

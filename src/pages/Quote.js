@@ -124,7 +124,7 @@ function Quote() {
                                                 />
                                                 <Form.Label>Votre numéro de téléphone</Form.Label>
                                                 <Form.Control.Feedback type="invalid">
-                                                    Uniquement les chiffres et ces caractères sont autorisés : + - .)
+                                                    Numéro de téléphone invalide. Seuls les chiffres et ces caractères sont autorisés : + - .
                                                 </Form.Control.Feedback>
                                             </Form.Floating>
                                         </Col>

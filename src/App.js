@@ -1,5 +1,5 @@
 import React, { useLayoutEffect } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { ModalProvider } from './context/ModalContext';
 import MessageModal from './components/MessageModal/MessageModal';
 //TODO use dotenv package here
@@ -27,10 +27,10 @@ import NotFound from './components/NotFound';
 function App() {
   useLayoutEffect(() => {
     window.scrollTo(0, 0, { behavior: 'smooth' })
-});
+  });
   return (
     <ModalProvider>
-      <Router>
+      <BrowserRouter basename="/maurice-havard">
         <div className="App">
           <Navbar />
           <Routes>
@@ -44,7 +44,7 @@ function App() {
           <Footer />
           <MessageModal />
         </div>
-      </Router>
+      </BrowserRouter>
     </ModalProvider>
   );
 }

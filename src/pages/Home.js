@@ -124,8 +124,8 @@ function Home() {
                     <i className="fa fa-check text-primary"></i>
                   </div>
                   <div className="ps-3">
-                    <h4>Devis gratuit</h4>
-                    <span>Estimation détaillée et personnalisée</span>
+                    <h4>Professionnel expérimenté</h4>
+                    <span>Expertise reconnue sur plus de 50 ans d'expérience</span>
                   </div>
                 </div>
               </div>
@@ -134,11 +134,11 @@ function Home() {
               <div className="bg-white shadow d-flex align-items-center h-100 px-5" style={{minHeight: "160px"}}>
                 <div className="d-flex">
                   <div className="flex-shrink-0 btn-lg-square rounded-circle bg-light">
-                    <i className="fa fa-users text-primary"></i>
+                    <i className="fa fa-home text-primary"></i>
                   </div>
                   <div className="ps-3">
-                    <h4>Équipe qualifiée</h4>
-                    <span>Professionnels expérimentés</span>
+                    <h4>Spécialiste en piscines</h4>
+                    <span>Utilisation du système robuste GRAF</span>
                   </div>
                 </div>
               </div>
@@ -147,11 +147,11 @@ function Home() {
               <div className="bg-white shadow d-flex align-items-center h-100 px-5" style={{minHeight: "160px"}}>
                 <div className="d-flex">
                   <div className="flex-shrink-0 btn-lg-square rounded-circle bg-light">
-                    <i className="fa fa-phone text-primary"></i>
+                    <i className="fa fa-tree text-primary"></i>
                   </div>
                   <div className="ps-3">
-                    <h4>Service client</h4>
-                    <span>À votre écoute</span>
+                    <h4>Spécialiste du jardin et de la pépinière</h4>
+                    <span>Conseils et solutions personnalisées</span>
                   </div>
                 </div>
               </div>
@@ -178,20 +178,20 @@ function Home() {
         <Container className="py-5">
           <Row className="g-5">
             <Col sm={6} lg={3} className="text-center wow fadeIn" data-wow-delay="0.1s">
-              <h1 className="display-4 text-white" data-toggle="counter-up">52</h1>
+              <h1 className="display-4 text-white" data-toggle="counter-up">{yearsExperience}</h1>
               <span className="fs-5 fw-semi-bold text-white">Années d'expérience</span>
             </Col>
             <Col sm={6} lg={3} className="text-center wow fadeIn" data-wow-delay="0.3s">
-              <h1 className="display-4 text-white" data-toggle="counter-up">1000+</h1>
+              <h1 className="display-4 text-white" data-toggle="counter-up">200+</h1>
               <span className="fs-5 fw-semi-bold text-white">Projets réalisés</span>
             </Col>
             <Col sm={6} lg={3} className="text-center wow fadeIn" data-wow-delay="0.5s">
-              <h1 className="display-4 text-white" data-toggle="counter-up">15</h1>
-              <span className="fs-5 fw-semi-bold text-white">Professionnels qualifiés</span>
-            </Col>
-            <Col sm={6} lg={3} className="text-center wow fadeIn" data-wow-delay="0.7s">
               <h1 className="display-4 text-white" data-toggle="counter-up">98%</h1>
               <span className="fs-5 fw-semi-bold text-white">Clients satisfaits</span>
+            </Col>
+            <Col sm={6} lg={3} className="text-center wow fadeIn" data-wow-delay="0.7s">
+              <h1 className="display-4 text-white" data-toggle="counter-up">1</h1>
+              <span className="fs-5 fw-semi-bold text-white">Professionnel de confiance</span>
             </Col>
           </Row>
         </Container>

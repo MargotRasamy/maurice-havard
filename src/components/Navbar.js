@@ -19,14 +19,6 @@ function Navbar() {
               <span>mauricehavard99@gmail.com</span>
             </div>
           </div>
-          <div className="col-lg-5 px-5 text-end">
-            <div className="h-100 d-inline-flex align-items-center mx-n2">
-              <span>Suivez-nous :</span>
-              <a className="btn btn-link text-light" href=""><i className="fab fa-facebook-f"></i></a>
-              <a className="btn btn-link text-light" href=""><i className="fab fa-linkedin-in"></i></a>
-              <a className="btn btn-link text-light" href=""><i className="fab fa-instagram"></i></a>
-            </div>
-          </div>
         </div>
       </div>
       {/* Topbar End */}

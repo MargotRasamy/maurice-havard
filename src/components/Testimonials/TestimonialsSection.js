@@ -8,9 +8,9 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import './testimonials.scss';
 // Import testimonial images
-import testimonial1 from '../../assets/img/team-1.jpg';
-import testimonial2 from '../../assets/img/team-2.jpg';
-import testimonial3 from '../../assets/img/team-3.jpg';
+import testimonial1 from '../../assets/img/garantie1.png';
+import testimonial2 from '../../assets/img/garantie1.png';
+import testimonial3 from '../../assets/img/garantie1.png';
 
 const testimonials = [
     {

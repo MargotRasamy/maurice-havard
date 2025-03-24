@@ -37,31 +37,13 @@ function Footer() {
               <p className="mb-2"><i className="fa fa-map-marker-alt me-3"></i>1 Lauzit du Haut, RN21, 32500 PAUILHAC</p>
               <p className="mb-2"><i className="fa fa-phone-alt me-3"></i>06 76 97 89 86</p>
               <p className="mb-2"><i className="fa fa-envelope me-3"></i>mauricehavard99@gmail.com</p>
-              <div className="d-flex pt-2">
-                <Link className="btn btn-square btn-outline-light rounded-circle me-2" to="">
-                  <i className="fab fa-facebook-f"></i>
-                </Link>
-                <Link className="btn btn-square btn-outline-light rounded-circle me-2" to="">
-                  <i className="fab fa-linkedin-in"></i>
-                </Link>
-                <Link className="btn btn-square btn-outline-light rounded-circle me-2" to="">
-                  <i className="fab fa-instagram"></i>
-                </Link>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6">
-              <h4 className="text-white mb-4">Nos Services</h4>
-              <Link className="btn btn-link" to="/services">Aménagement Paysager</Link>
-              <Link className="btn btn-link" to="/services">Études et Plans</Link>
-              <Link className="btn btn-link" to="/services">Maçonnerie Paysagère</Link>
-              <Link className="btn btn-link" to="/services">Entretien des Espaces Verts</Link>
-              <Link className="btn btn-link" to="/services">Élagage et Taille</Link>
             </div>
             <div className="col-lg-3 col-md-6">
               <h4 className="text-white mb-4">Liens Rapides</h4>
               <Link className="btn btn-link" to="/contact">Contact</Link>
               <Link className="btn btn-link" to="/services">Nos Services</Link>
               <Link className="btn btn-link" to="/projects">Nos Réalisations</Link>
+              <Link className="btn btn-link" to="/quote">Devis</Link>
             </div>
           </div>
         </div>

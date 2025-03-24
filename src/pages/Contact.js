@@ -97,7 +97,7 @@ function Contact() {
                     <Form.Floating>
                       <Form.Control
                         type="tel"
-                        pattern="[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}"
+                        pattern="^[0-9+\-\.\s]+$"
                         name="phone"
                         placeholder="Votre numéro de téléphone"
                         required

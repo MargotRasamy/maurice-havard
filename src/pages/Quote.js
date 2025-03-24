@@ -29,15 +29,15 @@ function Quote() {
         )
             .then((result) => {
                 setModal(
-                    'Succès !',
-                    'Votre demande de devis a été envoyée avec succès.',
+                    'Message envoyé !',
+                    'Votre demande de devis a bien été envoyée avec succès.',
                     'success'
                 );
                 form.current.reset();
             }, (error) => {
                 setModal(
-                    'Erreur',
-                    'Une erreur est survenue lors de l\'envoi de votre demande. Veuillez réessayer.',
+                    "Erreur d'envoi",
+                    "Une erreur est survenue lors de l'envoi du message. Veuillez réessayer ou nous contacter directement par téléphone au 06 76 97 89 86 ou par email à l'adresse mauricehavard99@gmail.com",
                     'error'
                 );
             });

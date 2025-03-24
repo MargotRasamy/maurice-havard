@@ -26,15 +26,15 @@ function Contact() {
     )
       .then((result) => {
         setModal(
-          'Succès !',
-          'Votre message a été envoyé avec succès.',
+          'Message envoyé !',
+          'Votre demande de contact à Maurice HAVARD a bien été envoyée avec succès.',
           'success'
         );
         form.current.reset();
       }, (error) => {
         setModal(
-          'Erreur',
-          'Une erreur est survenue lors de l\'envoi du message. Veuillez réessayer.',
+          "Erreur d'envoi",
+          "Une erreur est survenue lors de l'envoi du message. Veuillez réessayer ou nous contacter directement par téléphone au 06 76 97 89 86 ou par email à l'adresse mauricehavard99@gmail.com",
           'error'
         );
       });

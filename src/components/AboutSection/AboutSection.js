@@ -13,7 +13,7 @@ function AboutSection() {
                 <Row className="align-items-center">
                     <Col lg={6} className="wow fadeInLeft" data-wow-delay="0.1s">
                         <div className="about-content">
-                            <p className="fs-5 fw-bold text-primary">À propos de nous</p>
+                            <p className="fs-5 fw-bold text-primary">À propos</p>
                             <h1 className="display-5 mb-4">Maurice Havard, votre expert en aménagement paysager depuis 1971</h1>
                             <p className="mb-4">
                             Piscines et jardins de A à Z

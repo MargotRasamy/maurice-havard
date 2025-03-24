@@ -77,7 +77,7 @@ function Home() {
   return (
     <>
       {/* Carousel Start */}
-      <Container fluid className="p-0 wow fadeIn" data-wow-delay="0.05s">
+      <Container fluid className="p-0">
         <Carousel id="header-carousel" className="slide" interval={5000}>
           <Carousel.Item>
             <img className="w-100" src={carousel1} alt="Image" />

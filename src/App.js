@@ -30,7 +30,7 @@ function App() {
   });
   return (
     <ModalProvider>
-      <BrowserRouter>
+      <BrowserRouter basename="/maurice-havard">
         <div className="App">
           <Navbar />
           <Routes>

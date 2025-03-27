@@ -1,12 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import './SpecificProjectJourney.scss';
 
 const SpecificProjectJourney = ({ images, title, description }) => {
   const [selectedImage, setSelectedImage] = useState(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handleImageClick = (image) => {
-    setSelectedImage(image);
+    if (!isMobile) {
+      setSelectedImage(image);
+    }
   };
 
   const handleCloseModal = () => {
@@ -41,7 +53,7 @@ const SpecificProjectJourney = ({ images, title, description }) => {
         ))}
       </Row>
 
-      {selectedImage && (
+      {!isMobile && selectedImage && (
         <div className="modal-overlay" onClick={handleCloseModal}>
           <div className="modal-content" onClick={e => e.stopPropagation()}>
             <button className="close-button" onClick={handleCloseModal}>×</button>

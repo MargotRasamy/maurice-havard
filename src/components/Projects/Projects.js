@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Container, Row, Col, Button } from 'react-bootstrap';
@@ -89,28 +89,30 @@ const PROJECTS_DATA = [
     description: "Aménagement d'une piscine avec espace vert"
   }
 ];
-const ProjectCard = ({ project, onViewClick }) => (
+const ProjectCard = ({ project, onViewClick, isMobile }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     exit={{ opacity: 0, y: -20 }}
     transition={{ duration: 0.5 }}
   >
-    <div className="portfolio-inner rounded" onClick={() => onViewClick(project)}>
+    <div className="portfolio-inner rounded" onClick={() => !isMobile && onViewClick(project)}>
       <img className="img-fluid" src={project.image} alt={project.title} />
       <div className="portfolio-text">
         <h4 className="text-white mb-4">{project.title}</h4>
         <p className="text-white mb-3">{project.description}</p>
-        <div className="d-flex">
-          <Button
-            variant="outline-light"
-            className="btn-lg-square rounded-circle mx-2"
-            onClick={() => onViewClick(project)}
-            aria-label={`Voir ${project.title} en grand format`}
-          >
-            <i className="fa fa-eye"></i>
-          </Button>
-        </div>
+        {!isMobile && (
+          <div className="d-flex">
+            <Button
+              variant="outline-light"
+              className="btn-lg-square rounded-circle mx-2"
+              onClick={() => onViewClick(project)}
+              aria-label={`Voir ${project.title} en grand format`}
+            >
+              <i className="fa fa-eye"></i>
+            </Button>
+          </div>
+        )}
       </div>
     </div>
   </motion.div>
@@ -124,7 +126,8 @@ ProjectCard.propTypes = {
     description: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired
   }).isRequired,
-  onViewClick: PropTypes.func.isRequired
+  onViewClick: PropTypes.func.isRequired,
+  isMobile: PropTypes.bool.isRequired
 };
 
 const FilterButton = ({ category, label, isActive, onClick }) => (
@@ -149,6 +152,16 @@ function Projects() {
   const [filter, setFilter] = useState(PROJECT_CATEGORIES.ALL);
   const [selectedProject, setSelectedProject] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const filteredProjects = useMemo(() => 
     PROJECTS_DATA.filter(project => 
@@ -158,8 +171,10 @@ function Projects() {
   );
 
   const handleViewClick = (project) => {
-    setSelectedProject(project);
-    setShowModal(true);
+    if (!isMobile) {
+      setSelectedProject(project);
+      setShowModal(true);
+    }
   };
 
   return (
@@ -197,14 +212,18 @@ function Projects() {
           <AnimatePresence>
             {filteredProjects.map(project => (
               <Col key={project.id} lg={4} md={6}>
-                <ProjectCard project={project} onViewClick={handleViewClick} />
+                <ProjectCard 
+                  project={project} 
+                  onViewClick={handleViewClick}
+                  isMobile={isMobile}
+                />
               </Col>
             ))}
           </AnimatePresence>
         </Row>
 
-        {/* Project Modal */}
-        {showModal && selectedProject && (
+        {/* Project Modal - Only show on desktop */}
+        {!isMobile && showModal && selectedProject && (
           <div className="modal project-modal show" style={{ display: 'block' }}>
             <div className="modal-dialog modal-lg modal-dialog-centered">
               <div className="modal-content">
@@ -220,7 +239,7 @@ function Projects() {
             </div>
           </div>
         )}
-        {showModal && <div className="modal-backdrop show"></div>}
+        {!isMobile && showModal && <div className="modal-backdrop show"></div>}
         <Link to="/projects" className="btn btn-primary p-4 d-block mx-auto">En voir plus</Link>
       </Container>
     </Container>

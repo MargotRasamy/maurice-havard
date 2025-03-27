@@ -123,14 +123,14 @@ const PROJECTS_DATA = [
       description: "Une piscine contemporaine avec système de nage à contre-courant, intégrant les dernières innovations en matière de filtration et d'éclairage. Le design épuré s'harmonise parfaitement avec l'environnement naturel."
     }
 ];
-const ProjectCard = ({ project, onClick }) => (
+const ProjectCard = ({ project, onClick, isMobile }) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     animate={{ opacity: 1, y: 0 }}
     exit={{ opacity: 0, y: -20 }}
     transition={{ duration: 0.5 }}
   >
-    <div className="project-card" onClick={() => onClick(project)}>
+    <div className="project-card" onClick={() => !isMobile && onClick(project)}>
       <div className="project-image-container">
         <img src={project.image} alt={project.title} />
       </div>
@@ -150,7 +150,8 @@ ProjectCard.propTypes = {
     description: PropTypes.string.isRequired,
     category: PropTypes.string.isRequired
   }).isRequired,
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func.isRequired,
+  isMobile: PropTypes.bool.isRequired
 };
 
 const FilterButton = ({ category, label, isActive, onClick }) => (
@@ -175,6 +176,16 @@ function ProjectShowcase() {
   const [filter, setFilter] = useState(PROJECT_CATEGORIES.ALL);
   const [selectedProject, setSelectedProject] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const filteredProjects = useMemo(() => 
     PROJECTS_DATA.filter(project => 
@@ -184,8 +195,10 @@ function ProjectShowcase() {
   );
 
   const handleProjectClick = (project) => {
-    setSelectedProject(project);
-    setShowModal(true);
+    if (!isMobile) {
+      setSelectedProject(project);
+      setShowModal(true);
+    }
   };
 
   useEffect(() => {
@@ -228,14 +241,18 @@ function ProjectShowcase() {
           <AnimatePresence>
             {filteredProjects.map(project => (
               <Col key={project.id} lg={4} md={6}>
-                <ProjectCard project={project} onClick={handleProjectClick} />
+                <ProjectCard 
+                  project={project} 
+                  onClick={handleProjectClick}
+                  isMobile={isMobile}
+                />
               </Col>
             ))}
           </AnimatePresence>
         </Row>
 
-        {/* Project Modal */}
-        {showModal && selectedProject && (
+        {/* Project Modal - Only show on desktop */}
+        {!isMobile && showModal && selectedProject && (
           <div className="modal project-modal show" style={{ display: 'block' }}>
             <div className="modal-dialog modal-lg modal-dialog-centered">
               <div className="modal-content">
@@ -251,7 +268,7 @@ function ProjectShowcase() {
             </div>
           </div>
         )}
-        {showModal && <div className="modal-backdrop show"></div>}
+        {!isMobile && showModal && <div className="modal-backdrop show"></div>}
       </Container>
     </Container>
   );

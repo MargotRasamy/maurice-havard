@@ -296,6 +296,26 @@ h6,
     align-items: center;
 }
 
+@media (max-width: 768px) {
+    .navbar .navbar-brand {
+        margin-right: 0 !important;
+        padding: 0.5rem !important;
+    }
+    .navbar .navbar-toggler {
+        margin: 0.5rem !important;
+        padding: 0.3rem !important;
+    }
+    .navbar .navbar-toggler-icon {
+        font-size: 0.8rem !important;
+    }
+}
+
+@media (max-width: 260px) {
+    .navbar h1.m-0 {
+        font-size: 1.3rem !important;
+    }
+}
+
 @media (max-width: 991.98px) {
     .navbar .navbar-nav .nav-link  {
         margin-right: 0;

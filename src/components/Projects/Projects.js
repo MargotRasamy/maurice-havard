@@ -186,7 +186,7 @@ function Projects() {
             />
             <FilterButton
               category={PROJECT_CATEGORIES.LANDSCAPES}
-              label="Jardins et paysages"
+              label="Jardins"
               isActive={filter === PROJECT_CATEGORIES.LANDSCAPES}
               onClick={() => setFilter(PROJECT_CATEGORIES.LANDSCAPES)}
             />

@@ -388,8 +388,13 @@ h6,
 
 
 /*** Top Feature ***/
+.top-feature {
+    display: none;
+}
+
 @media (min-width: 991.98px) {
     .top-feature {
+        display: block;
         position: relative;
         margin-top: -80px;
         z-index: 1;

@@ -34,15 +34,17 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarCollapse">
           <div className="navbar-nav ms-auto p-4 p-lg-0">
             <Link to="/" className={`nav-item nav-link ${location.pathname === '/' ? 'active' : ''}`}>Accueil</Link>
-            <Link to="/services" className={`nav-item nav-link ${location.pathname === '/services' ? 'active' : ''}`}>Services</Link>
+            {/* <Link to="/services" className={`nav-item nav-link ${location.pathname === '/services' ? 'active' : ''}`}>Services</Link> */}
             
+            <Link to="/projects" className={`nav-item nav-link ${location.pathname === '/projects' ? 'active' : ''}`}>Nos réalisations</Link>
+
             {/* Pages Dropdown */}
-            <div className="nav-item dropdown">
+            {/* <div className="nav-item dropdown">
               <a href="#" className={`nav-link dropdown-toggle ${['/404'].includes(location.pathname) ? 'active' : ''}`} data-bs-toggle="dropdown">Réalisations</a>
               <div className="dropdown-menu bg-light m-0">
                 <Link to="/projects" className={`dropdown-item ${location.pathname === '/projects' ? 'active' : ''}`}>Réalisations diverses</Link>
               </div>
-            </div>
+            </div> */}
 
             <Link to="/contact" className={`nav-item nav-link ${location.pathname === '/contact' ? 'active' : ''}`}>Contact</Link>
             <Link to="/quote" className="btn btn-primary ctaBtn py-2 px-3 rounded-0 d-none d-lg-block"><span>Demander un devis<i className="fa fa-arrow-right ms-3"></i></span></Link>

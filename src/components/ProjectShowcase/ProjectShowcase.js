@@ -34,9 +34,9 @@ const PROJECTS_DATA = [
   {
     id: 1,
     image: project1,
-    title: "Piscine Moderne",
+    title: "Piscine et jacuzzi entourés de rochers cascade",
     category: PROJECT_CATEGORIES.POOLS,
-    description: "Une piscine contemporaine avec système de nage à contre-courant, intégrant les dernières innovations en matière de filtration et d'éclairage. Le design épuré s'harmonise parfaitement avec l'environnement naturel."
+    description: "Piscine et jacuzzi à débordement, entourés de rochers cascade, créent un cadre naturel et apaisant, idéal pour la détente en pleine nature."
   },
   {
     id: 2,

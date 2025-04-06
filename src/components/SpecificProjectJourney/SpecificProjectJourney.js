@@ -53,23 +53,39 @@ const SpecificProjectJourney = ({ images, title, description }) => {
         ))}
       </Row>
 
+      {/* Project Modal - Only show on desktop */}
       {!isMobile && selectedImage && (
-        <div className="modal-overlay" onClick={handleCloseModal}>
-          <div className="modal-content" onClick={e => e.stopPropagation()}>
-            <button className="close-button" onClick={handleCloseModal}>×</button>
-            <img 
-              src={selectedImage.url} 
-              alt={selectedImage.description || 'Image du projet'}
-              className="modal-image"
-            />
-            {selectedImage.description && (
-              <div className="modal-description">
-                <p>{selectedImage.description}</p>
+        <div 
+          className="modal project-modal show" 
+          style={{ display: 'block' }}
+          onClick={handleCloseModal}
+        >
+          <div 
+            className="modal-dialog modal-lg modal-dialog-centered"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="modal-content">
+              <div className="modal-body">
+                <button className="modal-close" onClick={handleCloseModal}>
+                  <i className="fas fa-times"></i>
+                </button>
+                <div className="modal-image">
+                  <img 
+                    src={selectedImage.url} 
+                    alt={selectedImage.description || 'Image du projet'} 
+                  />
+                </div>
+                {selectedImage.description && (
+                  <div className="modal-description">
+                    <p>{selectedImage.description}</p>
+                  </div>
+                )}
               </div>
-            )}
+            </div>
           </div>
         </div>
       )}
+      {!isMobile && selectedImage && <div className="modal-backdrop show"></div>}
     </Container>
   );
 };

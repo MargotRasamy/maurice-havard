@@ -1,3 +1,5 @@
+@import '../../styles/utils/utils.scss';
+
 .specific-project-journey {
   padding: 4rem 0;
 
@@ -17,28 +19,25 @@
   .project-image-container {
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    background: white;
+    margin-bottom: 2rem;
+    height: 300px;
 
     @media (min-width: 768px) {
       cursor: pointer;
       &:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-
-        .image-description {
-          opacity: 1;
-          transform: translateY(0);
-        }
+        transform: translateY(-10px);
+        box-shadow: 0 15px 40px rgba(0,0,0,0.2);
       }
     }
 
     .project-image {
       width: 100%;
-      height: 300px;
-      object-fit: cover;
-      transition: transform 0.3s ease;
+      height: 100%;
+      @include image-object-fit($adaptToWidth: false, $fixed-height: 300px, $fixed-width: 100%);
     }
 
     .image-description {
@@ -50,6 +49,8 @@
       color: white;
       padding: 1rem;
       transition: all 0.3s ease;
+      opacity: 1;
+      transform: translateY(0);
 
       @media (max-width: 767.98px) {
         position: relative;
@@ -57,18 +58,13 @@
         transform: none;
         opacity: 1;
         padding: 1rem;
-        border-radius: 0 0 10px 10px;
+        border-radius: 0 0 15px 15px;
 
         p {
           color: white;
           font-size: 0.95rem;
           margin: 0;
         }
-      }
-
-      @media (min-width: 768px) {
-        transform: translateY(100%);
-        opacity: 0;
       }
 
       p {
@@ -79,65 +75,67 @@
     }
   }
 
-  .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.6);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-    padding: 2rem;
-
-    @media (max-width: 767.98px) {
-      display: none;
-    }
-
+  // Modal styles
+  .project-modal {
     .modal-content {
-      position: relative;
-      max-width: 90vw;
-      max-height: 90vh;
       background: transparent;
+      border: none;
+      box-shadow: none;
+    }
 
-      .close-button {
-        position: absolute;
-        top: -40px;
-        right: 0;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 2rem;
-        cursor: pointer;
-        padding: 0.5rem;
-        transition: transform 0.3s ease;
+    .modal-body {
+      padding: 0;
+      position: relative;
+    }
 
-        &:hover {
-          transform: rotate(90deg);
-        }
-      }
+    .modal-image {
+      width: 100%;
+      height: 80vh;
+      @include image-object-fit($adaptToWidth: false, $fixed-height: 80vh, $fixed-width: 100%);
+    }
 
-      .modal-image {
-        max-width: 100%;
-        max-height: 80vh;
-        object-fit: contain;
-        border-radius: 5px;
-      }
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      z-index: 1;
 
-      .modal-description {
-        margin-top: 1rem;
-        text-align: center;
-        color: white;
-
-        p {
-          color: white;
-          margin: 0;
-          font-size: 1.1rem;
-        }
+      &:hover {
+        background: rgba(0,0,0,0.8);
       }
     }
+
+    .modal-description {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      
+      p {
+        color: white;
+        margin: 0;
+        font-size: 1.1rem;
+      }
+    }
+  }
+  
+  .modal-backdrop {
+    opacity: 0.5;
   }
 }
 
@@ -157,9 +155,7 @@
     }
 
     .project-image-container {
-      .project-image {
-        height: 250px;
-      }
+      height: 250px;
     }
   }
 } 

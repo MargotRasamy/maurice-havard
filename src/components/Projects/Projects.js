@@ -237,8 +237,15 @@ function Projects() {
 
         {/* Project Modal - Only show on desktop */}
         {!isMobile && showModal && selectedProject && (
-          <div className="modal project-modal show" style={{ display: 'block' }}>
-            <div className="modal-dialog modal-lg modal-dialog-centered">
+          <div 
+            className="modal project-modal show" 
+            style={{ display: 'block' }}
+            onClick={() => setShowModal(false)}
+          >
+            <div 
+              className="modal-dialog modal-lg modal-dialog-centered"
+              onClick={(e) => e.stopPropagation()}
+            >
               <div className="modal-content">
                 <div className="modal-body">
                   <button className="modal-close" onClick={() => setShowModal(false)}>

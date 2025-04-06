@@ -44,11 +44,11 @@ function Projects() {
     images: [
       {
         url: projectImage1,
-        description: "Aménagement d'une piscine avec ... vert"
+        description: "Aménagement d'une piscine avec espace vert"
       },
       {
         url: projectImage2,
-        description: "Aménagement d'une piscine avec ... vert"
+        description: "Aménagement d'une piscine avec espace vert"
       },
       {
         url: projectImage3,
@@ -64,7 +64,7 @@ function Projects() {
       },
       {
         url: projectImage6,
-        description: "... japonais"
+        description: "Pas japonais"
       }
     ]
   };

@@ -6,6 +6,11 @@
     margin: -1rem;
     padding: 2rem 0;
 
+    @media (max-width: 767.98px) {
+        margin: 0;
+        padding: 0;
+    }
+
     .col {
         padding: 1rem;
         flex: 0 0 33.333333%;
@@ -19,6 +24,7 @@
         @media (max-width: 767.98px) {
             flex: 0 0 100%;
             max-width: 100%;
+            padding: 0rem;
         }
     }
 }
@@ -49,6 +55,15 @@
         height: 300px;
         overflow: hidden;
         @include image-object-fit($adaptToWidth: false, $fixed-height: 300px, $fixed-width: 100%);
+        
+        @media (max-width: 767.98px) {
+            height: 250px;
+            
+            img {
+                object-fit: cover;
+                object-position: center;
+            }
+        }
     }
 
     .project-content {

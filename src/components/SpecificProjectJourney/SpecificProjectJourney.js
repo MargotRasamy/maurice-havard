@@ -72,7 +72,8 @@ const SpecificProjectJourney = ({ images, title, description }) => {
                 <div className="modal-image">
                   <img 
                     src={selectedImage.url} 
-                    alt={selectedImage.description || 'Image du projet'} 
+                    alt={selectedImage.description || 'Image du projet'}
+                    style={{ objectFit: "cover" }}
                   />
                 </div>
                 {selectedImage.description && (

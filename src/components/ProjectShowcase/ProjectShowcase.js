@@ -10,7 +10,7 @@ import { WOW } from 'wowjs';
 import project1 from '../../assets/img/pool1.jpg';
 import project2 from '../../assets/img/pool2.jpg';
 import project3 from '../../assets/img/pool3.jpg';
-import project4 from '../../assets/img/pool4.jpg';
+import project4 from '../../assets/img/pool7.jpg';
 import project5 from '../../assets/img/landscape3.jpg';
 import project6 from '../../assets/img/landscape1.jpg';
 import landscape1 from '../../assets/img/divers/divers-landscape1.jpg';

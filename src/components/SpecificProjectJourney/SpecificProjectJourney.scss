@@ -45,7 +45,9 @@
       bottom: 0;
       left: 0;
       right: 0;
-      background: rgba(var(--bs-dark-rgb), 0.7);
+      background: rgba(var(--bs-bg-text-overlay-rgb), 0.7);
+      text-shadow: 0 0 3px rgba(var(--bs-very-dark-rgb), 0.3);
+      //backdrop-filter: blur(2px);
       color: white;
       padding: 1rem;
       transition: all 0.3s ease;
@@ -69,7 +71,8 @@
 
       p {
         margin: 0;
-        font-size: 0.9rem;
+        font-size: 1rem;
+        font-weight: bold;
         color: white;
       }
     }
@@ -89,6 +92,7 @@
     }
 
     .modal-image {
+      overflow: hidden;
       width: 100%;
       height: 80vh;
       @include image-object-fit($adaptToWidth: false, $fixed-height: 80vh, $fixed-width: 100%);

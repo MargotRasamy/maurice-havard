@@ -6,6 +6,7 @@ import { EMAILJS_CONFIG } from '../config/emailjs';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { useModal } from '../context/ModalContext';
 import 'wowjs/css/libs/animate.css';
+import alternativeDecoration from '../assets/img/divers/divers-landscape6.jpg';
 
 function Contact() {
   const form = useRef();
@@ -161,7 +162,18 @@ function Contact() {
                 </Row>
               </Form>
             </Col>
-            <Col lg={6} className="wow fadeIn" data-wow-delay="0.5s" style={{ minHeight: "450px" }}>
+            <Col lg={6}>
+              <div className="alternative-decoration rounded overflow-hidden h-100 d-none d-lg-block" style={{ width: "80%", margin: "0 auto" }}>
+                <img 
+                  src={alternativeDecoration} 
+                  alt="paysage" 
+                  className="w-100 h-100 object-fit-cover" 
+                  style={{ width: "100%", height: "100%" }}
+                />
+              </div>
+            </Col>
+            {/* Google Maps */}
+            {/* <Col lg={6} className="wow fadeIn" data-wow-delay="0.5s" style={{ minHeight: "450px" }}>
               <div className="position-relative rounded overflow-hidden h-100">
                 <iframe 
                   className="position-relative w-100 h-100"
@@ -174,7 +186,7 @@ function Contact() {
                   title="Google Maps"
                 ></iframe>
               </div>
-            </Col>
+            </Col> */}
           </Row>
         </Container>
       </Container>

@@ -36,7 +36,7 @@ function MainAboutSection({ yearsExperience }) {
               <div className="col-12 col-sm-6 col-lg-12">
                 <div className="border-start ps-4">
                   <i className="fa fa-award fa-3x text-primary mb-3"></i>
-                  <h4 className="mb-3">Diplômé de l'Ecole d'horticulture de Saint Ilan (Bretagne 35)</h4>
+                  <h4 className="mb-3">Diplômé de l'Ecole d'horticulture de Saint Ilan (Bretagne)</h4>
                   <span>Spécialiste du jardin et de la pépinière</span>
                 </div>
               </div>

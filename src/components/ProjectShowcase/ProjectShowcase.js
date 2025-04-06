@@ -30,98 +30,99 @@ const PROJECT_CATEGORIES = {
   LANDSCAPES: 'second'
 };
 
+// Piscine et jacuzzi à débordement, entourés de rochers cascade, créent un cadre naturel et apaisant, idéal pour la détente en pleine nature.
 const PROJECTS_DATA = [
   {
     id: 1,
     image: project1,
-    title: "Piscine et jacuzzi entourés de rochers cascade",
+    title: null,
     category: PROJECT_CATEGORIES.POOLS,
-    description: "Piscine et jacuzzi à débordement, entourés de rochers cascade, créent un cadre naturel et apaisant, idéal pour la détente en pleine nature."
+    description: null
   },
   {
     id: 2,
     image: project2,
-    title: "Jardin Méditerranéen",
+    title: null,
     category: PROJECT_CATEGORIES.POOLS,
-    description: "Aménagement paysager avec plantes méditerranéennes et oliviers centenaires. Un espace de détente où les parfums de la lavande et du romarin se mêlent aux couleurs chaleureuses du sud."
+    description: null
   },
   {
     id: 3,
     image: project3,
-    title: "Terrasse Design",
+    title: null,
     category: PROJECT_CATEGORIES.POOLS,
-    description: "Création d'une terrasse en bois exotique avec pergola bioclimatique. Un espace de vie extérieur moderne et fonctionnel, parfait pour les moments de convivialité."
+    description: null
   },
   {
     id: 4,
     image: project4,
-    title: "Bassin Ornemental",
+    title: null,
     category: PROJECT_CATEGORIES.POOLS,
-    description: "Bassin paysager avec cascade et éclairage LED intégré. Un point d'eau vivant qui apporte sérénité et dynamisme à votre jardin."
+    description: null
   },
   {
     id: 5,
     image: project5,
-    title: "Jardin Paysager",
+    title: null,
     category: PROJECT_CATEGORIES.LANDSCAPES,
-    description: "Création d'un jardin paysager luxuriant avec une harmonie parfaite entre les différents éléments végétaux. Un espace vert structuré qui offre une expérience sensorielle unique à travers ses textures, couleurs et parfums."
+    description: null
   },
-    {
-      id: 6,
-      image: landscape1,
-      title: "Espace vert d'entreprise",
-      category: PROJECT_CATEGORIES.LANDSCAPES,
-      description: "Un espace vert structuré pour les entreprises"
-    },
-    {
-      id: 7,
-      image: landscape2,
-      title: "Espace vert d'entreprise",
-      category: PROJECT_CATEGORIES.LANDSCAPES,
-      description: "Un espace vert structuré pour les entreprises"
-    },
-    {
-      id: 8,
-      image: landscape3,
-      title: "Espace vert d'entreprise",
-      category: PROJECT_CATEGORIES.LANDSCAPES,
-      description: "Un espace vert structuré pour les entreprises"
-    },
-    {
-      id: 9,
-      image: landscape4,
-      title: "Espace vert d'entreprise",
-      category: PROJECT_CATEGORIES.LANDSCAPES,
-      description: "Un espace vert structuré pour les entreprises"
-    },  
-    {
-      id: 10,
-      image: landscape5,
-      title: "Espace vert d'entreprise",
-      category: PROJECT_CATEGORIES.LANDSCAPES,
-      description: "Un espace vert structuré pour les entreprises"
-    },
-    {
-      id: 11,
-      image: pool1,
-      title: "Piscine Moderne",
-      category: PROJECT_CATEGORIES.POOLS,
-      description: "Une piscine contemporaine avec système de nage à contre-courant, intégrant les dernières innovations en matière de filtration et d'éclairage. Le design épuré s'harmonise parfaitement avec l'environnement naturel."
-    },
-    {
-      id: 12,
-      image: pool2,
-      title: "Piscine Moderne",
-      category: PROJECT_CATEGORIES.POOLS,
-      description: "Une piscine contemporaine avec système de nage à contre-courant, intégrant les dernières innovations en matière de filtration et d'éclairage. Le design épuré s'harmonise parfaitement avec l'environnement naturel."
-    },
-    {
-      id: 13,
-      image: pool3,
-      title: "Piscine Moderne",
-      category: PROJECT_CATEGORIES.POOLS,
-      description: "Une piscine contemporaine avec système de nage à contre-courant, intégrant les dernières innovations en matière de filtration et d'éclairage. Le design épuré s'harmonise parfaitement avec l'environnement naturel."
-    }
+  {
+    id: 6,
+    image: landscape1,
+    title: null,
+    category: PROJECT_CATEGORIES.LANDSCAPES,
+    description: null
+  },
+  {
+    id: 7,
+    image: landscape2,
+    title: null,
+    category: PROJECT_CATEGORIES.LANDSCAPES,
+    description: null
+  },
+  {
+    id: 8,
+    image: landscape3,
+    title: null,
+    category: PROJECT_CATEGORIES.LANDSCAPES,
+    description: null
+  },
+  {
+    id: 9,
+    image: landscape4,
+    title: null,
+    category: PROJECT_CATEGORIES.LANDSCAPES,
+    description: null
+  },
+  {
+    id: 10,
+    image: landscape5,
+    title: null,
+    category: PROJECT_CATEGORIES.LANDSCAPES,
+    description: null
+  },
+  {
+    id: 11,
+    image: pool1,
+    title: null,
+    category: PROJECT_CATEGORIES.POOLS,
+    description: null
+  },
+  {
+    id: 12,
+    image: pool2,
+    title: null,
+    category: PROJECT_CATEGORIES.POOLS,
+    description: null
+  },
+  {
+    id: 13,
+    image: pool3,
+    title: null,
+    category: PROJECT_CATEGORIES.POOLS,
+    description: null
+  }
 ];
 const ProjectCard = ({ project, onClick, isMobile }) => (
   <motion.div
@@ -132,12 +133,14 @@ const ProjectCard = ({ project, onClick, isMobile }) => (
   >
     <div className="project-card" onClick={() => !isMobile && onClick(project)}>
       <div className="project-image-container">
-        <img src={project.image} alt={project.title} />
+        <img src={project.image} alt={project.title || "Image du projet"} />
       </div>
-      <div className="project-content">
-        <h3>{project.title}</h3>
-        <p>{project.description}</p>
-      </div>
+      {(project.title || project.description) && (
+        <div className="project-content">
+          {project.title && <h3>{project.title}</h3>}
+          {project.description && <p>{project.description}</p>}
+        </div>
+      )}
     </div>
   </motion.div>
 );
@@ -146,8 +149,8 @@ ProjectCard.propTypes = {
   project: PropTypes.shape({
     id: PropTypes.number.isRequired,
     image: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
+    title: PropTypes.string,
+    description: PropTypes.string,
     category: PropTypes.string.isRequired
   }).isRequired,
   onClick: PropTypes.func.isRequired,
@@ -268,8 +271,14 @@ function ProjectShowcase() {
                     <i className="fas fa-times"></i>
                   </button>
                   <div className="modal-image">
-                    <img src={selectedProject.image} alt={selectedProject.title} />
+                    <img src={selectedProject.image} alt={selectedProject.title || "Image du projet"} />
                   </div>
+                  {(selectedProject.title || selectedProject.description) && (
+                    <div className="modal-description">
+                      {selectedProject.title && <h3>{selectedProject.title}</h3>}
+                      {selectedProject.description && <p>{selectedProject.description}</p>}
+                    </div>
+                  )}
                 </div>
               </div>
             </div>

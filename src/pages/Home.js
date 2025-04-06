@@ -188,8 +188,8 @@ function Home() {
               <span className="fs-5 fw-semi-bold text-white">Projets réalisés</span>
             </Col>
             <Col sm={6} lg={3} className="text-center wow fadeIn" data-wow-delay="0.5s">
-              <h1 className="display-4 text-white" data-toggle="counter-up">98%</h1>
-              <span className="fs-5 fw-semi-bold text-white">Clients satisfaits</span>
+              <h1 className="display-4 text-white" data-toggle="counter-up">2</h1>
+              <span className="fs-5 fw-semi-bold text-white">Grandes expertises</span>
             </Col>
             <Col sm={6} lg={3} className="text-center wow fadeIn" data-wow-delay="0.7s">
               <h1 className="display-4 text-white" data-toggle="counter-up">1</h1>
@@ -210,11 +210,13 @@ function Home() {
           <Row className="g-5 justify-content-center">
             <Col lg={7}>
               <div className="bg-white rounded p-5 h-100">
-                <h1 className="display-5 mb-4">Demandez un Devis Gratuit</h1>
+                <h1 className="display-5 mb-4 text-center">Demandez un devis gratuit</h1>
                 <p className="mb-4">Contactez-nous pour obtenir un devis personnalisé pour votre projet d'aménagement paysager ou de création de piscine.</p>
-                <Link to="/quote" className="btn btn-primary py-3 px-4">
-                  <Button variant="primary" className="py-3 px-4">Demander un Devis</Button>
-                </Link>
+                <div className="text-center">
+                  <Link to="/quote" className="btn btn-primary py-2 px-2">
+                    <Button variant="primary" className="py-3 px-4">Demander un Devis</Button>
+                  </Link>
+                </div>
               </div>
             </Col>
           </Row>
@@ -223,7 +225,7 @@ function Home() {
       {/* Quote End */}
 
       {/* Testimonials Start */}
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
       {/* Testimonials End */}
     </>
   );

@@ -9,6 +9,7 @@ $very-light: #d9d9d950;
 $carousel-dark: #064852;
 $bg-overlay: rgba($carousel-dark, .5);
 $primary-greyed: #8ca8a7;
+$primary-slightly-darker: #14887c;
 
 // Function to convert hex to RGB
 @function hex-to-rgb($hex) {
@@ -25,11 +26,14 @@ $primary-greyed: #8ca8a7;
     --bs-very-light: #{$very-light};
     --bs-carousel-dark: #{$carousel-dark};
     --bs-bg-overlay: #{$bg-overlay};
+    
 
     --bs-primary-rgb: #{hex-to-rgb($primary)};
     --bs-secondary-rgb: #{hex-to-rgb($secondary)};
     --bs-light-rgb: #{hex-to-rgb($light)};
     --bs-dark-rgb: #{hex-to-rgb($dark)};
+    --bs-bg-text-overlay-rgb: #{hex-to-rgb($primary-slightly-darker)};
+    --bs-very-dark-rgb: #{hex-to-rgb($very-dark)};
 
     --bs-primary-greyed-rgb: #{hex-to-rgb($primary-greyed)};
 

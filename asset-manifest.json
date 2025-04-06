@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/maurice-havard/static/css/main.34024b81.css",
-    "main.js": "/maurice-havard/static/js/main.fe75bc7d.js",
+    "main.css": "/maurice-havard/static/css/main.a1121422.css",
+    "main.js": "/maurice-havard/static/js/main.48fed3da.js",
     "static/js/453.c001aaaf.chunk.js": "/maurice-havard/static/js/453.c001aaaf.chunk.js",
     "static/media/vitrine1.jpg": "/maurice-havard/static/media/vitrine1.9d0ad82f3994a09c1632.jpg",
     "static/media/mini-piscine4.png": "/maurice-havard/static/media/mini-piscine4.fe070866e30ede60acda.png",
@@ -35,6 +35,7 @@
     "static/media/5.jpg": "/maurice-havard/static/media/5.57f65424684247f853ce.jpg",
     "static/media/mini-piscine1.jpg": "/maurice-havard/static/media/mini-piscine1.43d6c5578285951d927c.jpg",
     "static/media/fa-brands-400.ttf": "/maurice-havard/static/media/fa-brands-400.1815e00441357e01619e.ttf",
+    "static/media/divers-landscape6.jpg": "/maurice-havard/static/media/divers-landscape6.874ac90d2a337dab8f00.jpg",
     "static/media/fa-solid-900.woff2": "/maurice-havard/static/media/fa-solid-900.2463b90d9a316e4e5294.woff2",
     "static/media/fa-brands-400.woff2": "/maurice-havard/static/media/fa-brands-400.c210719e60948b211a12.woff2",
     "static/media/fa-regular-400.ttf": "/maurice-havard/static/media/fa-regular-400.914997e1bdfc990d0897.ttf",
@@ -44,12 +45,12 @@
     "static/media/fa-v4compatibility.ttf": "/maurice-havard/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
     "static/media/fa-v4compatibility.woff2": "/maurice-havard/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "index.html": "/maurice-havard/index.html",
-    "main.34024b81.css.map": "/maurice-havard/static/css/main.34024b81.css.map",
-    "main.fe75bc7d.js.map": "/maurice-havard/static/js/main.fe75bc7d.js.map",
+    "main.a1121422.css.map": "/maurice-havard/static/css/main.a1121422.css.map",
+    "main.48fed3da.js.map": "/maurice-havard/static/js/main.48fed3da.js.map",
     "453.c001aaaf.chunk.js.map": "/maurice-havard/static/js/453.c001aaaf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.34024b81.css",
-    "static/js/main.fe75bc7d.js"
+    "static/css/main.a1121422.css",
+    "static/js/main.48fed3da.js"
   ]
 }

@@ -1,3 +1,5 @@
+@import '../../styles/utils/utils.scss';
+
 .project-modal {
     .modal-content {
         background: transparent;
@@ -120,6 +122,44 @@
             color: white;
             margin-bottom: 1.5rem;
         }
+    }
+    
+    // Style for projects without content
+    &.no-content {
+        cursor: pointer;
+        
+        @media (max-width: 767.98px) {
+            cursor: default;
+        }
+        
+        &:hover {
+            transform: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .img-fluid {
+            transition: transform 0.3s ease;
+        }
+        
+        &:hover .img-fluid {
+            transform: scale(1.05);
+        }
+        
+        // Override global overlay styles
+        &::before,
+        &::after {
+            display: none !important;
+            width: 0 !important;
+            background: none !important;
+        }
+        
+        // Remove any background overlay
+        .portfolio-text {
+            display: none;
+        }
+        
+        // Ensure no background color is applied
+        background: none !important;
     }
 }
 

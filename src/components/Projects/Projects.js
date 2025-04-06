@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import { motion, AnimatePresence } from 'framer-motion';
+import './projects.scss';
 
 // Import project images
 import project1 from '../../assets/img/pool1.jpg';
@@ -28,102 +29,114 @@ const PROJECTS_DATA = [
   {
     id: 1,
     image: project1,
-    title: "Aménagement paysager",
-    category: PROJECT_CATEGORIES.POOLS,
-    description: "Une piscine contemporaine avec système de nage à contre-courant"
+    title: null,
+    description: null,
+    category: PROJECT_CATEGORIES.POOLS
   },
   {
     id: 2,
     image: project2,
-    title: "Création de jardin",
+    title: null,
     category: PROJECT_CATEGORIES.POOLS,
-    description: "Un espace de détente où les parfums de la lavande et du romarin se mêlent"
+    description: null
   },
   {
     id: 3,
     image: project3,
-    title: "Terrasse en bois",
+    title: null,
     category: PROJECT_CATEGORIES.POOLS,
-    description: "Une terrasse en bois exotique avec pergola bioclimatique"
+    description: null
   },
   {
     id: 4,
     image: project4,
-    title: "Piscine paysagée",
+    title: null,
     category: PROJECT_CATEGORIES.POOLS,
-    description: "Une piscine intégrée harmonieusement dans son environnement"
+    description: null
   },
   {
     id: 5,
     image: project5,
-    title: "Jardin méditerranéen",
+    title: null,
     category: PROJECT_CATEGORIES.LANDSCAPES,
-    description: "Un jardin méditerranéen avec oliviers centenaires"
+    description: null
   },
   {
     id: 6,
     image: project6,
-    title: "Espace vert d'entreprise",
+    title: null,
     category: PROJECT_CATEGORIES.LANDSCAPES,
-    description: "Un espace vert structuré pour les entreprises"
+    description: null
   },
   {
     id: 7,
     image: projectImage2,
-    title: "Aménagement espace vert",
+    title: null,
     category: PROJECT_CATEGORIES.LANDSCAPES,
-    description: "Aménagement d'une piscine avec espace vert"
+    description: null
   },
   {
     id: 8,
     image: projectImage4,
-    title: "Aménagement espace vert",
+    title: null,
     category: PROJECT_CATEGORIES.LANDSCAPES,
-    description: "Aménagement d'une piscine avec espace vert"
+    description: null
   },
   {
     id: 9,
     image: projectImage6,
-    title: "Aménagement espace vert",
+    title: null,
     category: PROJECT_CATEGORIES.LANDSCAPES,
-    description: "Aménagement d'une piscine avec espace vert"
+    description: null
   }
 ];
-const ProjectCard = ({ project, onViewClick, isMobile }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    exit={{ opacity: 0, y: -20 }}
-    transition={{ duration: 0.5 }}
-  >
-    <div className="portfolio-inner rounded" onClick={() => !isMobile && onViewClick(project)}>
-      <img className="img-fluid" src={project.image} alt={project.title} />
-      <div className="portfolio-text">
-        <h4 className="text-white mb-4">{project.title}</h4>
-        <p className="text-white mb-3">{project.description}</p>
-        {!isMobile && (
-          <div className="d-flex">
-            <Button
-              variant="outline-light"
-              className="btn-lg-square rounded-circle mx-2"
-              onClick={() => onViewClick(project)}
-              aria-label={`Voir ${project.title} en grand format`}
-            >
-              <i className="fa fa-eye"></i>
-            </Button>
+const ProjectCard = ({ project, onViewClick, isMobile }) => {
+  const hasContent = project.title && project.description;
+  
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -20 }}
+      transition={{ duration: 0.5 }}
+    >
+      <div 
+        className={`portfolio-inner rounded ${hasContent ? '' : 'no-content'}`} 
+        onClick={() => !isMobile && onViewClick(project)}
+      >
+        <img className="img-fluid" src={project.image} alt={project.title || "Project image"} />
+        {hasContent && (
+          <div className="portfolio-text">
+            <h4 className="text-white mb-4">{project.title}</h4>
+            <p className="text-white mb-3">{project.description}</p>
+            {!isMobile && (
+              <div className="d-flex">
+                <Button
+                  variant="outline-light"
+                  className="btn-lg-square rounded-circle mx-2"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onViewClick(project);
+                  }}
+                  aria-label={`Voir ${project.title} en grand format`}
+                >
+                  <i className="fa fa-eye"></i>
+                </Button>
+              </div>
+            )}
           </div>
         )}
       </div>
-    </div>
-  </motion.div>
-);
+    </motion.div>
+  );
+};
 
 ProjectCard.propTypes = {
   project: PropTypes.shape({
     id: PropTypes.number.isRequired,
     image: PropTypes.string.isRequired,
-    title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
+    title: PropTypes.string,
+    description: PropTypes.string,
     category: PropTypes.string.isRequired
   }).isRequired,
   onViewClick: PropTypes.func.isRequired,

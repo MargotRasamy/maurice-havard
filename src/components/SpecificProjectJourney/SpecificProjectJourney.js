@@ -30,7 +30,7 @@ const SpecificProjectJourney = ({ images, title, description }) => {
       <Row className="mb-5">
         <Col>
           <h2 className="text-center mb-4">{title}</h2>
-          <p className="text-center mb-5">{description}</p>
+          <p className="text-center mb-5" dangerouslySetInnerHTML={{__html: description}}></p>
         </Col>
       </Row>
 

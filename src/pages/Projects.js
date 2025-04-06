@@ -15,6 +15,13 @@ import projectImage4 from '../assets/img/divers/projet/4.jpg';
 import projectImage5 from '../assets/img/divers/projet/5.jpg';
 import projectImage6 from '../assets/img/divers/projet/6.jpg';
 
+import minipiscine1 from '../assets/img/minipiscine/mini-piscine1.jpg';
+import minipiscine2 from '../assets/img/minipiscine/mini-piscine2.png';
+import minipiscine3 from '../assets/img/minipiscine/mini-piscine3.png';
+import minipiscine4 from '../assets/img/minipiscine/mini-piscine4.png';
+import minipiscine5 from '../assets/img/minipiscine/mini-piscine5.png';
+import minipiscine6 from '../assets/img/minipiscine/mini-piscine8.png';
+
 function Projects() {
   
   useEffect(() => {
@@ -62,6 +69,37 @@ function Projects() {
     ]
   };
 
+  const projetCoqueEnPolyester = {
+    title: "Projet d'installation d'une mini-piscine",
+    description: "Nos mini-piscines sont réalisées à l'aide de <strong>mini-coques en polyester</strong> fabriquées en usine à <strong>Montauban</strong>.",
+    images: [
+      {
+        url: minipiscine1,
+        description: null
+      },
+      {
+        url: minipiscine2,
+        description: null
+      },
+      {
+        url: minipiscine3,
+        description: null
+      },
+      {
+        url: minipiscine4,
+        description: null
+      },
+      {
+        url: minipiscine5,
+        description: null
+      },
+      {
+        url: minipiscine6,
+        description: null
+      }
+    ]
+  };
+
   return (
     <>
       {/* Page Header Start */}
@@ -81,6 +119,10 @@ function Projects() {
       {/* Project Journey Start */}
       <SpecificProjectJourney {...projectData} />
       {/* Project Journey End */}
+
+      {/* Coque en polyester */}
+      <SpecificProjectJourney {...projetCoqueEnPolyester} />
+      {/* Coque en polyester End */}
 
       <ProjectShowcase />
     </>

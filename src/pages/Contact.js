@@ -12,19 +12,37 @@ function Contact() {
   const form = useRef();
   const { setModal } = useModal();
   const [validated, setValidated] = useState(false);
+  const [contactError, setContactError] = useState('');
+  const [invalidFields, setInvalidFields] = useState({ email: false, phone: false });
+  const [formSubmitted, setFormSubmitted] = useState(false);
 
   useEffect(() => {
     new WOW().init();
   }, []);
 
   useLayoutEffect(() => {
-    window.scrollTo(0, 0, { behavior: 'smooth' })
+    if (!formSubmitted) {
+      window.scrollTo(0, 0, { behavior: 'smooth' });
+    }
   });
 
   const sendEmail = (e) => {
     e.preventDefault();
     const formElement = e.currentTarget;
     setValidated(true);
+    setContactError('');
+    setInvalidFields({ email: false, phone: false });
+    setFormSubmitted(true);
+
+    // Check if at least one contact method is provided
+    const email = formElement.querySelector('[name="email"]').value;
+    const phone = formElement.querySelector('[name="phone"]').value;
+    
+    if (!email && !phone) {
+      setContactError('Veuillez fournir au moins un moyen de contact (email ou téléphone)');
+      setInvalidFields({ email: true, phone: true });
+      return;
+    }
 
     if (!formElement.checkValidity()) {
       e.stopPropagation();
@@ -46,6 +64,8 @@ function Contact() {
         );
         form.current.reset();
         setValidated(false);
+        setInvalidFields({ email: false, phone: false });
+        setFormSubmitted(false);
       }, (error) => {
         console.error("Error sending email from quote:", error);
         setModal(
@@ -53,6 +73,7 @@ function Contact() {
           "Une erreur est survenue lors de l'envoi du message. Veuillez réessayer ou nous contacter directement par téléphone au 06.76.97.89.86 ou par email à l'adresse mauricehavard99@gmail.com",
           'error'
         );
+        setFormSubmitted(false);
       });
   };
 
@@ -102,7 +123,7 @@ function Contact() {
                         type="email"
                         name="email"
                         placeholder="Votre adresse email"
-                        required
+                        isInvalid={invalidFields.email}
                       />
                       <Form.Label>Votre adresse email</Form.Label>
                       <Form.Control.Feedback type="invalid">
@@ -117,7 +138,7 @@ function Contact() {
                         pattern="^[0-9+\-\.\s]+$"
                         name="phone"
                         placeholder="Votre numéro de téléphone"
-                        required
+                        isInvalid={invalidFields.phone}
                       />
                       <Form.Label>Votre numéro de téléphone</Form.Label>
                       <Form.Control.Feedback type="invalid">
@@ -125,6 +146,11 @@ function Contact() {
                       </Form.Control.Feedback>
                     </Form.Floating>
                   </Col>
+                  {contactError && (
+                    <Col xs={12}>
+                      <div className="text-danger mb-2">{contactError}</div>
+                    </Col>
+                  )}
                   <Col xs={12}>
                     <Form.Floating>
                       <Form.Control

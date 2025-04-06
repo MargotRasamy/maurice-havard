@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/maurice-havard/static/css/main.34024b81.css",
-    "main.js": "/maurice-havard/static/js/main.8b9d13be.js",
+    "main.js": "/maurice-havard/static/js/main.fe75bc7d.js",
     "static/js/453.c001aaaf.chunk.js": "/maurice-havard/static/js/453.c001aaaf.chunk.js",
     "static/media/vitrine1.jpg": "/maurice-havard/static/media/vitrine1.9d0ad82f3994a09c1632.jpg",
     "static/media/mini-piscine4.png": "/maurice-havard/static/media/mini-piscine4.fe070866e30ede60acda.png",
@@ -45,11 +45,11 @@
     "static/media/fa-v4compatibility.woff2": "/maurice-havard/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "index.html": "/maurice-havard/index.html",
     "main.34024b81.css.map": "/maurice-havard/static/css/main.34024b81.css.map",
-    "main.8b9d13be.js.map": "/maurice-havard/static/js/main.8b9d13be.js.map",
+    "main.fe75bc7d.js.map": "/maurice-havard/static/js/main.fe75bc7d.js.map",
     "453.c001aaaf.chunk.js.map": "/maurice-havard/static/js/453.c001aaaf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.34024b81.css",
-    "static/js/main.8b9d13be.js"
+    "static/js/main.fe75bc7d.js"
   ]
 }

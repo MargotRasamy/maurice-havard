@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/maurice-havard/static/css/main.34aa80da.css",
+    "main.css": "/maurice-havard/static/css/main.8554b37a.css",
     "main.js": "/maurice-havard/static/js/main.ef784ced.js",
     "static/js/453.c001aaaf.chunk.js": "/maurice-havard/static/js/453.c001aaaf.chunk.js",
     "static/media/pool7.jpg": "/maurice-havard/static/media/pool7.4de6abb4777f5b624acb.jpg",
@@ -47,12 +47,12 @@
     "static/media/fa-v4compatibility.ttf": "/maurice-havard/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
     "static/media/fa-v4compatibility.woff2": "/maurice-havard/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "index.html": "/maurice-havard/index.html",
-    "main.34aa80da.css.map": "/maurice-havard/static/css/main.34aa80da.css.map",
+    "main.8554b37a.css.map": "/maurice-havard/static/css/main.8554b37a.css.map",
     "main.ef784ced.js.map": "/maurice-havard/static/js/main.ef784ced.js.map",
     "453.c001aaaf.chunk.js.map": "/maurice-havard/static/js/453.c001aaaf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.34aa80da.css",
+    "static/css/main.8554b37a.css",
     "static/js/main.ef784ced.js"
   ]
 }

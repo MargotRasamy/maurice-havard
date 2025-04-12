@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/maurice-havard/static/css/main.34aa80da.css",
-    "main.js": "/maurice-havard/static/js/main.be4ec12e.js",
+    "main.js": "/maurice-havard/static/js/main.31b441a2.js",
     "static/js/453.c001aaaf.chunk.js": "/maurice-havard/static/js/453.c001aaaf.chunk.js",
     "static/media/pool7.jpg": "/maurice-havard/static/media/pool7.4de6abb4777f5b624acb.jpg",
     "static/media/vitrine1.jpg": "/maurice-havard/static/media/vitrine1.9d0ad82f3994a09c1632.jpg",
@@ -48,11 +48,11 @@
     "static/media/fa-v4compatibility.woff2": "/maurice-havard/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "index.html": "/maurice-havard/index.html",
     "main.34aa80da.css.map": "/maurice-havard/static/css/main.34aa80da.css.map",
-    "main.be4ec12e.js.map": "/maurice-havard/static/js/main.be4ec12e.js.map",
+    "main.31b441a2.js.map": "/maurice-havard/static/js/main.31b441a2.js.map",
     "453.c001aaaf.chunk.js.map": "/maurice-havard/static/js/453.c001aaaf.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.34aa80da.css",
-    "static/js/main.be4ec12e.js"
+    "static/js/main.31b441a2.js"
   ]
 }

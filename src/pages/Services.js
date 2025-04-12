@@ -97,7 +97,7 @@ function Services() {
                     </div>
                     <h4 className="mb-3">{service.title}</h4>
                     <p className="mb-4">{service.description}</p>
-                    <Link to="/quote" className="btn btn-sm btn-hover">
+                    <Link to="/devis" className="btn btn-sm btn-hover">
                       <i className="fa fa-plus text-primary me-2"></i>Devis Gratuit
                     </Link>
                   </div>

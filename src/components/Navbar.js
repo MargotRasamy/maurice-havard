@@ -36,7 +36,7 @@ function Navbar() {
             <Link to="/" className={`nav-item nav-link ${location.pathname === '/' ? 'active' : ''}`}>Accueil</Link>
             {/* <Link to="/services" className={`nav-item nav-link ${location.pathname === '/services' ? 'active' : ''}`}>Services</Link> */}
             
-            <Link to="/projects" className={`nav-item nav-link ${location.pathname === '/projects' ? 'active' : ''}`}>Nos réalisations</Link>
+            <Link to="/projets" className={`nav-item nav-link ${location.pathname === '/projects' ? 'active' : ''}`}>Nos réalisations</Link>
 
             {/* Pages Dropdown */}
             {/* <div className="nav-item dropdown">
@@ -47,7 +47,7 @@ function Navbar() {
             </div> */}
 
             <Link to="/contact" className={`nav-item nav-link ${location.pathname === '/contact' ? 'active' : ''}`}>Contact</Link>
-            <Link to="/quote" className="btn btn-primary ctaBtn py-2 px-3 rounded-0 d-none d-lg-block"><span>Demander un devis<i className="fa fa-arrow-right ms-3"></i></span></Link>
+            <Link to="/devis" className="btn btn-primary ctaBtn py-2 px-3 rounded-0 d-none d-lg-block"><span>Demander un devis<i className="fa fa-arrow-right ms-3"></i></span></Link>
           </div>
         </div>
       </nav>

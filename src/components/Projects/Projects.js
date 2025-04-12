@@ -260,7 +260,7 @@ function Projects() {
           </div>
         )}
         {!isMobile && showModal && <div className="modal-backdrop show"></div>}
-        <Link to="/projects" className="btn btn-primary p-4 mx-auto d-flex justify-content-center" style={{ maxWidth: "90%", width: "350px" }}><p className="text-center m-0">En voir plus</p></Link>
+        <Link to="/projets" className="btn btn-primary p-4 mx-auto d-flex justify-content-center" style={{ maxWidth: "90%", width: "350px" }}><p className="text-center m-0">En voir plus</p></Link>
       </Container>
     </Container>
   );

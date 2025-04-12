@@ -213,7 +213,7 @@ function Home() {
                 <h1 className="display-5 mb-4 text-center">Demandez un devis gratuit</h1>
                 <p className="mb-4">Contactez-nous pour obtenir un devis personnalisé pour votre projet d'aménagement paysager ou de création de piscine.</p>
                 <div className="text-center">
-                  <Link to="/quote" className="btn btn-primary py-2 px-2">
+                  <Link to="/devis" className="btn btn-primary py-2 px-2">
                     <Button variant="primary" className="py-3 px-4">Demander un Devis</Button>
                   </Link>
                 </div>

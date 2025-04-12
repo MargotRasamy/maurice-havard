@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/maurice-havard/static/css/main.cf4cbd0c.css",
-    "main.js": "/maurice-havard/static/js/main.201d27e6.js",
+    "main.css": "/maurice-havard/static/css/main.34aa80da.css",
+    "main.js": "/maurice-havard/static/js/main.be4ec12e.js",
     "static/js/453.c001aaaf.chunk.js": "/maurice-havard/static/js/453.c001aaaf.chunk.js",
     "static/media/pool7.jpg": "/maurice-havard/static/media/pool7.4de6abb4777f5b624acb.jpg",
     "static/media/vitrine1.jpg": "/maurice-havard/static/media/vitrine1.9d0ad82f3994a09c1632.jpg",
@@ -39,18 +39,20 @@
     "static/media/fa-solid-900.woff2": "/maurice-havard/static/media/fa-solid-900.2463b90d9a316e4e5294.woff2",
     "static/media/fa-brands-400.woff2": "/maurice-havard/static/media/fa-brands-400.c210719e60948b211a12.woff2",
     "static/media/fa-regular-400.ttf": "/maurice-havard/static/media/fa-regular-400.914997e1bdfc990d0897.ttf",
+    "static/media/divers-landscape7.jpg": "/maurice-havard/static/media/divers-landscape7.5ccdf4b74ac81afddf3f.jpg",
+    "static/media/divers-landscape9.jpg": "/maurice-havard/static/media/divers-landscape9.3dfa1fe7ba518d421ba1.jpg",
     "static/media/garantie1.png": "/maurice-havard/static/media/garantie1.1d7a55e74352f67e0b17.png",
     "static/media/fa-regular-400.woff2": "/maurice-havard/static/media/fa-regular-400.89999bdf5d835c012025.woff2",
     "static/media/logo-graf.png": "/maurice-havard/static/media/logo-graf.9e6f100324cfcd344abd.png",
     "static/media/fa-v4compatibility.ttf": "/maurice-havard/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
     "static/media/fa-v4compatibility.woff2": "/maurice-havard/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "index.html": "/maurice-havard/index.html",
-    "main.cf4cbd0c.css.map": "/maurice-havard/static/css/main.cf4cbd0c.css.map",
-    "main.201d27e6.js.map": "/maurice-havard/static/js/main.201d27e6.js.map",
+    "main.34aa80da.css.map": "/maurice-havard/static/css/main.34aa80da.css.map",
+    "main.be4ec12e.js.map": "/maurice-havard/static/js/main.be4ec12e.js.map",
     "453.c001aaaf.chunk.js.map": "/maurice-havard/static/js/453.c001aaaf.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.cf4cbd0c.css",
-    "static/js/main.201d27e6.js"
+    "static/css/main.34aa80da.css",
+    "static/js/main.be4ec12e.js"
   ]
 }

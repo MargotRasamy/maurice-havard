@@ -1,12 +1,26 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { WOW } from 'wowjs';
 import './about-section.scss';
 
 // Import images
-import landscape1 from '../../assets/img/vitrine1.jpg';
+import vitrine1 from '../../assets/img/vitrine1.jpg';
+import landscape6 from '../../assets/img/divers/divers-landscape6.jpg';
+import landscape7 from '../../assets/img/divers/divers-landscape7.jpg';
+import landscape9 from '../../assets/img/divers/divers-landscape9.jpg';
 
 function AboutSection() {
+    const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 992);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setIsSmallScreen(window.innerWidth < 992);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     return (
         <Container fluid className="about-section py-5 bg-very-light">
             <Container>
@@ -41,7 +55,20 @@ function AboutSection() {
                     <Col lg={6} className="wow fadeInRight" data-wow-delay="0.3s">
                         <div className="about-images">
                             <div className="image-wrapper">
-                                <img src={landscape1} alt="Aménagement paysager" className="img-fluid rounded" />
+                                <img src={vitrine1} alt="Aménagement paysager" className="img-fluid rounded" />
+                            </div>
+                            <div className="image-grid">
+                                <div className="image-item">
+                                    <img src={landscape6} alt="Aménagement paysager divers" className="img-fluid rounded" />
+                                </div>
+                                <div className="image-item">
+                                    <img src={landscape7} alt="Aménagement paysager divers" className="img-fluid rounded" />
+                                </div>
+                                {!isSmallScreen && (
+                                    <div className="image-item">
+                                        <img src={landscape9} alt="Aménagement paysager divers" className="img-fluid rounded" />
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </Col>

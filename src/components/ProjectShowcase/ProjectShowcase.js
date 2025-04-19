@@ -211,7 +211,7 @@ function ProjectShowcase() {
   return (
     <Container fluid className="py-5">
       <Container>
-        <div className="text-center mx-auto wow fadeIn" data-wow-delay="0.1s" style={{maxWidth: "500px"}}>
+        <div className="text-center mx-auto wow" style={{maxWidth: "500px"}}>
           <p className="fs-5 fw-bold text-primary">Nos Projets</p>
           <h1 className="display-5 mb-5">Découvrez nos réalisations</h1>
           <p className="mb-5">Explorez notre galerie de projets et découvrez comment nous transformons les espaces extérieurs en lieux d'exception.</p>

@@ -22,7 +22,7 @@ function NotFound() {
       {/* Page Header End */}
 
       {/* 404 Start */}
-      <div className="container-xxl py-5 wow fadeInUp" data-wow-delay="0.1s">
+      <div className="container-xxl py-5 wow fadeInUp" data-wow-delay="0.05s">
         <div className="container text-center">
           <div className="row justify-content-center">
             <div className="col-lg-6">

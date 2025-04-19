@@ -97,13 +97,13 @@ function Quote() {
             {/* Quote Start */}
             <Container fluid className="py-5">
                 <Container>
-                    <div className="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style={{maxWidth: "500px"}}>
+                    <div className="text-center mx-auto wow fadeInUp" data-wow-delay="0.05s" style={{maxWidth: "500px"}}>
                         <p className="fs-5 fw-bold text-primary">Devis Gratuit</p>
                         <h1 className="display-5 mb-5">Demandez un Devis Gratuit</h1>
                     </div>
                     <Row className="justify-content-center">
                         <Col lg={7}>
-                            <div className="bg-light rounded p-4 p-sm-5 wow fadeInUp" data-wow-delay="0.2s">
+                            <div className="bg-light rounded p-4 p-sm-5 wow fadeInUp" data-wow-delay="0.05s">
                                 <Form ref={form} onSubmit={sendEmail} noValidate validated={validated}>
                                     <Row className="g-3">
                                         <Col sm={6}>

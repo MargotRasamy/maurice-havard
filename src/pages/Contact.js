@@ -97,7 +97,7 @@ function Contact() {
       <Container fluid className="py-5">
         <Container>
           <Row className="g-5">
-            <Col lg={6} className="wow fadeIn" data-wow-delay="0.1s">
+            <Col lg={6} className="wow fadeIn" data-wow-delay="0.05s">
               <p className="fs-5 fw-bold text-primary">Contact</p>
               <h1 className="display-5 mb-5">Si vous avez des questions, n'hésitez pas à contacter Maurice HAVARD</h1>
               <p className="mb-4">Maurice HAVARD est à votre disposition pour répondre à toutes vos questions concernant ses services d'aménagement paysager et de création de piscines.</p>

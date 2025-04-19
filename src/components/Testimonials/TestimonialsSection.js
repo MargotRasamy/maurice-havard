@@ -69,13 +69,13 @@ function TestimonialsSection() {
     return (
         <div className="testimonials-page">
             <Container>
-                <div className="section-title wow fadeInUp" data-wow-delay="0.1s">
+                <div className="section-title wow fadeInUp" data-wow-delay="0.001s">
                     <h2>Ce que disent nos clients</h2>
                     <p>Découvrez les témoignages de nos clients satisfaits qui nous font confiance pour leurs projets d'aménagement extérieur.</p>
                 </div>
 
                 {/* Slider Section */}
-                <div className="testimonial-slider wow fadeInUp" data-wow-delay="0.2s">
+                <div className="testimonial-slider wow fadeInUp" data-wow-delay="0.002s">
                     <Swiper
                         modules={[Pagination, Autoplay]}
                         spaceBetween={30}

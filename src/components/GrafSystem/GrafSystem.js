@@ -15,7 +15,7 @@ const GrafSystem = () => {
         <div className="graf-system">
             <Container>
                 <Row className="align-items-center justify-content-between">
-                    <Col lg={7} className="wow fadeInLeft" data-wow-delay="0.1s">
+                    <Col lg={7} className="wow">
                         <div className="graf-content">
                             <div className="section-title">
                                 <h2 className="mb-4">Pourquoi choisir GRAF ?</h2>
@@ -61,7 +61,7 @@ const GrafSystem = () => {
                             </div>
                         </div>
                     </Col>
-                    <Col lg={4} className="wow fadeInRight" data-wow-delay="0.1s">
+                    <Col lg={4} className="wow">
                         <div className="graf-images">
                             <div className="main-image">
                                 <img src={logoGraf} alt="Logo GRAF" />

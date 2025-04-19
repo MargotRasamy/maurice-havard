@@ -193,7 +193,7 @@ function Projects() {
   return (
     <Container fluid className="py-5">
       <Container>
-        <div className="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style={{maxWidth: "500px"}}>
+        <div className="text-center mx-auto wow" style={{maxWidth: "500px"}}>
           <p className="fs-5 fw-bold text-primary">Notre galerie</p>
           <h1 className="display-5 mb-3">Piscines et Jardins réalisés</h1>
         </div>

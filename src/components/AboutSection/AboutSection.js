@@ -25,7 +25,7 @@ function AboutSection() {
         <Container fluid className="about-section py-5 bg-very-light">
             <Container>
                 <Row className="align-items-center">
-                    <Col lg={6} className="wow fadeInLeft" data-wow-delay="0.1s">
+                    <Col lg={6} className="wow">
                         <div className="about-content">
                             <p className="fs-5 fw-bold text-primary">À propos</p>
                             <h1 className="display-5 mb-4">Maurice Havard, votre expert en aménagement paysager depuis 1971</h1>
@@ -46,13 +46,13 @@ function AboutSection() {
                                     <i className="fa fa-check text-primary"></i>
                                 </div>
                                 <div className="ms-3">
-                                    <h5 className="mb-0">Où est la piscine ?</h5>
-                                    <p className="mb-0">Dans le jardin ...</p>
+                                    <h5 className="mb-0 wow fadeInLeft">Où est la piscine ?</h5>
+                                    <p className="mb-0 wow fadeInLeft">Dans le jardin ...</p>
                                 </div>
                             </div>
                         </div>
                     </Col>
-                    <Col lg={6} className="wow fadeInRight" data-wow-delay="0.3s">
+                    <Col lg={6} className="wow">
                         <div className="about-images">
                             <div className="image-wrapper">
                                 <img src={vitrine1} alt="Aménagement paysager" className="img-fluid rounded" />

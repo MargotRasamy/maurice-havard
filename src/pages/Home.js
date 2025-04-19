@@ -116,7 +116,7 @@ function Home() {
       {/* Top Feature Start */}
       <Container fluid className="top-feature py-5 pt-lg-0">
         <Container className="py-5 pt-lg-0">
-          <Row className="gx-0 wow" data-wow-delay="0.05s">
+          <Row className="gx-0 wow" data-wow-delay="0.005s">
             <Col lg={4}>
               <div className="bg-white shadow d-flex align-items-center h-100 px-5" style={{minHeight: "160px"}}>
                 <div className="d-flex">
@@ -179,19 +179,19 @@ function Home() {
       <Container fluid className="facts my-5 py-5">
         <Container className="py-5">
           <Row className="g-5">
-            <Col sm={6} lg={3} className="text-center wow fadeIn" data-wow-delay="0.1s">
+            <Col sm={6} lg={3} className="text-center wow fadeIn" data-wow-delay="0.001s">
               <h1 className="display-4 text-white" data-toggle="counter-up">{yearsExperience}</h1>
               <span className="fs-5 fw-semi-bold text-white">Années d'expérience</span>
             </Col>
-            <Col sm={6} lg={3} className="text-center wow fadeIn" data-wow-delay="0.3s">
+            <Col sm={6} lg={3} className="text-center wow fadeIn" data-wow-delay="0.002s">
               <h1 className="display-4 text-white" data-toggle="counter-up">200+</h1>
               <span className="fs-5 fw-semi-bold text-white">Projets réalisés</span>
             </Col>
-            <Col sm={6} lg={3} className="text-center wow fadeIn" data-wow-delay="0.5s">
+            <Col sm={6} lg={3} className="text-center wow fadeIn" data-wow-delay="0.003s">
               <h1 className="display-4 text-white" data-toggle="counter-up">2</h1>
               <span className="fs-5 fw-semi-bold text-white">Grandes expertises</span>
             </Col>
-            <Col sm={6} lg={3} className="text-center wow fadeIn" data-wow-delay="0.7s">
+            <Col sm={6} lg={3} className="text-center wow fadeIn" data-wow-delay="0.004s">
               <h1 className="display-4 text-white" data-toggle="counter-up">1</h1>
               <span className="fs-5 fw-semi-bold text-white">Professionnel de confiance</span>
             </Col>

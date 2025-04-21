@@ -36,7 +36,7 @@ const SpecificProjectJourney = ({ images, title, description }) => {
 
       <Row className="g-4 image-container">
         {images.map((image, index) => (
-          <Col key={index} xs={12} md={6} lg={4}>
+          <Col key={index} xs={6} md={6} lg={4}>
             <div className="project-image-container" onClick={() => handleImageClick(image)}>
               <img 
                 src={image.url} 

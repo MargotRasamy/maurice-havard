@@ -195,7 +195,7 @@ function Projects() {
       <Container>
         <div className="text-center mx-auto wow" style={{maxWidth: "500px"}}>
           <p className="fs-5 fw-bold text-primary">Notre galerie</p>
-          <h1 className="display-5 mb-3">Piscines et Jardins réalisés</h1>
+          <h1 className="display-5 mb-3">Piscines et Jardins réalisés dans le Gers</h1>
         </div>
         
         <Row className="justify-content-center mb-3">

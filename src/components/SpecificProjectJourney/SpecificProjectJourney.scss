@@ -6,6 +6,13 @@
 
   @media (max-width: 767.98px) {
     padding: 3rem 0;
+
+    .text-block {
+      .title, .description {
+        padding: 0 1rem;
+        margin-bottom: 0.5rem !important;
+      }
+    }
   }
 
   .section-title {

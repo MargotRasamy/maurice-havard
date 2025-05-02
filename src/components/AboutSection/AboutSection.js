@@ -28,7 +28,7 @@ function AboutSection() {
                     <Col lg={6} className="wow">
                         <div className="about-content">
                             <p className="fs-5 fw-bold text-primary">À propos</p>
-                            <h1 className="display-5 mb-4">Maurice Havard, votre expert en aménagement paysager depuis 1971</h1>
+                            <h1 className="display-5 mb-4">Maurice Havard, votre expert en aménagement paysager dans le Gers depuis 1971</h1>
                             <p className="mb-4">
                             Piscines et jardins de A à Z
                             </p>

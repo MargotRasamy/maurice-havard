@@ -28,9 +28,9 @@ const SpecificProjectJourney = ({ images, title, description }) => {
   return (
     <Container className="specific-project-journey">
       <Row className="mb-5">
-        <Col>
-          <h2 className="text-center mb-4">{title}</h2>
-          <p className="text-center mb-5" dangerouslySetInnerHTML={{__html: description}}></p>
+        <Col className="text-block">
+          <h2 className="text-center mb-4 title">{title}</h2>
+          <p className="text-center mb-5 description" dangerouslySetInnerHTML={{__html: description}}></p>
         </Col>
       </Row>
 

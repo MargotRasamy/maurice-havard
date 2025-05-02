@@ -33,43 +33,43 @@ function Home() {
     {
       image: "/img/service-1.jpg",
       icon: "/img/icon/icon-3.png",
-      title: "Aménagement Paysager",
-      description: "Création et aménagement de jardins sur mesure. Conception d'espaces verts harmonieux et durables. Mise en valeur de votre extérieur avec des solutions adaptées à vos envies et à votre terrain.",
+      title: "Aménagement Paysager dans le Gers",
+      description: "Création et aménagement de jardins sur mesure dans le Gers. Conception d'espaces verts harmonieux et durables. Mise en valeur de votre extérieur avec des solutions adaptées à vos envies et à votre terrain.",
       delay: "0.1s",
     },
     {
       image: "/img/service-2.jpg",
       icon: "/img/icon/icon-6.png",
-      title: "Études et Plans",
-      description: "Réalisation d'études détaillées et de plans d'aménagement personnalisés. Analyse approfondie de votre terrain et de vos besoins pour créer un projet cohérent et réalisable. Conseils experts pour optimiser votre espace extérieur.",
+      title: "Études et Plans Paysagers",
+      description: "Réalisation d'études détaillées et de plans d'aménagement personnalisés dans le Gers. Analyse approfondie de votre terrain et de vos besoins pour créer un projet cohérent et réalisable.",
       delay: "0.3s",
     },
     {
       image: "/img/service-3.jpg",
       icon: "/img/icon/icon-5.png",
-      title: "Maçonnerie Paysagère",
-      description: "Construction d'éléments en pierre et maçonnerie pour structurer et embellir votre jardin. Réalisation de murets, escaliers, terrasses et allées. Travail soigné avec des matériaux de qualité pour un résultat durable.",
+      title: "Maçonnerie Paysagère Gers",
+      description: "Construction d'éléments en pierre et maçonnerie pour structurer et embellir votre jardin dans le Gers. Réalisation de murets, escaliers, terrasses et allées avec des matériaux locaux.",
       delay: "0.5s",
     },
     {
       image: "/img/service-4.jpg",
       icon: "/img/icon/icon-4.png",
-      title: "Entretien des Espaces Verts",
-      description: "Entretien régulier et professionnel de vos espaces verts. Tonte, taille des haies, désherbage et soins des végétaux. Suivi personnalisé pour maintenir la beauté de votre jardin toute l'année.",
+      title: "Entretien des Espaces Verts Gers",
+      description: "Entretien régulier et professionnel de vos espaces verts dans le Gers. Tonte, taille des haies, désherbage et soins des végétaux. Suivi personnalisé pour maintenir la beauté de votre jardin.",
       delay: "0.1s",
     },
     {
       image: "/img/service-5.jpg",
       icon: "/img/icon/icon-8.png",
-      title: "Élagage et Taille",
-      description: "Élagage professionnel et taille raisonnée de vos arbres et arbustes. Intervention respectueuse pour favoriser la santé et la croissance des végétaux. Expertise dans la gestion des hauteurs et l'entretien des formes.",
+      title: "Élagage et Taille dans le Gers",
+      description: "Élagage professionnel et taille raisonnée de vos arbres et arbustes dans le Gers. Intervention respectueuse pour favoriser la santé et la croissance des végétaux.",
       delay: "0.3s",
     },
     {
       image: "/img/service-6.jpg",
       icon: "/img/icon/icon-2.png",
-      title: "Création de Piscines",
-      description: "Conception et réalisation de piscines sur mesure. Installation professionnelle avec des matériaux de qualité. Intégration harmonieuse dans votre espace extérieur pour créer un lieu de détente unique.",
+      title: "Création de Piscines dans le Gers",
+      description: "Conception et réalisation de piscines sur mesure dans le Gers. Installation professionnelle avec des matériaux de qualité. Intégration harmonieuse dans votre espace extérieur.",
       delay: "0.5s",
     },
   ];
@@ -78,14 +78,14 @@ function Home() {
     <>
       {/* Carousel Start */}
       <Container fluid className="p-0">
-        <Carousel id="header-carousel" className="slide" interval={5000}>
+        <Carousel id="header-carousel" className="slide" interval={8000}>
           <Carousel.Item>
-            <img className="w-100" src={carousel1} alt="Image" />
+            <img className="w-100" src={carousel1} alt="Expert pisciniste et paysagiste dans le Gers" />
             <Carousel.Caption>
               <Container>
                 <Row className="justify-content-center">
                   <Col lg={8}>
-                    <h1 className="display-1 text-white mb-5 animated fadeIn">Piscines Et Jardins depuis 1971</h1>
+                    <h1 className="display-1 text-white mb-5 animated fadeIn">Pisciniste et Paysagiste dans le Gers</h1>
                     <a href="#explore">
                       <Button variant="primary" className="py-sm-3 px-sm-4">Explorer</Button>
                     </a>
@@ -95,12 +95,12 @@ function Home() {
             </Carousel.Caption>
           </Carousel.Item>
           <Carousel.Item>
-            <img className="w-100" src={carousel2} alt="Image" />
+            <img className="w-100" src={carousel2} alt="Expert piscines et jardins dans le Gers" />
             <Carousel.Caption>
               <Container>
                 <Row className="justify-content-center">
-                  <Col lg={7}>
-                    <h1 className="display-1 text-white mb-5 animated fadeIn">Piscines et Jardins depuis 1971</h1>
+                  <Col lg={8}>
+                    <h1 className="display-1 text-white mb-5 animated fadeIn">Pisciniste et Paysagiste dans le Gers</h1>
                     <a href="#explore">
                       <Button variant="primary" className="py-sm-3 px-sm-4">Explorer</Button>
                     </a>
@@ -125,7 +125,7 @@ function Home() {
                   </div>
                   <div className="ps-3">
                     <h4>Professionnel expérimenté</h4>
-                    <span>Expertise reconnue sur plus de 50 ans d'expérience</span>
+                    <span>Expertise reconnue sur plus de 50 ans d'expérience dans le Gers</span>
                   </div>
                 </div>
               </div>
@@ -137,8 +137,8 @@ function Home() {
                     <i className="fa fa-home text-primary"></i>
                   </div>
                   <div className="ps-3">
-                    <h4>Spécialiste en piscines</h4>
-                    <span>Utilisation du système robuste GRAF</span>
+                    <h4>Spécialiste en piscines dans le Gers</h4>
+                    <span>Utilisation du système robuste GRAF pour des piscines durables</span>
                   </div>
                 </div>
               </div>
@@ -150,8 +150,8 @@ function Home() {
                     <i className="fa fa-tree text-primary"></i>
                   </div>
                   <div className="ps-3">
-                    <h4>Spécialiste du jardin et de la pépinière</h4>
-                    <span>Conseils et solutions personnalisées</span>
+                    <h4>Spécialiste du jardin et de la pépinière dans le Gers</h4>
+                    <span>Conseils et solutions personnalisées pour votre jardin</span>
                   </div>
                 </div>
               </div>
@@ -189,11 +189,11 @@ function Home() {
             </Col>
             <Col sm={6} lg={3} className="text-center wow fadeIn" data-wow-delay="0.003s">
               <h1 className="display-4 text-white" data-toggle="counter-up">2</h1>
-              <span className="fs-5 fw-semi-bold text-white">Grandes expertises</span>
+              <span className="fs-5 fw-semi-bold text-white">Expertises majeures</span>
             </Col>
             <Col sm={6} lg={3} className="text-center wow fadeIn" data-wow-delay="0.004s">
               <h1 className="display-4 text-white" data-toggle="counter-up">1</h1>
-              <span className="fs-5 fw-semi-bold text-white">Professionnel de confiance</span>
+              <span className="fs-5 fw-semi-bold text-white">Pisciniste et paysagiste professionnel de confiance</span>
             </Col>
           </Row>
         </Container>
@@ -210,8 +210,8 @@ function Home() {
           <Row className="g-5 justify-content-center">
             <Col lg={7}>
               <div className="bg-white rounded p-5 h-100">
-                <h1 className="display-5 mb-4 text-center">Demandez un devis gratuit</h1>
-                <p className="mb-4">Contactez-nous pour obtenir un devis personnalisé pour votre projet d'aménagement paysager ou de création de piscine.</p>
+                <h1 className="display-5 mb-4 text-center">Devis gratuit pour votre projet dans le Gers</h1>
+                <p className="mb-4">Contactez-nous pour obtenir un devis personnalisé pour votre projet de piscine ou d'aménagement paysager dans le Gers.</p>
                 <div className="text-center">
                   <Link to="/devis" className="btn btn-primary py-2 px-2">
                     <Button variant="primary" className="py-3 px-4">Demander un Devis</Button>

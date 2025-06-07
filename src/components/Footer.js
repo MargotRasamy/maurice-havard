@@ -57,8 +57,7 @@ function Footer() {
               &copy; <Link to="/">Maurice Havard</Link>, Tous droits réservés.
             </div>
             <div className="col-md-6 text-center text-md-end">
-              Développé par <Link target="_blank" rel="noopener noreferrer" to="https://www.linkedin.com/in/margotrasamy">Margot RASAMY</Link> 
-              {/* & <Link target="_blank" rel="noopener noreferrer" to="https://www.linkedin.com/in/lionel-tran/">Lionel TRAN</Link> */}
+              Développé par <Link target="_blank" rel="noopener noreferrer" to="https://www.linkedin.com/in/margotrasamy">Margot RASAMY</Link> & <Link target="_blank" rel="noopener noreferrer" to="https://www.linkedin.com/in/lionel-tran/">Lionel TRAN</Link>
             </div>
           </div>
         </div>
